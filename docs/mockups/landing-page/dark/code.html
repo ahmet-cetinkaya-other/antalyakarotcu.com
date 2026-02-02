@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Antalya Karotcu - Industrial Precision</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff6600",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#1a1a1a",
+                        "surface-dark": "#262626",
+                        "surface-darker": "#111111",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "sm": "0.125rem",
+                        "lg": "0.375rem",
+                        "xl": "0.5rem",
+                        "none": "0px"
+                    },
+                    backgroundImage: {
+                         'grid-pattern': "linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Space Grotesk", sans-serif;
+        }
+        .text-stroke-1 {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+        }
+        .industrial-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden antialiased font-display">
+<div class="flex min-h-screen flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b-4 border-primary bg-surface-darker/95 backdrop-blur shadow-2xl">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center bg-primary rounded text-white">
+<span class="material-symbols-outlined !text-3xl">construction</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-black uppercase tracking-widest leading-none text-white">Antalya</span>
+<span class="text-sm font-bold uppercase tracking-widest leading-none text-primary">Karotcu</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-bold uppercase tracking-wider text-gray-300 hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-bold uppercase tracking-wider text-gray-300 hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-bold uppercase tracking-wider text-gray-300 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-bold uppercase tracking-wider text-gray-300 hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-2 text-white font-bold group" href="tel:+905551234567">
+<span class="material-symbols-outlined text-primary group-hover:animate-pulse">call</span>
+<span class="text-sm tracking-wide">+90 555 123 4567</span>
+</a>
+<button class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded font-bold uppercase text-sm tracking-wider transition-all transform hover:scale-105 shadow-[0_4px_0_rgb(166,55,0)] active:shadow-none active:translate-y-[4px]">
+                        Get a Quote
+                    </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full overflow-hidden bg-surface-darker">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/90 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-60 mix-blend-overlay" data-alt="Close up of heavy industrial concrete drilling machinery sparks flying dark atmosphere"></div>
+<!-- Texture Overlay -->
+<div class="absolute inset-0 opacity-20 z-10 industrial-grid"></div>
+</div>
+<div class="relative z-20 mx-auto flex h-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl">
+<div class="mb-6 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">ISO 9001:2015 Certified</span>
+</div>
+<h1 class="mb-6 text-5xl font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-7xl md:text-8xl">
+                        Precision <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Concrete</span><br/>
+                        Solutions
+                    </h1>
+<p class="mb-10 max-w-xl text-lg font-medium leading-relaxed text-gray-300 md:text-xl">
+                        Since 1995, we've delivered heavy-duty drilling, demolition, and cutting services for Antalya's most complex engineering challenges.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center gap-2 bg-primary hover:bg-orange-600 text-white h-14 px-8 rounded font-bold uppercase text-base tracking-wider transition-all shadow-[0_0_20px_rgba(255,102,0,0.4)]">
+<span class="material-symbols-outlined">dataset</span>
+                            Explore Our Fleet
+                        </button>
+<button class="flex items-center justify-center gap-2 border-2 border-white hover:border-primary hover:text-primary text-white h-14 px-8 rounded font-bold uppercase text-base tracking-wider transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+                            Watch Showreel
+                        </button>
+</div>
+</div>
+</div>
+<!-- Bottom decorative bar -->
+<div class="absolute bottom-0 left-0 h-2 w-full bg-[repeating-linear-gradient(45deg,#ff6600,#ff6600_20px,#1a1a1a_20px,#1a1a1a_40px)] opacity-80"></div>
+</section>
+<!-- Stats Bar -->
+<div class="border-y border-white/10 bg-surface-dark relative z-30">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div class="flex flex-col gap-1 border-l-4 border-primary pl-6">
+<span class="text-5xl font-black text-white tracking-tighter">28<span class="text-primary">+</span></span>
+<span class="text-sm font-bold uppercase tracking-widest text-gray-400">Years Experience</span>
+</div>
+<div class="flex flex-col gap-1 border-l-4 border-gray-700 pl-6">
+<span class="text-5xl font-black text-white tracking-tighter">1k<span class="text-primary">+</span></span>
+<span class="text-sm font-bold uppercase tracking-widest text-gray-400">Projects Done</span>
+</div>
+<div class="flex flex-col gap-1 border-l-4 border-gray-700 pl-6">
+<span class="text-5xl font-black text-white tracking-tighter">0</span>
+<span class="text-sm font-bold uppercase tracking-widest text-gray-400">Safety Incidents</span>
+</div>
+<div class="flex flex-col gap-1 border-l-4 border-gray-700 pl-6">
+<span class="text-5xl font-black text-white tracking-tighter">24/7</span>
+<span class="text-sm font-bold uppercase tracking-widest text-gray-400">Support Team</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<section class="bg-background-dark py-24 relative overflow-hidden">
+<!-- Background element -->
+<div class="absolute right-0 top-0 h-full w-1/3 bg-surface-dark opacity-30 skew-x-12 translate-x-32 pointer-events-none"></div>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+<div>
+<h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2">Our Expertise</h2>
+<h3 class="text-4xl font-black uppercase text-white md:text-5xl">Industrial Services</h3>
+</div>
+<p class="max-w-md text-gray-400 text-lg">
+                        High-precision concrete manipulation using state-of-the-art diamond cutting technology.
+                    </p>
+</div>
+<!-- Masonry Grid -->
+<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+<!-- Service Card 1 -->
+<div class="group relative flex flex-col overflow-hidden rounded bg-surface-dark border-2 border-white/5 transition-all hover:border-primary hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10 opacity-90"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Close up of a large industrial drill bit penetrating concrete surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTe225IJlwTKILz62PJem8ifmoEKpwiAYy5jo2DzfbcApFzbFwTzuXuzFHO6GTf_Y9pggNizzW2YEDdVCuoaJLYPdyUBzlBPx4-6RjniOETFH6FzpyPBjLCXP5P6khRjY-FI3rWzOWit1h3WzyWBpYgDrASkTihGvITc9AuRSHKiOdFFKMDqC5f-3LP1mzb8g1lBsldO1DptTTqzHqHq4R85WgsEH3EyAmiegyCxMvvVr6RfrXXF0F9X_6TS7G9bZ7L3pW4-3pq7M')"></div>
+<div class="absolute bottom-4 left-4 z-20 bg-primary p-2 text-white shadow-lg">
+<span class="material-symbols-outlined !text-3xl">engineering</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h4 class="mb-3 text-2xl font-bold uppercase text-white">Core Drilling</h4>
+<p class="mb-6 text-gray-400 leading-relaxed">Precision circular cuts up to 1000mm diameter for plumbing, electrical, and HVAC installations.</p>
+<a class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-white transition-colors" href="#">
+                                Technical Specs <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group relative flex flex-col overflow-hidden rounded bg-surface-dark border-2 border-white/5 transition-all hover:border-primary hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10 opacity-90"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Construction worker using a large wall saw to cut through concrete wall" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHiYKTo_1TTRS_Dln22dgXJbLPaXu6-cHM10xmBhwFipDp-2vi5jo5bsZAXwvdDQUyqXzLqGXqj-E-VtUGIVJvNqNliOBihGmKSbxk_EHgven-UlQkp4-qWDXr99_VioYr7nCbZNAKoF0zac0TTWL-s8fQUiAoLKr9HPltFex5iFl5g_IjRpn2jmpjYhhdraTfm6zP_TpXmq14WA7fGRWPEADl79Ka9LsaKGfeaTgQMuKetqpynFAFZaZTi1Dd2EG1SE6XhO000_A')"></div>
+<div class="absolute bottom-4 left-4 z-20 bg-surface-darker border border-gray-700 p-2 text-white shadow-lg group-hover:bg-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined !text-3xl">architecture</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h4 class="mb-3 text-2xl font-bold uppercase text-white">Wall Sawing</h4>
+<p class="mb-6 text-gray-400 leading-relaxed">Track-mounted systems for precise openings in vertical or horizontal surfaces.</p>
+<a class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-white transition-colors" href="#">
+                                Technical Specs <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group relative flex flex-col overflow-hidden rounded bg-surface-dark border-2 border-white/5 transition-all hover:border-primary hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10 opacity-90"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Heavy duty wire saw cutting through a large concrete bridge pillar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHlhZPWU2x-tZEGU9Pc5ZbtGm4XGkDWusmRgRqpklrxPHba0w1H939tsWAHosqu4vWzS3fcWiH_buPHA2xIVbs2mcIOBdNzn2boR-JqFVDRQuGE0TAn0gewVkU3NdP9Q9dSyGgVy1nPn1TUdSwRXX9K2Lj17yXKJB1-7ukipCEm-wy4SpX5qs_tlY_jbJABP23yzRZ8KdErjlLzanqYmnUDLTzdWw-UGtsbs0ZDaQEp5oxylcOFfE3EQmp5Z_OlM2FHx6nyQ9Cjho')"></div>
+<div class="absolute bottom-4 left-4 z-20 bg-surface-darker border border-gray-700 p-2 text-white shadow-lg group-hover:bg-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined !text-3xl">content_cut</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h4 class="mb-3 text-2xl font-bold uppercase text-white">Wire Sawing</h4>
+<p class="mb-6 text-gray-400 leading-relaxed">Unlimited depth cutting for massive structures, bridges, and foundations.</p>
+<a class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-white transition-colors" href="#">
+                                Technical Specs <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group relative flex flex-col overflow-hidden rounded bg-surface-dark border-2 border-white/5 transition-all hover:border-primary hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10 opacity-90"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Chemical anchor bolts installed in concrete surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYW0s8sdHeaf6jwZYjTo173I0o6uBl50UE2sbikUBMbZKeT0h82WGmJaXKkbjD7AtGmOWNN60Tsx_E9ihtHL_A39p6-5YdU9rRPUVayaY291TGQMiOtuk9whFxYePp8O7MTWFmsPzg0khFKdx91Pf8XWOICrm6NsFshVaBUGN_0NA1jq4zIzGdJeKZ6qpqyV-7xbiiXC9M1KhHnN_QbO2fil55w0Pu-fezzxZRDmhgImMz57SthfKbkXjfJR58HhAQ9-i7aS0OJTE')"></div>
+<div class="absolute bottom-4 left-4 z-20 bg-surface-darker border border-gray-700 p-2 text-white shadow-lg group-hover:bg-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined !text-3xl">anchor</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h4 class="mb-3 text-2xl font-bold uppercase text-white">Chemical Anchoring</h4>
+<p class="mb-6 text-gray-400 leading-relaxed">High-load injection systems for structural reinforcement and retrofitting.</p>
+<a class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-white transition-colors" href="#">
+                                Technical Specs <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="group relative flex flex-col overflow-hidden rounded bg-surface-dark border-2 border-white/5 transition-all hover:border-primary hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark to-transparent z-10 opacity-90"></div>
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="Worker using a handheld concrete grinder on a floor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIo6KdRn6PG4mG29W3ZcNPMprOvKgY2BUKboGtp1AfC9kWuQ8CQ3s0FV-dn_se2_tkeswzy72BkHPT64pnZ1npxDEIKW3tIK7CUjFem35aXzZn0zzGW9hG4MEvRBMzNAZkzR9sLchrUq_s_XM8b0Dn9a_h4lW21xZ-wsy4fuSFyN_nJisbgrpxdqD0QtzJbY7dz3nmOH9T_7VihPW-xNPhu9wkJU8MskGDvzWzdj_lbKy-IjQrXfJsQPOf19jmJlXpVaZGG2CfucM')"></div>
+<div class="absolute bottom-4 left-4 z-20 bg-surface-darker border border-gray-700 p-2 text-white shadow-lg group-hover:bg-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined !text-3xl">handyman</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h4 class="mb-3 text-2xl font-bold uppercase text-white">Controlled Demolition</h4>
+<p class="mb-6 text-gray-400 leading-relaxed">Robotic demolition services for sensitive environments requiring low vibration.</p>
+<a class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-white transition-colors" href="#">
+                                Technical Specs <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Call to Action Card -->
+<div class="relative flex flex-col items-center justify-center rounded bg-primary p-8 text-center overflow-hidden">
+<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+<h4 class="relative z-10 mb-4 text-3xl font-black uppercase text-white">Need a Custom Solution?</h4>
+<p class="relative z-10 mb-8 text-white/90">Our engineers are ready to assess your project requirements.</p>
+<button class="relative z-10 w-full rounded bg-white px-6 py-3 text-sm font-bold uppercase tracking-wider text-primary hover:bg-gray-100 shadow-xl transition-colors">
+                            Contact Engineering
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial / Trust Section -->
+<section class="bg-surface-darker py-24 border-t border-white/5">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="mb-8 inline-flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">format_quote</span>
+<span class="text-sm font-bold uppercase tracking-widest">Client Feedback</span>
+</div>
+<h3 class="text-3xl md:text-4xl font-black uppercase text-white mb-8 leading-tight">
+                            "Antalya Karotcu delivered exceptional precision on the Akdeniz University expansion. Their safety protocols are unmatched."
+                        </h3>
+<div class="flex items-center gap-4">
+<div class="h-14 w-14 rounded bg-gray-700 flex items-center justify-center text-gray-400">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="text-white font-bold text-lg">Mehmet Yılmaz</p>
+<p class="text-primary text-sm uppercase tracking-wider">Site Manager, Yapi Construction</p>
+</div>
+</div>
+</div>
+<div class="bg-background-dark p-8 rounded border border-white/5 relative">
+<!-- Decorative Corner Marks -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
+<h4 class="text-white text-lg font-bold uppercase mb-6 text-center border-b border-white/10 pb-4">Trusted By Industry Leaders</h4>
+<div class="grid grid-cols-2 gap-8 opacity-60">
+<div class="h-12 bg-white/10 rounded flex items-center justify-center text-white/50 font-bold uppercase">Limak</div>
+<div class="h-12 bg-white/10 rounded flex items-center justify-center text-white/50 font-bold uppercase">Rixos</div>
+<div class="h-12 bg-white/10 rounded flex items-center justify-center text-white/50 font-bold uppercase">Tav</div>
+<div class="h-12 bg-white/10 rounded flex items-center justify-center text-white/50 font-bold uppercase">Ic Holding</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary py-16 relative overflow-hidden">
+<!-- Abstract background pattern -->
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMWgydjJIMUMxeiIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-20"></div>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h2 class="text-3xl md:text-4xl font-black uppercase text-white mb-2">Ready to break ground?</h2>
+<p class="text-white/80 text-lg font-medium">Get a detailed quote for your project within 24 hours.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-surface-darker text-white hover:bg-black px-8 py-4 rounded font-bold uppercase text-sm tracking-wider shadow-lg transition-transform transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                        Request Quote
+                    </button>
+<button class="bg-white/20 text-white hover:bg-white/30 px-8 py-4 rounded font-bold uppercase text-sm tracking-wider backdrop-blur-sm transition-colors w-full sm:w-auto text-center">
+                        Call Now
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#111] border-t border-white/10 pt-20 pb-10">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center bg-primary rounded text-white">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-black uppercase tracking-widest leading-none text-white">Antalya</span>
+<span class="text-sm font-bold uppercase tracking-widest leading-none text-primary">Karotcu</span>
+</div>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed">
+                            Premier concrete cutting and drilling services in Antalya. Certified precision, industrial strength.
+                        </p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<!-- Links -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-2 inline-block">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">About Us</a></li>
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Our Fleet</a></li>
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Projects</a></li>
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Careers</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-2 inline-block">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Core Drilling</a></li>
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Wall Sawing</a></li>
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Wire Sawing</a></li>
+<li><a class="text-gray-400 hover:text-primary transition-colors text-sm" href="#">Demolition</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-2 inline-block">Contact</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-gray-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+<span>Organize Sanayi Bölgesi<br/>1. Cadde No:12<br/>Antalya, Turkey</span>
+</li>
+<li class="flex items-center gap-3 text-gray-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>+90 555 123 4567</span>
+</li>
+<li class="flex items-center gap-3 text-gray-400 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>info@antalyakarotcu.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-600 text-xs">© 2023 Antalya Karotcu. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-600 hover:text-gray-400 text-xs uppercase" href="#">Privacy Policy</a>
+<a class="text-gray-600 hover:text-gray-400 text-xs uppercase" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
