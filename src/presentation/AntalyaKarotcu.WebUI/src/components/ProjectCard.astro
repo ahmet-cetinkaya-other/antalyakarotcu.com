@@ -1,0 +1,59 @@
+---
+interface Spec {
+  label: string;
+  value: string;
+  isPrimary?: boolean;
+}
+
+interface Props {
+  title: string;
+  category: string;
+  image: string;
+  specs: Spec[];
+  href?: string;
+}
+
+const { title, category, image, specs, href = "#" } = Astro.props;
+---
+
+<article class="break-inside-avoid relative group bg-surface-dark border border-white/10 hover:border-primary transition-colors duration-300">
+  <!-- Corner Decorations -->
+  <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-primary z-20"></div>
+  <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-primary z-20"></div>
+
+  <div class="relative overflow-hidden aspect-[4/3]">
+    <img 
+      alt={title} 
+      class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" 
+      src={image}
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-80"></div>
+    <div class="absolute bottom-4 left-4">
+      <div class="bg-primary text-white text-[10px] font-bold uppercase px-2 py-1 mb-2 inline-block">{category}</div>
+      <h3 class="text-xl font-bold text-white uppercase leading-tight" set:html={title.replace(/\n/g, '<br/>')}></h3>
+    </div>
+  </div>
+  <div class="p-6 bg-surface-dark border-t border-white/10 blueprint-grid-small">
+    <div class="grid grid-cols-2 gap-y-4 gap-x-2">
+      {specs.map((spec) => (
+        <div class="flex flex-col">
+          <span class="text-[10px] font-mono text-gray-500 uppercase">{spec.label}</span>
+          <span class={`text-sm font-bold uppercase ${spec.isPrimary ? 'text-primary' : 'text-white'}`}>{spec.value}</span>
+        </div>
+      ))}
+    </div>
+    <div class="mt-4 flex justify-end">
+      <button class="text-primary hover:text-white text-xs font-bold uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">
+        View Blueprint <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+      </button>
+    </div>
+  </div>
+</article>
+
+<style>
+  .blueprint-grid-small {
+      background-size: 10px 10px;
+      background-image: linear-gradient(to right, rgba(255, 102, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 102, 0, 0.05) 1px, transparent 1px);
+  }
+</style>
