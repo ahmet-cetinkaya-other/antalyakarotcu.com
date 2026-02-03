@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
+
+// Sort services by title or priority if needed, for now just default order
+// services.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<BaseLayout title="Industrial Services | Antalya Karotcu" description="Professional concrete cutting, drilling, and anchoring services in Antalya. High-precision solutions for construction projects.">
+  <div class="container mx-auto px-4 py-16 md:py-24">
+    <!-- Header Section -->
+    <div class="mb-16 md:mb-24 max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white mb-6">
+        Industrial <span class="text-primary">Services</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 max-w-2xl leading-relaxed">
+        State-of-the-art diamond cutting technology meets decades of engineering expertise. We deliver precision where others see obstacles.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {
+        services.map((service) => (
+          <ServiceCard
+            title={service.data.title}
+            description={service.data.description}
+            image={service.data.image || 'https://placehold.co/600x400/1a1a1a/FFF?text=Service'}
+            icon={service.data.icon}
+            href={`/services/${service.id}`}
+          />
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
