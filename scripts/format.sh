@@ -18,12 +18,13 @@ Format project files using acore-scripts.
 
 Arguments:
   TYPE                 File type to format (default: all)
-                       Options: all, shell, markdown, json, yaml
+                       Options: all, shell, markdown, json, yaml, webui
 
 Examples:
   ./format.sh                     Format all files
   ./format.sh shell               Format shell scripts only
   ./format.sh json                Format JSON files only
+  ./format.sh webui               Format WebUI (Astro) project files
 
 EOF
 }
@@ -39,6 +40,7 @@ main() {
       bash "$ACORE_DIR/format_md.sh"
       bash "$ACORE_DIR/format_json.sh"
       bash "$ACORE_DIR/format_yaml.sh"
+      bash "$PROJECT_ROOT/src/presentation/AntalyaKarotcu.WebUI/scripts/format.sh"
       ;;
     shell)
       bash "$ACORE_DIR/format_sh.sh"
@@ -51,6 +53,9 @@ main() {
       ;;
     yaml)
       bash "$ACORE_DIR/format_yaml.sh"
+      ;;
+    webui)
+      bash "$PROJECT_ROOT/src/presentation/AntalyaKarotcu.WebUI/scripts/format.sh"
       ;;
     -h | --help)
       show_usage

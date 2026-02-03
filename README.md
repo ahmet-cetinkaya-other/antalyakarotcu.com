@@ -79,12 +79,14 @@ The project includes a formatting script at `scripts/format.sh` that uses acore-
 ```
 
 **Formatters used:**
+
 - Shell scripts: shfmt
 - Markdown/JSON/YAML: Prettier
 
 ### acore-scripts
 
 Project uses `packages/acore-scripts` as a git submodule providing reusable utilities:
+
 - Logger functions for colored console output
 - Formatting scripts for various file types
 - Changelog generation
