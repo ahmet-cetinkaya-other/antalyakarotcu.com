@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Contact Us - Antalya Karotcu";
+const description = "Contact Antalya Karotcu for 24/7 industrial concrete cutting, drilling, and demolition services. Get a quote today.";
+---
+
+<BaseLayout title={title} description={description}>
+    <style>
+        .map-container {
+            filter: grayscale(100%) invert(90%) contrast(120%);
+        }
+    </style>
+
+    <section class="relative h-[400px] w-full bg-surface-darker overflow-hidden border-b-4 border-white/10">
+        <div class="absolute inset-0 z-0">
+            <iframe class="map-container opacity-60" frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=Antalya%20Organize%20Sanayi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%">
+            </iframe>
+            <div class="absolute inset-0 bg-background-concrete/30 pointer-events-none mix-blend-multiply"></div>
+            <div class="absolute inset-0 z-10 industrial-grid pointer-events-none opacity-40"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+            <div class="relative">
+                <span class="material-symbols-outlined text-primary text-6xl drop-shadow-[0_0_15px_rgba(255,103,0,0.8)] animate-bounce">location_on</span>
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-2 bg-black/50 blur-sm rounded-full"></div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-concrete to-transparent pt-20 pb-8 z-20">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h1 class="text-6xl md:text-8xl font-display font-bold uppercase text-white tracking-tighter drop-shadow-lg">
+                    Contact <span class="text-primary">HQ</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex-grow py-16 lg:py-24 relative overflow-hidden bg-background-concrete">
+        <div class="absolute right-0 top-0 h-full w-1/3 bg-black/10 skew-x-12 translate-x-32 pointer-events-none"></div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                <div class="lg:col-span-5 flex flex-col gap-8">
+                    <div>
+                        <div class="mb-2 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1">
+                            <span class="material-symbols-outlined text-primary text-sm">engineering</span>
+                            <span class="text-sm font-display font-bold uppercase tracking-widest text-primary">24/7 Support</span>
+                        </div>
+                        <h2 class="text-4xl font-display font-bold uppercase text-white mb-6">Connect With Engineering</h2>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                            For urgent industrial concrete cutting, drilling operations, or project estimation, reach our technical team directly.
+                        </p>
+                    </div>
+                    <div class="group bg-surface-dark border-[3px] border-white/10 hover:border-primary transition-colors p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"></div>
+                        <div class="flex items-start gap-5 relative z-10">
+                            <div class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
+                                <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors">Direct Line</h3>
+                                <p class="text-2xl font-bold text-white tracking-wide font-display">+90 555 123 4567</p>
+                                <p class="text-sm text-gray-400 mt-1 uppercase tracking-wider">Available 24/7 for Emergencies</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group bg-surface-dark border-[3px] border-white/10 hover:border-primary transition-colors p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"></div>
+                        <div class="flex items-start gap-5 relative z-10">
+                            <div class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
+                                <span class="material-symbols-outlined text-3xl">chat</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors">WhatsApp Support</h3>
+                                <p class="text-2xl font-bold text-white tracking-wide font-display">+90 555 987 6543</p>
+                                <p class="text-sm text-gray-400 mt-1 uppercase tracking-wider">Instant Project Assessment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group bg-surface-dark border-[3px] border-white/10 hover:border-primary transition-colors p-6 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"></div>
+                        <div class="flex items-start gap-5 relative z-10">
+                            <div class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
+                                <span class="material-symbols-outlined text-3xl">factory</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors">Headquarters</h3>
+                                <p class="text-lg font-bold text-white leading-tight font-display tracking-wide">
+                                    Antalya Organize Sanayi Bölgesi<br/>
+                                    1. Cadde No:12<br/>
+                                    Antalya, Turkey
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-6">
+                        <div class="h-12 w-12 flex items-center justify-center bg-white/5 rounded-full border border-white/10">
+                            <span class="material-symbols-outlined text-primary">public</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-display font-bold uppercase text-white">Nationwide Coverage</h4>
+                            <p class="text-sm text-gray-400">Serving all 81 provinces in Turkey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="bg-surface-darker p-8 md:p-10 border-t-4 border-primary shadow-2xl relative">
+                        <div class="absolute top-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
+                        <div class="absolute top-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
+                        <div class="absolute bottom-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
+                        <div class="absolute bottom-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
+                        <h2 class="text-4xl md:text-5xl font-display font-bold uppercase text-white mb-2">Get a Quote</h2>
+                        <p class="text-gray-400 mb-8 uppercase tracking-widest text-sm font-bold border-b border-gray-700 pb-4 inline-block">Technical Specifications Required</p>
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-xl font-display font-bold uppercase text-gray-400" for="name">Full Name</label>
+                                <input class="w-full bg-input-charcoal border-none text-white placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="name" placeholder="ENTER NAME" type="text"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-xl font-display font-bold uppercase text-gray-400" for="company">Company</label>
+                                <input class="w-full bg-input-charcoal border-none text-white placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="company" placeholder="ENTER COMPANY" type="text"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-xl font-display font-bold uppercase text-gray-400" for="email">Email Address</label>
+                                <input class="w-full bg-input-charcoal border-none text-white placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="email" placeholder="EMAIL@DOMAIN.COM" type="email"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-xl font-display font-bold uppercase text-gray-400" for="phone">Phone Number</label>
+                                <input class="w-full bg-input-charcoal border-none text-white placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="phone" placeholder="+90 XXX XXX XX XX" type="tel"/>
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="block text-xl font-display font-bold uppercase text-gray-400" for="service">Service Required</label>
+                                <select class="w-full bg-input-charcoal border-none text-white focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm uppercase" id="service">
+                                    <option>Core Drilling (Diamond)</option>
+                                    <option>Wall Sawing</option>
+                                    <option>Wire Sawing</option>
+                                    <option>Chemical Anchoring</option>
+                                    <option>Controlled Demolition</option>
+                                    <option>Other / Consultation</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="block text-xl font-display font-bold uppercase text-gray-400" for="details">Project Details</label>
+                                <textarea class="w-full bg-input-charcoal border-none text-white placeholder-gray-500 focus:ring-2 focus:ring-primary p-4 font-medium rounded-sm" id="details" placeholder="Describe depth, diameter, concrete type, location specifics..." rows="4"></textarea>
+                            </div>
+                            <div class="md:col-span-2 pt-4">
+                                <button class="w-full bg-primary hover:bg-orange-600 text-white font-display font-bold text-3xl uppercase tracking-wider py-5 rounded-none shadow-[0_6px_0_rgb(166,55,0)] active:shadow-none active:translate-y-[6px] transition-all flex items-center justify-center gap-3 group" type="submit">
+                                    <span>Submit Request</span>
+                                    <span class="material-symbols-outlined text-4xl group-hover:translate-x-1 transition-transform">send</span>
+                                </button>
+                                <p class="text-center text-gray-500 text-xs mt-4 uppercase tracking-wider">By submitting, you agree to our processing of technical data.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

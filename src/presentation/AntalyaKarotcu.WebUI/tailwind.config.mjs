@@ -9,6 +9,8 @@ export default {
         "background-dark": "#1a1a1a",
         "surface-dark": "#262626",
         "surface-darker": "#111111",
+        "background-concrete": "#2C3E50",
+        "input-charcoal": "#374151",
       },
       fontFamily: {
         "display": ["Space Grotesk", "sans-serif"]

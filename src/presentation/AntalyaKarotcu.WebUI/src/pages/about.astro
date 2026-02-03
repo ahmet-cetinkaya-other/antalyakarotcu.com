@@ -1,63 +1,210 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "About Us - Antalya Karotcu";
+const description = "Founded in 1995, Antalya Karotcu defines the standard for industrial concrete cutting and structural modification across Turkey.";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<BaseLayout title={title} description={description}>
+    <section class="relative h-[70vh] w-full overflow-hidden bg-surface-darker flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590059530490-674391c49a04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-50 mix-blend-overlay" data-alt="Massive concrete bridge structure under construction dark moody"></div>
+            <div class="absolute inset-0 opacity-20 z-10 industrial-grid"></div>
+        </div>
+        <div class="relative z-20 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl">
+                <div class="mb-6 inline-flex items-center gap-2 border-l-4 border-primary pl-4">
+                    <span class="text-sm font-bold uppercase tracking-[0.2em] text-primary">Est. 1995</span>
+                </div>
+                <h1 class="mb-8 text-6xl font-black uppercase leading-[0.85] tracking-tighter text-white sm:text-7xl md:text-9xl">
+                    Founded in<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Precision</span>
+                </h1>
+                <p class="max-w-xl text-lg font-medium leading-relaxed text-gray-300 md:text-xl border-t border-white/10 pt-6">
+                    For nearly three decades, we have defined the standard for industrial concrete cutting and structural modification across the region.
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 h-2 w-full bg-[repeating-linear-gradient(45deg,#ff6600,#ff6600_20px,#1a1a1a_20px,#1a1a1a_40px)] opacity-80"></div>
+    </section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+    <div class="border-y border-white/10 bg-surface-dark relative z-30">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-12 md:grid-cols-4">
+                <div class="flex flex-col gap-2">
+                    <span class="text-6xl font-black text-white tracking-tighter">28<span class="text-primary text-4xl align-top">+</span></span>
+                    <span class="h-1 w-12 bg-primary"></span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Years of Excellence</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-6xl font-black text-white tracking-tighter">5k<span class="text-primary text-4xl align-top">+</span></span>
+                    <span class="h-1 w-12 bg-primary"></span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Projects Delivered</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-6xl font-black text-white tracking-tighter">100<span class="text-primary text-4xl align-top">%</span></span>
+                    <span class="h-1 w-12 bg-primary"></span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Safety Record</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-6xl font-black text-white tracking-tighter">81</span>
+                    <span class="h-1 w-12 bg-primary"></span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Cities Served</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <section class="bg-background-dark py-24 relative overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/3 sticky top-24 self-start">
+                    <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">Our History</h2>
+                    <h3 class="text-4xl md:text-5xl font-black uppercase text-white mb-6 leading-none">Building a<br/>Legacy</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        From a single core drill unit in Antalya to a nationwide fleet of heavy industrial machinery. Our journey is paved with concrete solutions.
+                    </p>
+                    <div class="h-64 w-full rounded overflow-hidden relative border-2 border-white/5">
+                        <img alt="Vintage construction site black and white" class="object-cover w-full h-full opacity-60 grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLjV4hHt_vht3tpYfeSp9KUSc7zcw6rvlx05puMiin_AyHQ5ka5_96dir8es5sIipsukUP6d1mZEgAgzAd5jaSUMqt73tcHIAxKo-5zeJgHMPcHHFXCP9U0SCCBjA-GEq9HeO8bKuqInzUg2iPoQ5kubFzW_PCIMNCqNPh8iK5ppNirgXyQDlxnKeDxC_vilIDDa2hQ4Glabo56pegmwTTmxQ400ch2gysbolfKUAE9DDhzBp8EELW83qHvbPmKSbRHDhgbVsyu7k3"/>
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 relative pl-8 md:pl-16 border-l border-white/10 space-y-20">
+                    <div class="relative group">
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-primary shadow-[0_0_15px_rgba(255,102,0,0.5)] group-hover:scale-125 transition-transform"></div>
+                        <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">1995</span>
+                        <div class="relative z-10">
+                            <span class="text-primary font-bold text-lg mb-2 block">The Beginning</span>
+                            <h4 class="text-3xl font-bold text-white uppercase mb-4">Founded in Antalya</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Antalya Karotcu was established to meet the growing demand for precise concrete modification in the region's booming tourism construction sector. Starting with just two operators, we set a new standard for cleanliness and accuracy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
+                        <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">2008</span>
+                        <div class="relative z-10">
+                            <span class="text-primary font-bold text-lg mb-2 block">Expansion</span>
+                            <h4 class="text-3xl font-bold text-white uppercase mb-4">Heavy Machinery Fleet</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                We acquired our first remote-controlled demolition robots and heavy-duty wire saws, allowing us to take on massive infrastructure projects including bridges and dams across the Mediterranean region.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
+                        <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">2015</span>
+                        <div class="relative z-10">
+                            <span class="text-primary font-bold text-lg mb-2 block">Innovation</span>
+                            <h4 class="text-3xl font-bold text-white uppercase mb-4">Technical Certification</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                Achieved ISO 9001:2015 certification and implemented industry-leading safety protocols. Our team grew to over 50 certified specialists, handling complex chemical anchoring and seismic retrofitting projects.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
+                        <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">2023</span>
+                        <div class="relative z-10">
+                            <span class="text-primary font-bold text-lg mb-2 block">Today</span>
+                            <h4 class="text-3xl font-bold text-white uppercase mb-4">National Leadership</h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                With over 5,000 successful projects, we are now the preferred partner for Turkey's largest construction firms. Our fleet is fully modernized with the latest diamond cutting technology from Europe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+    <section class="bg-surface-darker py-24 border-t border-white/5 relative">
+        <div class="absolute right-0 top-0 h-full w-1/2 bg-[url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-luminosity"></div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">Our Foundation</h2>
+                <h3 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">Core Values</h3>
+                <p class="text-gray-400 text-lg">
+                    We don't just cut concrete; we build trust. These three pillars support every operation we undertake.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-background-dark border border-white/10 p-10 hover:border-primary transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-9xl text-white">health_and_safety</span>
+                    </div>
+                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-darker border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
+                        <span class="material-symbols-outlined !text-4xl">health_and_safety</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white uppercase mb-4">Safety First</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        We operate in high-risk environments where there is no room for error. Our zero-incident culture is backed by rigorous training, superior PPE, and strict site protocols.
+                    </p>
+                </div>
+                <div class="bg-background-dark border border-white/10 p-10 hover:border-primary transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-9xl text-white">precision_manufacturing</span>
+                    </div>
+                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-darker border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
+                        <span class="material-symbols-outlined !text-4xl">precision_manufacturing</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white uppercase mb-4">Technical Accuracy</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Structural integrity demands millimetric precision. We utilize advanced diamond cutting tech and laser guidance to ensure every cut matches the blueprint exactly.
+                    </p>
+                </div>
+                <div class="bg-background-dark border border-white/10 p-10 hover:border-primary transition-colors group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-9xl text-white">local_shipping</span>
+                    </div>
+                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-darker border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
+                        <span class="material-symbols-outlined !text-4xl">verified_user</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white uppercase mb-4">Nationwide Reliability</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Time is money in construction. We pride ourselves on rapid mobilization and meeting strict deadlines, whether the project is in Antalya or across the country.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+    <section class="bg-background-dark py-20 border-t border-white/5">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="w-full md:w-1/2">
+                <img alt="Team operating wall saw" class="rounded border-2 border-white/10 grayscale hover:grayscale-0 transition-all duration-500 w-full shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHiYKTo_1TTRS_Dln22dgXJbLPaXu6-cHM10xmBhwFipDp-2vi5jo5bsZAXwvdDQUyqXzLqGXqj-E-VtUGIVJvNqNliOBihGmKSbxk_EHgven-UlQkp4-qWDXr99_VioYr7nCbZNAKoF0zac0TTWL-s8fQUiAoLKr9HPltFex5iFl5g_IjRpn2jmpjYhhdraTfm6zP_TpXmq14WA7fGRWPEADl79Ka9LsaKGfeaTgQMuKetqpynFAFZaZTi1Dd2EG1SE6XhO000_A"/>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h3 class="text-3xl font-black uppercase text-white mb-6">Master Craftsmen</h3>
+                <p class="text-gray-400 text-lg mb-8">
+                    Our operators are not just laborers; they are certified technicians. Every team member undergoes 200+ hours of specialized equipment training before stepping onto a job site.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-surface-darker px-4 py-2 rounded border border-white/10 text-gray-300 text-sm font-bold uppercase tracking-wide">ISG Certified</div>
+                    <div class="bg-surface-darker px-4 py-2 rounded border border-white/10 text-gray-300 text-sm font-bold uppercase tracking-wide">Hilti Trained</div>
+                    <div class="bg-surface-darker px-4 py-2 rounded border border-white/10 text-gray-300 text-sm font-bold uppercase tracking-wide">First Aid Qualified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMWgydjJIMUMxeiIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-20"></div>
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-black uppercase text-white mb-2">Work with the experts</h2>
+                <p class="text-white/80 text-lg font-medium">Discuss your structural requirements with our engineers today.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                <button class="bg-surface-darker text-white hover:bg-black px-8 py-4 rounded font-bold uppercase text-sm tracking-wider shadow-lg transition-transform transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                    Request Quote
+                </button>
+                <button class="bg-white/20 text-white hover:bg-white/30 px-8 py-4 rounded font-bold uppercase text-sm tracking-wider backdrop-blur-sm transition-colors w-full sm:w-auto text-center">
+                    Call Now
+                </button>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
