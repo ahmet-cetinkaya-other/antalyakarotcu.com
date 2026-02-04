@@ -118,9 +118,9 @@ const services = await getCollection('services');
                         </>
                       )}
                     </div>
-                    <button class="flex items-center gap-2 text-primary font-bold uppercase text-sm tracking-wider group-hover:translate-x-2 transition-transform">
-                      Request Quote <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                    </button>
+                    <a href={`/hizmetler/${service.id}`} class="flex items-center gap-2 text-primary font-bold uppercase text-sm tracking-wider group-hover:translate-x-2 transition-transform">
+                      Hizmet Detayı <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </a>
                   </div>
                 </div>
               </div>

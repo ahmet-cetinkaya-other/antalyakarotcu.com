@@ -93,9 +93,9 @@ const description = "Professional concrete drilling, cutting, and construction s
           <ServiceCard
             title={service.data.title}
             description={service.data.description}
-            image={service.data.image}
+            image={service.data.image ?? 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'}
             icon={service.data.icon}
-            href={`/services/${service.slug}`}
+            href={`/hizmetler/${service.id}`}
           />
         ))}
       </div>

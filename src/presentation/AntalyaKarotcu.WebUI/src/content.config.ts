@@ -23,6 +23,7 @@ const services = defineCollection({
     description: z.string(),
     icon: z.string(), // Material Symbol name
     image: z.string().optional(),
+    features: z.array(z.string()).optional(),
     technicalSpecs: z
       .array(
         z.object({

@@ -8,14 +8,18 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://antalyakarotcu.com",
   integrations: [mdx(), sitemap()],
+  redirects: {
+    "/services": "/hizmetler",
+    "/about": "/hakkimizda",
+    "/contact": "/iletisim",
+    "/gallery": "/galeri",
+  },
 
   vite: {
     plugins: [
-      tailwindcss({
-        darkMode: "class",
-      }),
+      tailwindcss(),
     ],
   },
 });
