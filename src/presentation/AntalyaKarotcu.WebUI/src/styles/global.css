@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 @theme {
+  /* Fonts */
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  /* Color Palette */
+  --color-primary: #ff6600;
+  --color-background-light: #f8f7f5;
+  --color-background-dark: #1a1a1a;
+  --color-surface-dark: #262626;
+  --color-surface-darker: #111111;
 }
 
 /* Utility classes from mockup */

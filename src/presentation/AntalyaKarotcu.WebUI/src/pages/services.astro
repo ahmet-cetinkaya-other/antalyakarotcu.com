@@ -1,39 +1,198 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
 import { getCollection } from 'astro:content';
 
 const services = await getCollection('services');
-
-// Sort services by title or priority if needed, for now just default order
-// services.sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<BaseLayout title="Industrial Services | Antalya Karotcu" description="Professional concrete cutting, drilling, and anchoring services in Antalya. High-precision solutions for construction projects.">
-  <div class="container mx-auto px-4 py-16 md:py-24">
-    <!-- Header Section -->
-    <div class="mb-16 md:mb-24 max-w-4xl">
-      <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white mb-6">
-        Industrial <span class="text-primary">Services</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-400 max-w-2xl leading-relaxed">
-        State-of-the-art diamond cutting technology meets decades of engineering expertise. We deliver precision where others see obstacles.
-      </p>
+<BaseLayout title="Services Catalog | Antalya Karotcu" description="Professional concrete cutting, drilling, and controlled demolition solutions engineered for Antalya's heavy industry and infrastructure projects.">
+  <!-- Header Section -->
+  <section class="bg-surface-dark border-b border-white/10 py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+        <div>
+          <div class="mb-4 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1">
+            <span class="material-symbols-outlined text-primary text-sm">engineering</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-primary">Comprehensive Catalog</span>
+          </div>
+          <h1 class="text-4xl font-black uppercase tracking-tighter text-white sm:text-6xl">
+            Industrial <span class="text-primary">Services</span>
+          </h1>
+        </div>
+        <p class="max-w-xl text-gray-400 text-lg leading-relaxed font-body">
+          Specialized concrete cutting, drilling, and controlled demolition solutions engineered for Antalya's heavy industry and infrastructure projects.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-      {
-        services.map((service) => (
-          <ServiceCard
-            title={service.data.title}
-            description={service.data.description}
-            image={service.data.image || 'https://placehold.co/600x400/1a1a1a/FFF?text=Service'}
-            icon={service.data.icon}
-            href={`/services/${service.id}`}
-          />
-        ))
-      }
+  <!-- Services List -->
+  <main class="flex-grow bg-background-dark py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+      {services.map((service, index) => {
+        const isEven = index % 2 === 0;
+        const imageClasses = `lg:col-span-5 ${isEven ? '' : 'lg:order-2'}`;
+        const contentClasses = `lg:col-span-7 ${isEven ? '' : 'lg:order-1'}`;
+        
+        return (
+          <article class="group relative overflow-hidden bg-surface-dark border border-white/10 rounded-sm hover:border-primary/50 transition-colors">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+              {/* Image Section - 5 columns */}
+              <div class={`${imageClasses} relative h-64 lg:h-auto overflow-hidden`}>
+                <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-surface-dark/80 to-transparent z-10 lg:bg-gradient-to-t"></div>
+                <img
+                  alt={service.data.title}
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  src={service.data.image || 'https://placehold.co/600x400/1a1a1a/FFF?text=Service'}
+                />
+                {index === 0 && (
+                  <div class="absolute top-4 left-4 z-20">
+                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest">Most Requested</span>
+                  </div>
+                )}
+              </div>
+
+              {/* Content Section - 7 columns */}
+              <div class={`${contentClasses} p-8 flex flex-col justify-between relative`}>
+                {/* Striped Background Pattern - matches mockup */}
+                <div class="absolute inset-0 opacity-5 pointer-events-none" style={{
+                  backgroundImage: 'repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 10px, transparent 10px, transparent 20px)'
+                }}></div>
+
+                <div class="relative z-10">
+                  <div class="mb-6">
+                    <div class="flex items-center gap-3 mb-4">
+                      <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 200;">{service.data.icon}</span>
+                      <h2 class="text-3xl font-black uppercase text-white tracking-tight">{service.data.title}</h2>
+                    </div>
+                    <p class="text-gray-400 font-body mb-6 leading-relaxed">{service.data.description}</p>
+                  </div>
+
+                  {service.data.technicalSpecs && (
+                    <div class="bg-surface-darker/50 border border-white/5 rounded p-4 mb-6">
+                      <h3 class="text-xs font-bold uppercase text-gray-500 tracking-widest mb-3 border-b border-white/5 pb-2">Technical Specs</h3>
+                      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {service.data.technicalSpecs.map((spec) => (
+                          <div>
+                            <span class="block text-xs text-gray-500 uppercase">{spec.label}</span>
+                            <span class="block text-white font-bold font-mono">{spec.value}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Features based on service type */}
+                  <div class="flex items-center justify-between border-t border-white/10 pt-6">
+                    <div class="flex gap-4 text-sm text-gray-400">
+                      {index === 0 && (
+                        <>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Dust-Free</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Low Noise</span>
+                        </>
+                      )}
+                      {index === 1 && (
+                        <>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Perfect Edges</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Rapid Setup</span>
+                        </>
+                      )}
+                      {index === 2 && (
+                        <>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Any Thickness</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Complex Shapes</span>
+                        </>
+                      )}
+                      {index === 3 && (
+                        <>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> High Pull-Out</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Certified</span>
+                        </>
+                      )}
+                      {index === 4 && (
+                        <>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Fume Free</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Confined Space</span>
+                        </>
+                      )}
+                    </div>
+                    <button class="flex items-center gap-2 text-primary font-bold uppercase text-sm tracking-wider group-hover:translate-x-2 transition-transform">
+                      Request Quote <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        );
+      })}
     </div>
-  </div>
+  </main>
+
+  <!-- Standards & Protocols Section -->
+  <section class="bg-surface-darker border-t border-primary/20 py-20 relative overflow-hidden">
+    {/* Background Grid Pattern */}
+    <div class="absolute right-0 top-0 h-full w-1/3 opacity-5 pointer-events-none" style={{
+      backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
+      backgroundSize: '40px 40px'
+    }}></div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="mb-12 text-center md:text-left">
+        <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2">Standards & Compliance</h2>
+        <h3 class="text-4xl font-black uppercase text-white">Safety Protocols</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="border border-white/10 bg-surface-dark p-6 rounded relative hover:border-primary transition-colors group">
+          <div class="absolute -top-3 left-6 bg-surface-darker px-2 text-primary">
+            <span class="material-symbols-outlined">health_and_safety</span>
+          </div>
+          <h4 class="text-xl font-bold uppercase text-white mb-3 mt-2">OSHA Compliance</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Adherence to international occupational safety standards for hazardous construction environments.</p>
+        </div>
+        <div class="border border-white/10 bg-surface-dark p-6 rounded relative hover:border-primary transition-colors group">
+          <div class="absolute -top-3 left-6 bg-surface-darker px-2 text-primary">
+            <span class="material-symbols-outlined">chef_hat</span>
+          </div>
+          <h4 class="text-xl font-bold uppercase text-white mb-3 mt-2">PPE Mandate</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Strict personal protective equipment requirements for all personnel on-site, zero tolerance.</p>
+        </div>
+        <div class="border border-white/10 bg-surface-dark p-6 rounded relative hover:border-primary transition-colors group">
+          <div class="absolute -top-3 left-6 bg-surface-darker px-2 text-primary">
+            <span class="material-symbols-outlined">engineering</span>
+          </div>
+          <h4 class="text-xl font-bold uppercase text-white mb-3 mt-2">Site Assessment</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">Pre-work structural integrity analysis and hazard identification before equipment deployment.</p>
+        </div>
+        <div class="border border-white/10 bg-surface-dark p-6 rounded relative hover:border-primary transition-colors group">
+          <div class="absolute -top-3 left-6 bg-surface-darker px-2 text-primary">
+            <span class="material-symbols-outlined">verified_user</span>
+          </div>
+          <h4 class="text-xl font-bold uppercase text-white mb-3 mt-2">Operator Certified</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">All machinery operators hold current advanced certification for specific hydraulic equipment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-primary py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="absolute -right-20 -bottom-20 opacity-20 rotate-12">
+      <span class="material-symbols-outlined text-[300px] text-black">construction</span>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h2 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">Ready to Start Your Project?</h2>
+      <p class="text-white/90 text-xl font-medium max-w-2xl mx-auto mb-10">Get a detailed technical proposal and cost estimation for your concrete cutting needs within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <button class="bg-surface-darker text-white hover:bg-black px-10 py-5 rounded font-bold uppercase text-base tracking-wider shadow-2xl transition-transform transform hover:-translate-y-1 border border-black/20">
+          Get A Quote
+        </button>
+        <button class="bg-white text-primary hover:bg-gray-100 px-10 py-5 rounded font-bold uppercase text-base tracking-wider shadow-xl transition-transform transform hover:-translate-y-1">
+          Call Engineering Team
+        </button>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
