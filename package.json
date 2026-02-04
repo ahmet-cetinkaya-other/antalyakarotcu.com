@@ -1,0 +1,42 @@
+{
+  "name": "antalyakarotcu.com",
+  "version": "1.0.0",
+  "description": "Professional concrete drilling, cutting, and construction services website for Antalya Karotcu",
+  "private": true,
+  "type": "module",
+  "author": "Antalya Karotcu",
+  "license": "UNLICENSED",
+  "scripts": {
+    "format": "./scripts/format.sh",
+    "format:shell": "./scripts/format.sh shell",
+    "format:markdown": "./scripts/format.sh markdown",
+    "format:json": "./scripts/format.sh json",
+    "format:yaml": "./scripts/format.sh yaml",
+    "webui:dev": "cd src/presentation/AntalyaKarotcu.WebUI && bun dev",
+    "webui:build": "cd src/presentation/AntalyaKarotcu.WebUI && bun build",
+    "webui:preview": "cd src/presentation/AntalyaKarotcu.WebUI && bun preview"
+  },
+  "workspaces": [
+    "packages/*",
+    "src/presentation/*"
+  ],
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "shfmt": "^3.10.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "concrete-drilling",
+    "construction",
+    "antalya",
+    "turkey",
+    "karotcu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmet-cetinkaya/antalyakarotcu.com"
+  }
+}
