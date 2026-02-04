@@ -1,4 +1,5 @@
 ---
+import ThemeToggle from './ui/ThemeToggle.astro';
 ---
 <header class="sticky top-0 z-50 w-full border-b-4 border-primary bg-surface-darker/95 backdrop-blur shadow-2xl">
     <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -22,6 +23,7 @@
                 <span class="material-symbols-outlined text-primary group-hover:animate-pulse">call</span>
                 <span class="text-sm tracking-wide">+90 555 123 4567</span>
             </a>
+            <ThemeToggle />
              <button class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded font-bold uppercase text-sm tracking-wider transition-all transform hover:scale-105 shadow-[0_4px_0_rgb(166,55,0)] active:shadow-none active:translate-y-[4px]">
                          Get A Quote
                      </button>
