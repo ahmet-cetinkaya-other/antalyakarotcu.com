@@ -5,16 +5,16 @@ import Icon from '../components/ui/Icon.astro';
 import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects');
-const title = "Project Gallery | Antalya Karotcu";
-const description = "Showcase of our engineering precision in concrete cutting, drilling, and demolition projects across Antalya.";
+const title = "Proje Galerisi | Antalya Karotcu";
+const description = "Antalya genelindeki beton kesme, delme ve yıkım projelerimizdeki mühendislik hassasiyetimizin sergisi.";
 
 // Static categories for the filter bar
 const categories = [
-  { name: 'All Projects', active: true },
-  { name: 'Concrete Cutting', active: false },
-  { name: 'Core Drilling', active: false },
-  { name: 'Demolition', active: false },
-  { name: 'Anchoring', active: false },
+  { name: 'Tüm Projeler', active: true },
+  { name: 'Beton Kesme', active: false },
+  { name: 'Karot Delme', active: false },
+  { name: 'Yıkım', active: false },
+  { name: 'Ankraj', active: false },
 ];
 ---
 
@@ -31,16 +31,16 @@ const categories = [
       <div class="max-w-4xl">
         <div class="inline-flex items-center gap-2 mb-6 text-primary border border-primary/20 bg-primary/5 px-3 py-1 rounded">
           <Icon name="engineering" class="text-sm" />
-          <span class="text-xs font-bold uppercase tracking-widest">Portfolio 2024</span>
+          <span class="text-xs font-bold uppercase tracking-widest">Portföy 2024</span>
         </div>
         
         <h1 class="text-5xl md:text-7xl font-black uppercase text-text leading-[0.9] tracking-tight mb-6">
-          Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Precision</span><br />
-          Showcase
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Mühendislik</span><br />
+          Hassasiyeti Galerisi
         </h1>
         
         <p class="text-xl text-text-muted max-w-2xl font-medium">
-          A collection of our most challenging and technically demanding projects, demonstrating our capability in complex concrete manipulation.
+          Karmaşık beton işleme yeteneklerimizi gösteren, en zorlu ve teknik açıdan talepkar projelerimizin bir koleksiyonu.
         </p>
       </div>
     </div>
@@ -50,7 +50,7 @@ const categories = [
   <section class="sticky top-0 z-40 bg-bg/95 backdrop-blur-md border-b border-white/5">
     <div class="container mx-auto px-4">
       <div class="flex items-center gap-2 py-4 overflow-x-auto no-scrollbar mask-gradient">
-        <span class="text-xs font-bold uppercase text-gray-500 mr-4 shrink-0 hidden sm:block">Filter By:</span>
+        <span class="text-xs font-bold uppercase text-gray-500 mr-4 shrink-0 hidden sm:block">Filtrele:</span>
         {categories.map((cat) => (
           <button 
             class={`
@@ -85,7 +85,7 @@ const categories = [
       ) : (
          <div class="text-center py-20 border border-dashed border-border rounded-lg bg-surface/50">
            <Icon name="construction" class="text-4xl text-text-muted mb-4 mx-auto" />
-           <p class="text-text-muted font-mono uppercase">No projects found in collection</p>
+           <p class="text-text-muted font-mono uppercase">Koleksiyonda proje bulunamadı</p>
          </div>
       )}
     </div>
@@ -101,25 +101,25 @@ const categories = [
          <div class="max-w-xl">
            <div class="mb-4 text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2">
              <Icon name="location_on" />
-             <span>Service Area</span>
+             <span>Hizmet Bölgesi</span>
            </div>
-           <h2 class="text-4xl font-black uppercase text-text mb-6">Operating Across The Mediterranean Region</h2>
+           <h2 class="text-4xl font-black uppercase text-text mb-6">Akdeniz Bölgesi Genelinde Faaliyet</h2>
            <p class="text-text-muted mb-8 leading-relaxed">
-             From the heart of Antalya to the surrounding districts, our mobile fleet is ready to deploy. We handle projects in difficult terrains, high-rise constructions, and industrial zones.
+             Antalya'nın kalbinden çevre ilçelere kadar, mobil filomuz göreve hazır. Zorlu arazilerde, yüksek katlı inşaatlarda ve sanayi bölgelerinde projeler yürütüyoruz.
            </p>
            <div class="grid grid-cols-2 gap-4">
              <div class="flex items-center gap-3 p-4 bg-white/5 border border-white/10">
                <span class="text-2xl font-bold text-primary">07</span>
                <div class="flex flex-col">
-                 <span class="text-xs text-gray-500 uppercase">Primary Zone</span>
-                 <span class="text-sm font-bold text-text">Antalya Center</span>
+                 <span class="text-xs text-gray-500 uppercase">Birincil Bölge</span>
+                 <span class="text-sm font-bold text-text">Antalya Merkez</span>
                </div>
              </div>
               <div class="flex items-center gap-3 p-4 bg-white/5 border border-white/10">
                 <span class="text-2xl font-bold text-text">24</span>
                 <div class="flex flex-col">
-                 <span class="text-xs text-gray-500 uppercase">Response Time</span>
-                 <span class="text-sm font-bold text-text">Hours Max</span>
+                 <span class="text-xs text-gray-500 uppercase">Müdahale Süresi</span>
+                 <span class="text-sm font-bold text-text">Saat Maksimum</span>
                </div>
              </div>
            </div>
@@ -129,7 +129,7 @@ const categories = [
          <div class="w-full md:w-1/3">
            <div class="bg-bg border border-border p-6 relative">
              <div class="absolute -top-2 -right-2 w-4 h-4 bg-primary"></div>
-             <h3 class="text-lg font-bold text-text uppercase mb-4 border-b border-border pb-2">Active Zones</h3>
+             <h3 class="text-lg font-bold text-text uppercase mb-4 border-b border-border pb-2">Aktif Bölgeler</h3>
              <ul class="space-y-3">
                <li class="flex justify-between items-center text-sm group cursor-default">
                  <span class="text-text-muted group-hover:text-text transition-colors">Muratpaşa</span>

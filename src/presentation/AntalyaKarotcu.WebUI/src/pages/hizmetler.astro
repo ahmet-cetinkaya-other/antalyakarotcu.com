@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 const services = await getCollection('services');
 ---
 
-<BaseLayout title="Services Catalog | Antalya Karotcu" description="Professional concrete cutting, drilling, and controlled demolition solutions engineered for Antalya's heavy industry and infrastructure projects.">
+<BaseLayout title="Services Catalog | Antalya Karotcu" description="Antalya'nın ağır sanayi ve altyapı projeleri için mühendislik harikası beton kesme, delme ve kontrollü yıkım çözümleri.">
   <!-- Header Section -->
   <section class="bg-surface border-b border-border py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -14,14 +14,14 @@ const services = await getCollection('services');
         <div>
           <div class="mb-4 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1">
             <span class="material-symbols-outlined text-primary text-sm">engineering</span>
-            <span class="text-xs font-bold uppercase tracking-widest text-primary">Comprehensive Catalog</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-primary">Kapsamlı Katalog</span>
           </div>
           <h1 class="text-4xl font-black uppercase tracking-tighter text-text sm:text-6xl">
-            Industrial <span class="text-primary">Services</span>
+            Endüstriyel <span class="text-primary">Hizmetler</span>
           </h1>
         </div>
         <p class="max-w-xl text-text-muted text-lg leading-relaxed font-body">
-          Specialized concrete cutting, drilling, and controlled demolition solutions engineered for Antalya's heavy industry and infrastructure projects.
+          Antalya'nın ağır sanayi ve altyapı projeleri için özel olarak tasarlanmış beton kesme, delme ve kontrollü yıkım çözümleri.
         </p>
       </div>
     </div>
@@ -49,7 +49,7 @@ const services = await getCollection('services');
                 />
                 {index === 0 && (
                   <div class="absolute top-4 left-4 z-20">
-                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest">Most Requested</span>
+                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest">En Çok Tercih Edilen</span>
                   </div>
                 )}
               </div>
@@ -72,7 +72,7 @@ const services = await getCollection('services');
 
                   {service.data.technicalSpecs && (
                     <div class="bg-surface-strong/50 border border-white/5 rounded p-4 mb-6">
-                      <h3 class="text-xs font-bold uppercase text-gray-500 tracking-widest mb-3 border-b border-white/5 pb-2">Technical Specs</h3>
+                      <h3 class="text-xs font-bold uppercase text-gray-500 tracking-widest mb-3 border-b border-white/5 pb-2">Teknik Özellikler</h3>
                       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {service.data.technicalSpecs.map((spec) => (
                           <div>
@@ -89,32 +89,32 @@ const services = await getCollection('services');
                     <div class="flex gap-4 text-sm text-text-muted">
                       {index === 0 && (
                         <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Dust-Free</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Low Noise</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Tozsuz</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Düşük Gürültü</span>
                         </>
                       )}
                       {index === 1 && (
                         <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Perfect Edges</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Rapid Setup</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Mükemmel Kenarlar</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Hızlı Kurulum</span>
                         </>
                       )}
                       {index === 2 && (
                         <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Any Thickness</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Complex Shapes</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Her Kalınlıkta</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Karmaşık Şekiller</span>
                         </>
                       )}
                       {index === 3 && (
                         <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> High Pull-Out</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Certified</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Yüksek Çekme Dayanımı</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Sertifikalı</span>
                         </>
                       )}
                       {index === 4 && (
                         <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Fume Free</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Confined Space</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Dumansız</span>
+                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Kapalı Alan</span>
                         </>
                       )}
                     </div>
@@ -141,37 +141,37 @@ const services = await getCollection('services');
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="mb-12 text-center md:text-left">
-        <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2">Standards & Compliance</h2>
-        <h3 class="text-4xl font-black uppercase text-text">Safety Protocols</h3>
+        <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2">Standartlar ve Uyumluluk</h2>
+        <h3 class="text-4xl font-black uppercase text-text">Güvenlik Protokolleri</h3>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
           <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
             <span class="material-symbols-outlined">health_and_safety</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">OSHA Compliance</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Adherence to international occupational safety standards for hazardous construction environments.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">İSG Uyumluluğu</h4>
+          <p class="text-text-muted text-sm leading-relaxed">Tehlikeli inşaat ortamları için uluslararası iş güvenliği standartlarına uyum.</p>
         </div>
         <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
           <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
             <span class="material-symbols-outlined">chef_hat</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">PPE Mandate</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Strict personal protective equipment requirements for all personnel on-site, zero tolerance.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">KKD Zorunluluğu</h4>
+          <p class="text-text-muted text-sm leading-relaxed">Sahadaki tüm personel için katı kişisel koruyucu donanım gereklilikleri, sıfır tolerans.</p>
         </div>
         <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
           <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
             <span class="material-symbols-outlined">engineering</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">Site Assessment</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Pre-work structural integrity analysis and hazard identification before equipment deployment.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">Saha Değerlendirmesi</h4>
+          <p class="text-text-muted text-sm leading-relaxed">Ekipman kurulumundan önce yapısal bütünlük analizi ve tehlike tanımlaması.</p>
         </div>
         <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
           <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
             <span class="material-symbols-outlined">verified_user</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">Operator Certified</h4>
-          <p class="text-text-muted text-sm leading-relaxed">All machinery operators hold current advanced certification for specific hydraulic equipment.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">Sertifikalı Operatörler</h4>
+          <p class="text-text-muted text-sm leading-relaxed">Tüm makine operatörleri, özel hidrolik ekipmanlar için güncel ileri düzey sertifikalara sahiptir.</p>
         </div>
       </div>
     </div>
@@ -184,11 +184,11 @@ const services = await getCollection('services');
       <span class="material-symbols-outlined text-[300px] text-black">construction</span>
     </div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <h2 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">Ready to Start Your Project?</h2>
-      <p class="text-white/90 text-xl font-medium max-w-2xl mx-auto mb-10">Get a detailed technical proposal and cost estimation for your concrete cutting needs within 24 hours.</p>
+      <h2 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">Projenize Başlamaya Hazır mısınız?</h2>
+      <p class="text-white/90 text-xl font-medium max-w-2xl mx-auto mb-10">Beton kesme ihtiyaçlarınız için 24 saat içinde detaylı teknik teklif ve maliyet tahmini alın.</p>
        <div class="flex flex-col sm:flex-row justify-center gap-6">
          <Button variant="outline" class="px-8 py-4">
-           Get A Quote
+           Teklif Alın
          </Button>
        </div>
     </div>

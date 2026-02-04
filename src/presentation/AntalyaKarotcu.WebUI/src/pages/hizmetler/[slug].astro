@@ -20,7 +20,7 @@ const { Content } = await render(entry);
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mb-4 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1">
         <span class="material-symbols-outlined text-primary text-sm">{entry.data.icon}</span>
-        <span class="text-xs font-bold uppercase tracking-widest text-primary">Service Detail</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary">Hizmet Detayı</span>
       </div>
       <h1 class="text-4xl font-black uppercase tracking-tighter text-text sm:text-6xl">
         {entry.data.title}
@@ -46,7 +46,7 @@ const { Content } = await render(entry);
 
           {entry.data.technicalSpecs && (
             <div class="bg-surface border border-border p-6 rounded-sm">
-              <h3 class="text-lg font-black uppercase text-text mb-4 border-b border-border pb-2">Technical Specifications</h3>
+              <h3 class="text-lg font-black uppercase text-text mb-4 border-b border-border pb-2">Teknik Özellikler</h3>
               <dl class="space-y-4">
                 {entry.data.technicalSpecs.map(spec => (
                   <div>
@@ -59,10 +59,10 @@ const { Content } = await render(entry);
           )}
 
           <div class="bg-primary p-6 rounded-sm text-white">
-            <h3 class="text-xl font-black uppercase mb-4">Need this service?</h3>
-            <p class="mb-6 text-white/90">Contact our technical team for a free site assessment and quote.</p>
+            <h3 class="text-xl font-black uppercase mb-4">Bu hizmete mi ihtiyacınız var?</h3>
+            <p class="mb-6 text-white/90">Ücretsiz saha keşfi ve teklif için teknik ekibimizle iletişime geçin.</p>
             <Button variant="outline" class="w-full bg-white text-primary border-white hover:bg-white/90">
-              Get A Quote
+              Teklif Alın
             </Button>
           </div>
         </aside>
