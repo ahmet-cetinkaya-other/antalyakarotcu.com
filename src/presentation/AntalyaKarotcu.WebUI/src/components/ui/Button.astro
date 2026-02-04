@@ -8,11 +8,11 @@ interface Props {
 
 const { variant = 'primary', href, class: className, ...rest } = Astro.props;
 
-const baseStyles = "inline-flex items-center justify-center px-8 py-3 rounded-md font-bold uppercase tracking-wider transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2";
+const baseStyles = "inline-flex items-center justify-center font-bold uppercase tracking-wider transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2";
 
 const variants = {
-  primary: "bg-primary hover:bg-orange-600 text-white shadow-lg hover:-translate-y-1 focus:ring-orange-500",
-  outline: "border-2 border-white hover:border-primary hover:text-primary text-white hover:bg-white/10 focus:ring-white",
+  primary: "bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded font-bold uppercase text-sm tracking-wider transition-all transform hover:scale-105 shadow-[0_4px_0_rgb(166,55,0)] active:shadow-none active:translate-y-[4px] focus:ring-orange-500",
+  outline: "border-2 border-current text-text hover:shadow-lg hover:bg-primary/10 focus:ring-primary",
   ghost: "text-primary hover:bg-primary/10 focus:ring-primary"
 };
 

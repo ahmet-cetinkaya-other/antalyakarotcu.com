@@ -1,12 +1,57 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Primitive Tokens */
+  --color-orange-500: #ff6600;
+  --color-gray-50: #f8f7f5;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-400: #9ca3af;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #1a1a1a;
+  --color-gray-950: #111111;
+  --color-white: #ffffff;
+  --color-neutral-800: #262626;
+
+  /* Semantic Tokens (Light Mode Default) */
+  --color-primary: var(--color-orange-500);
+  --color-bg: var(--color-gray-50);
+  --color-surface: var(--color-white);
+  --color-surface-strong: var(--color-gray-100);
+  --color-text: var(--color-gray-800);
+  --color-text-muted: var(--color-gray-600);
+  --color-border: var(--color-gray-200);
+}
+
+.dark {
+  /* Semantic Tokens (Dark Mode Override) */
+  --color-bg: var(--color-gray-900);
+  --color-surface: var(--color-neutral-800);
+  --color-surface-strong: var(--color-gray-950);
+  --color-text: var(--color-white);
+  --color-text-muted: var(--color-gray-400);
+  --color-border: var(--color-gray-700);
+}
+
 @theme {
   /* Fonts */
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Color Palette */
-  --color-primary: #ff6600;
+  /* Semantic Colors - Mapped to variables */
+  --color-primary: var(--color-primary);
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-strong: var(--color-surface-strong);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+
+  /* Legacy Colors */
   --color-background-light: #f8f7f5;
   --color-background-dark: #1a1a1a;
   --color-surface-light: #ffffff;
@@ -36,15 +81,4 @@ html.dark #theme-toggle .icon-light {
 html:not(.dark) #theme-toggle .icon-light,
 html.dark #theme-toggle .icon-dark {
   display: none;
-}
-
-/* Utility classes from mockup */
-.industrial-grid {
-  background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-}
-.text-stroke-1 {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
 }

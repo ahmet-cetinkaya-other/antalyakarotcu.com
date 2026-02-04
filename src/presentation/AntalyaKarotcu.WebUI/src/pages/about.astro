@@ -1,14 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
 
 const title = "About Us - Antalya Karotcu";
 const description = "Founded in 1995, Antalya Karotcu defines the standard for industrial concrete cutting and structural modification across Turkey.";
 ---
 
 <BaseLayout title={title} description={description}>
-    <section class="relative h-[70vh] w-full overflow-hidden bg-surface-darker flex items-center">
+    <section class="relative h-[70vh] w-full overflow-hidden bg-surface-strong flex items-center">
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-transparent z-10"></div>
             <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590059530490-674391c49a04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-50 mix-blend-overlay" data-alt="Massive concrete bridge structure under construction dark moody"></div>
             <div class="absolute inset-0 opacity-20 z-10 industrial-grid"></div>
         </div>
@@ -17,11 +18,11 @@ const description = "Founded in 1995, Antalya Karotcu defines the standard for i
                 <div class="mb-6 inline-flex items-center gap-2 border-l-4 border-primary pl-4">
                     <span class="text-sm font-bold uppercase tracking-[0.2em] text-primary">Est. 1995</span>
                 </div>
-                <h1 class="mb-8 text-6xl font-black uppercase leading-[0.85] tracking-tighter text-white sm:text-7xl md:text-9xl">
+                <h1 class="mb-8 text-6xl font-black uppercase leading-[0.85] tracking-tighter text-text sm:text-7xl md:text-9xl">
                     Founded in<br/>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Precision</span>
                 </h1>
-                <p class="max-w-xl text-lg font-medium leading-relaxed text-gray-300 md:text-xl border-t border-white/10 pt-6">
+                <p class="max-w-xl text-lg font-medium leading-relaxed text-text-muted md:text-xl border-t border-border pt-6">
                     For nearly three decades, we have defined the standard for industrial concrete cutting and structural modification across the region.
                 </p>
             </div>
@@ -29,40 +30,40 @@ const description = "Founded in 1995, Antalya Karotcu defines the standard for i
         <div class="absolute bottom-0 left-0 h-2 w-full bg-[repeating-linear-gradient(45deg,#ff6600,#ff6600_20px,#1a1a1a_20px,#1a1a1a_40px)] opacity-80"></div>
     </section>
 
-    <div class="border-y border-white/10 bg-surface-dark relative z-30">
+    <div class="border-y border-border bg-surface relative z-30">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 gap-12 md:grid-cols-4">
                 <div class="flex flex-col gap-2">
-                    <span class="text-6xl font-black text-white tracking-tighter">28<span class="text-primary text-4xl align-top">+</span></span>
+                    <span class="text-6xl font-black text-text tracking-tighter">28<span class="text-primary text-4xl align-top">+</span></span>
                     <span class="h-1 w-12 bg-primary"></span>
-                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Years of Excellence</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-text-muted mt-2">Years of Excellence</span>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <span class="text-6xl font-black text-white tracking-tighter">5k<span class="text-primary text-4xl align-top">+</span></span>
+                    <span class="text-6xl font-black text-text tracking-tighter">5k<span class="text-primary text-4xl align-top">+</span></span>
                     <span class="h-1 w-12 bg-primary"></span>
-                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Projects Delivered</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-text-muted mt-2">Projects Delivered</span>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <span class="text-6xl font-black text-white tracking-tighter">100<span class="text-primary text-4xl align-top">%</span></span>
+                    <span class="text-6xl font-black text-text tracking-tighter">100<span class="text-primary text-4xl align-top">%</span></span>
                     <span class="h-1 w-12 bg-primary"></span>
-                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Safety Record</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-text-muted mt-2">Safety Record</span>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <span class="text-6xl font-black text-white tracking-tighter">81</span>
+                    <span class="text-6xl font-black text-text tracking-tighter">81</span>
                     <span class="h-1 w-12 bg-primary"></span>
-                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400 mt-2">Cities Served</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-text-muted mt-2">Cities Served</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="bg-background-dark py-24 relative overflow-hidden">
+    <section class="bg-bg py-24 relative overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col md:flex-row gap-16">
                 <div class="md:w-1/3 sticky top-24 self-start">
                     <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">Our History</h2>
-                    <h3 class="text-4xl md:text-5xl font-black uppercase text-white mb-6 leading-none">Building a<br/>Legacy</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                    <h3 class="text-4xl md:text-5xl font-black uppercase text-text mb-6 leading-none">Building a<br/>Legacy</h3>
+                    <p class="text-text-muted text-lg leading-relaxed mb-8">
                         From a single core drill unit in Antalya to a nationwide fleet of heavy industrial machinery. Our journey is paved with concrete solutions.
                     </p>
                     <div class="h-64 w-full rounded overflow-hidden relative border-2 border-white/5">
@@ -70,47 +71,47 @@ const description = "Founded in 1995, Antalya Karotcu defines the standard for i
                         <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
                     </div>
                 </div>
-                <div class="md:w-2/3 relative pl-8 md:pl-16 border-l border-white/10 space-y-20">
+                <div class="md:w-2/3 relative pl-8 md:pl-16 border-l border-border space-y-20">
                     <div class="relative group">
-                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-primary shadow-[0_0_15px_rgba(255,102,0,0.5)] group-hover:scale-125 transition-transform"></div>
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-strong border-4 border-primary shadow-[0_0_15px_rgba(255,102,0,0.5)] group-hover:scale-125 transition-transform"></div>
                         <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">1995</span>
                         <div class="relative z-10">
                             <span class="text-primary font-bold text-lg mb-2 block">The Beginning</span>
-                            <h4 class="text-3xl font-bold text-white uppercase mb-4">Founded in Antalya</h4>
-                            <p class="text-gray-400 leading-relaxed">
+                            <h4 class="text-3xl font-bold text-text uppercase mb-4">Founded in Antalya</h4>
+                            <p class="text-text-muted leading-relaxed">
                                 Antalya Karotcu was established to meet the growing demand for precise concrete modification in the region's booming tourism construction sector. Starting with just two operators, we set a new standard for cleanliness and accuracy.
                             </p>
                         </div>
                     </div>
                     <div class="relative group">
-                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-strong border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
                         <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">2008</span>
                         <div class="relative z-10">
                             <span class="text-primary font-bold text-lg mb-2 block">Expansion</span>
-                            <h4 class="text-3xl font-bold text-white uppercase mb-4">Heavy Machinery Fleet</h4>
-                            <p class="text-gray-400 leading-relaxed">
+                            <h4 class="text-3xl font-bold text-text uppercase mb-4">Heavy Machinery Fleet</h4>
+                            <p class="text-text-muted leading-relaxed">
                                 We acquired our first remote-controlled demolition robots and heavy-duty wire saws, allowing us to take on massive infrastructure projects including bridges and dams across the Mediterranean region.
                             </p>
                         </div>
                     </div>
                     <div class="relative group">
-                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-strong border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
                         <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">2015</span>
                         <div class="relative z-10">
                             <span class="text-primary font-bold text-lg mb-2 block">Innovation</span>
-                            <h4 class="text-3xl font-bold text-white uppercase mb-4">Technical Certification</h4>
-                            <p class="text-gray-400 leading-relaxed">
+                            <h4 class="text-3xl font-bold text-text uppercase mb-4">Technical Certification</h4>
+                            <p class="text-text-muted leading-relaxed">
                                 Achieved ISO 9001:2015 certification and implemented industry-leading safety protocols. Our team grew to over 50 certified specialists, handling complex chemical anchoring and seismic retrofitting projects.
                             </p>
                         </div>
                     </div>
                     <div class="relative group">
-                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-darker border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
+                        <div class="absolute -left-[41px] md:-left-[73px] top-2 h-5 w-5 rounded-full bg-surface-strong border-4 border-gray-600 group-hover:border-primary transition-colors"></div>
                         <span class="text-7xl font-black text-white/5 absolute -top-12 -left-4 select-none z-0">2023</span>
                         <div class="relative z-10">
                             <span class="text-primary font-bold text-lg mb-2 block">Today</span>
-                            <h4 class="text-3xl font-bold text-white uppercase mb-4">National Leadership</h4>
-                            <p class="text-gray-400 leading-relaxed">
+                            <h4 class="text-3xl font-bold text-text uppercase mb-4">National Leadership</h4>
+                            <p class="text-text-muted leading-relaxed">
                                 With over 5,000 successful projects, we are now the preferred partner for Turkey's largest construction firms. Our fleet is fully modernized with the latest diamond cutting technology from Europe.
                             </p>
                         </div>
@@ -120,50 +121,50 @@ const description = "Founded in 1995, Antalya Karotcu defines the standard for i
         </div>
     </section>
 
-    <section class="bg-surface-darker py-24 border-t border-white/5 relative">
+    <section class="bg-surface-strong py-24 border-t border-white/5 relative">
         <div class="absolute right-0 top-0 h-full w-1/2 bg-[url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-luminosity"></div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 max-w-2xl mx-auto">
                 <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">Our Foundation</h2>
-                <h3 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">Core Values</h3>
-                <p class="text-gray-400 text-lg">
+                <h3 class="text-4xl md:text-5xl font-black uppercase text-text mb-6">Core Values</h3>
+                <p class="text-text-muted text-lg">
                     We don't just cut concrete; we build trust. These three pillars support every operation we undertake.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-background-dark border border-white/10 p-10 hover:border-primary transition-colors group relative overflow-hidden">
+                <div class="bg-bg border border-border p-10 hover:border-primary transition-colors group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <span class="material-symbols-outlined text-9xl text-white">health_and_safety</span>
+                        <span class="material-symbols-outlined text-9xl text-text">health_and_safety</span>
                     </div>
-                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-darker border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
+                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-strong border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
                         <span class="material-symbols-outlined !text-4xl">health_and_safety</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white uppercase mb-4">Safety First</h4>
-                    <p class="text-gray-400 leading-relaxed">
+                    <h4 class="text-2xl font-bold text-text uppercase mb-4">Safety First</h4>
+                    <p class="text-text-muted leading-relaxed">
                         We operate in high-risk environments where there is no room for error. Our zero-incident culture is backed by rigorous training, superior PPE, and strict site protocols.
                     </p>
                 </div>
-                <div class="bg-background-dark border border-white/10 p-10 hover:border-primary transition-colors group relative overflow-hidden">
+                <div class="bg-bg border border-border p-10 hover:border-primary transition-colors group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <span class="material-symbols-outlined text-9xl text-white">precision_manufacturing</span>
+                        <span class="material-symbols-outlined text-9xl text-text">precision_manufacturing</span>
                     </div>
-                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-darker border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
+                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-strong border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
                         <span class="material-symbols-outlined !text-4xl">precision_manufacturing</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white uppercase mb-4">Technical Accuracy</h4>
-                    <p class="text-gray-400 leading-relaxed">
+                    <h4 class="text-2xl font-bold text-text uppercase mb-4">Technical Accuracy</h4>
+                    <p class="text-text-muted leading-relaxed">
                         Structural integrity demands millimetric precision. We utilize advanced diamond cutting tech and laser guidance to ensure every cut matches the blueprint exactly.
                     </p>
                 </div>
-                <div class="bg-background-dark border border-white/10 p-10 hover:border-primary transition-colors group relative overflow-hidden">
+                <div class="bg-bg border border-border p-10 hover:border-primary transition-colors group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <span class="material-symbols-outlined text-9xl text-white">local_shipping</span>
+                        <span class="material-symbols-outlined text-9xl text-text">local_shipping</span>
                     </div>
-                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-darker border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
+                    <div class="mb-6 inline-flex items-center justify-center h-16 w-16 rounded bg-surface-strong border border-primary text-primary shadow-[0_0_20px_rgba(255,102,0,0.2)]">
                         <span class="material-symbols-outlined !text-4xl">verified_user</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white uppercase mb-4">Nationwide Reliability</h4>
-                    <p class="text-gray-400 leading-relaxed">
+                    <h4 class="text-2xl font-bold text-text uppercase mb-4">Nationwide Reliability</h4>
+                    <p class="text-text-muted leading-relaxed">
                         Time is money in construction. We pride ourselves on rapid mobilization and meeting strict deadlines, whether the project is in Antalya or across the country.
                     </p>
                 </div>
@@ -171,20 +172,20 @@ const description = "Founded in 1995, Antalya Karotcu defines the standard for i
         </div>
     </section>
 
-    <section class="bg-background-dark py-20 border-t border-white/5">
+    <section class="bg-bg py-20 border-t border-white/5">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
             <div class="w-full md:w-1/2">
-                <img alt="Team operating wall saw" class="rounded border-2 border-white/10 grayscale hover:grayscale-0 transition-all duration-500 w-full shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHiYKTo_1TTRS_Dln22dgXJbLPaXu6-cHM10xmBhwFipDp-2vi5jo5bsZAXwvdDQUyqXzLqGXqj-E-VtUGIVJvNqNliOBihGmKSbxk_EHgven-UlQkp4-qWDXr99_VioYr7nCbZNAKoF0zac0TTWL-s8fQUiAoLKr9HPltFex5iFl5g_IjRpn2jmpjYhhdraTfm6zP_TpXmq14WA7fGRWPEADl79Ka9LsaKGfeaTgQMuKetqpynFAFZaZTi1Dd2EG1SE6XhO000_A"/>
+                <img alt="Team operating wall saw" class="rounded border-2 border-border grayscale hover:grayscale-0 transition-all duration-500 w-full shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHiYKTo_1TTRS_Dln22dgXJbLPaXu6-cHM10xmBhwFipDp-2vi5jo5bsZAXwvdDQUyqXzLqGXqj-E-VtUGIVJvNqNliOBihGmKSbxk_EHgven-UlQkp4-qWDXr99_VioYr7nCbZNAKoF0zac0TTWL-s8fQUiAoLKr9HPltFex5iFl5g_IjRpn2jmpjYhhdraTfm6zP_TpXmq14WA7fGRWPEADl79Ka9LsaKGfeaTgQMuKetqpynFAFZaZTi1Dd2EG1SE6XhO000_A"/>
             </div>
             <div class="w-full md:w-1/2">
-                <h3 class="text-3xl font-black uppercase text-white mb-6">Master Craftsmen</h3>
-                <p class="text-gray-400 text-lg mb-8">
+                <h3 class="text-3xl font-black uppercase text-text mb-6">Master Craftsmen</h3>
+                <p class="text-text-muted text-lg mb-8">
                     Our operators are not just laborers; they are certified technicians. Every team member undergoes 200+ hours of specialized equipment training before stepping onto a job site.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <div class="bg-surface-darker px-4 py-2 rounded border border-white/10 text-gray-300 text-sm font-bold uppercase tracking-wide">ISG Certified</div>
-                    <div class="bg-surface-darker px-4 py-2 rounded border border-white/10 text-gray-300 text-sm font-bold uppercase tracking-wide">Hilti Trained</div>
-                    <div class="bg-surface-darker px-4 py-2 rounded border border-white/10 text-gray-300 text-sm font-bold uppercase tracking-wide">First Aid Qualified</div>
+                    <div class="bg-surface-strong px-4 py-2 rounded border border-border text-text-muted text-sm font-bold uppercase tracking-wide">ISG Certified</div>
+                    <div class="bg-surface-strong px-4 py-2 rounded border border-border text-text-muted text-sm font-bold uppercase tracking-wide">Hilti Trained</div>
+                    <div class="bg-surface-strong px-4 py-2 rounded border border-border text-text-muted text-sm font-bold uppercase tracking-wide">First Aid Qualified</div>
                 </div>
             </div>
         </div>
@@ -197,14 +198,11 @@ const description = "Founded in 1995, Antalya Karotcu defines the standard for i
                 <h2 class="text-3xl md:text-4xl font-black uppercase text-white mb-2">Work with the experts</h2>
                 <p class="text-white/80 text-lg font-medium">Discuss your structural requirements with our engineers today.</p>
             </div>
-            <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                <button class="bg-surface-darker text-white hover:bg-black px-8 py-4 rounded font-bold uppercase text-sm tracking-wider shadow-lg transition-transform transform hover:-translate-y-1 w-full sm:w-auto text-center">
-                    Request Quote
-                </button>
-                <button class="bg-white/20 text-white hover:bg-white/30 px-8 py-4 rounded font-bold uppercase text-sm tracking-wider backdrop-blur-sm transition-colors w-full sm:w-auto text-center">
-                    Call Now
-                </button>
-            </div>
+             <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                 <Button variant="outline" class="px-8 py-4" href="#">
+                     Request Quote
+                 </Button>
+             </div>
         </div>
     </section>
 </BaseLayout>

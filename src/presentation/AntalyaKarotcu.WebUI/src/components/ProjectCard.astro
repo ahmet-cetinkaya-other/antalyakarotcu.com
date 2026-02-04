@@ -16,7 +16,7 @@ interface Props {
 const { title, category, image, specs, href = "#" } = Astro.props;
 ---
 
-<article class="break-inside-avoid relative group bg-surface-dark border border-white/10 hover:border-primary transition-colors duration-300">
+<article class="break-inside-avoid relative group bg-surface border border-border hover:border-primary transition-colors duration-300">
   <!-- Corner Decorations -->
   <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-primary z-20"></div>
   <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-primary z-20"></div>
@@ -33,12 +33,12 @@ const { title, category, image, specs, href = "#" } = Astro.props;
       <h3 class="text-xl font-bold text-white uppercase leading-tight" set:html={title.replace(/\n/g, '<br/>')}></h3>
     </div>
   </div>
-  <div class="p-6 bg-surface-dark border-t border-white/10 blueprint-grid-small">
+  <div class="p-6 bg-surface border-t border-border blueprint-grid-small">
     <div class="grid grid-cols-2 gap-y-4 gap-x-2">
       {specs.map((spec) => (
         <div class="flex flex-col">
-          <span class="text-[10px] font-mono text-gray-500 uppercase">{spec.label}</span>
-          <span class={`text-sm font-bold uppercase ${spec.isPrimary ? 'text-primary' : 'text-white'}`}>{spec.value}</span>
+          <span class="text-[10px] font-mono text-text-muted uppercase">{spec.label}</span>
+          <span class={`text-sm font-bold uppercase ${spec.isPrimary ? 'text-primary' : 'text-text'}`}>{spec.value}</span>
         </div>
       ))}
     </div>
