@@ -25,7 +25,7 @@ const description =
                 marginheight="0"
                 marginwidth="0"
                 scrolling="no"
-                src="https://maps.google.com/maps?q=Antalya%20Organize%20Sanayi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Y%C3%BCkseli%C5%9F%20Mahallesi%202124%20Sokak%20Kepez%20Antalya&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
             >
             </iframe>
@@ -116,7 +116,7 @@ const description =
                             </div>
                             <div>
                                 <h3
-                                    class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors"
+                                    class="text-xl font-display font-bold uppercase text-text-muted mb-1 group-hover:text-primary transition-colors"
                                 >
                                     Doğrudan Hat
                                 </h3>
@@ -133,40 +133,7 @@ const description =
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden"
-                    >
-                        <div
-                            class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"
-                        >
-                        </div>
-                        <div class="flex items-start gap-5 relative z-10">
-                            <div
-                                class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors"
-                            >
-                                <span class="material-symbols-outlined text-3xl"
-                                    >chat</span
-                                >
-                            </div>
-                            <div>
-                                <h3
-                                    class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors"
-                                >
-                                    WhatsApp Destek
-                                </h3>
-                                <p
-                                    class="text-2xl font-bold text-text tracking-wide font-display"
-                                >
-                                    +90 532 609 68 02
-                                </p>
-                                <p
-                                    class="text-sm text-text-muted mt-1 uppercase tracking-wider"
-                                >
-                                    Anında Proje Değerlendirmesi
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
                     <div
                         class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden"
                     >
@@ -184,16 +151,16 @@ const description =
                             </div>
                             <div>
                                 <h3
-                                    class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors"
+                                    class="text-xl font-display font-bold uppercase text-text-muted mb-1 group-hover:text-primary transition-colors"
                                 >
                                     Merkez Ofis
                                 </h3>
                                 <p
                                     class="text-lg font-bold text-text leading-tight font-display tracking-wide"
                                 >
-                                    Antalya Organize Sanayi Bölgesi<br />
-                                    1. Cadde No:12<br />
-                                    Antalya, Türkiye
+                                    Yükseliş Mahallesi<br />
+                                    2124 Sokak. Sakin Apartmanı.<br />
+                                    No:34/A - Kepez /Antalya
                                 </p>
                             </div>
                         </div>
@@ -250,7 +217,10 @@ const description =
                         >
                             Teknik Özellikler Gereklidir
                         </p>
-                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <form
+                            id="contact-form"
+                            class="grid grid-cols-1 md:grid-cols-2 gap-6"
+                        >
                             <div class="space-y-2">
                                 <label
                                     class="block text-xl font-display font-bold uppercase text-text-muted"
@@ -275,18 +245,7 @@ const description =
                                     type="text"
                                 />
                             </div>
-                            <div class="space-y-2">
-                                <label
-                                    class="block text-xl font-display font-bold uppercase text-text-muted"
-                                    for="email">E-posta Adresi</label
-                                >
-                                <input
-                                    class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm"
-                                    id="email"
-                                    placeholder="iletisim@antalyakarotcu.com"
-                                    type="email"
-                                />
-                            </div>
+
                             <div class="space-y-2">
                                 <label
                                     class="block text-xl font-display font-bold uppercase text-text-muted"
@@ -343,8 +302,9 @@ const description =
                                 <p
                                     class="text-center text-gray-500 text-xs mt-4 uppercase tracking-wider"
                                 >
-                                    Göndererek, teknik verilerinizin işlenmesini
-                                    kabul etmiş olursunuz.
+                                    Talebi gönderdiğinizde e-posta uygulamanıza
+                                    yönlendirileceksiniz ve kendi e-postanızdan
+                                    gönderebileceksiniz.
                                 </p>
                             </div>
                         </form>
@@ -354,3 +314,25 @@ const description =
         </div>
     </section>
 </BaseLayout>
+
+<script>
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("name")?.value;
+            const company = document.getElementById("company")?.value;
+            const phone = document.getElementById("phone")?.value;
+            const service = document.getElementById("service")?.value;
+            const details = document.getElementById("details")?.value;
+
+            const subject = "Antalya Karotçu - Yeni Hizmet Talebi";
+            const body = `Merhaba,\n\nAşağıdaki hizmet talebini iletiyorum:\n\n**Kişisel Bilgiler:**\nAd Soyad: ${name}\nFirma Adı: ${company}\n\nTelefon: ${phone}\n\n**Hizmet Detayları:**\nTalep Edilen Hizmet: ${service}\nProje Detayları:\n${details}\n\nTeşekkürler.`;
+
+            const mailtoLink = `mailto:iletisim@antalyakarotcu.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+        });
+    }
+</script>
