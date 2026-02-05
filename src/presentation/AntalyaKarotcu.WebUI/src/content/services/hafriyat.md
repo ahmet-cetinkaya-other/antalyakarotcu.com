@@ -1,22 +1,20 @@
 ---
 title: "Hafriyat"
-description: "İnşaat temelleri ve altyapı projeleri için profesyonel kazı, dolgu ve hafriyat hizmeti."
+description: "Projeniz için sağlam bir zemin hazırlığı: Temel kazısı, dolgu ve çevre düzenleme."
 icon: "foundation"
-image: "https://karmakkarot.com/images/hafriyat/5.jpg"
-features: ["Tozsuz", "Sessiz", "Hızlı"]
+image: "/assets/images/services/hafriyat-5.jpg"
+features: ["Zemin Hazırlığı", "Temel Kazısı", "Moloz Nakliyesi"]
 technicalSpecs:
-  - label: "Ekipman"
-    value: "Ekskavatör, Loder, Damperli Kamyon"
-  - label: "Hizmetler"
-    value: "Temel Kazısı, Kanal Açma, Moloz Atımı"
+  - label: "Araçlar"
+    value: "JCB, Ekskavatör"
+  - label: "Kapsam"
+    value: "Mini ve Büyük İşler"
   - label: "Güvenlik"
-    value: "Zemin Etüdü ve İksa Sistemleri"
+    value: "Çevre Önlemi"
 ---
 
-Hafriyat; çoğu durumda site değerlendirme verilerine ve kısıtlamalarına dayalı olarak, bir sahayı temizlemenin ve hazırlamanın en uygun maliyetli yoludur. Ekibimiz, hafriyat projelerini yürütme konusunda kapsamlı deneyime ve gerekli yerel izinlere sahiptir.
+İyi bir bina, sağlam bir temel üzerine kurulur. Antalya'nın kayalık zeminlerinden kumsal bölgelerine kadar her türlü toprak yapısında tecrübeliyiz. Temel kazısı, bina yıkımı sonrası temizlik, bahçe toprağı serimi veya kanal açma işlerinde kendi iş makinelerimizle hizmet veriyoruz.
 
-## Hafriyat Nasıl Yapılır?
+## Planlı ve Güvenli Çalışma
 
-Kazı alanı detaylı bir şekilde analiz edilmeli ve zemin etüdü yapılmalıdır. Kazının çökmemesi için kenarlarına şev verilmelidir. Şevlerin zemini tutması için çelik ve kereste gibi malzemeler ile desteklenerek iksa yapılmalıdır.
-
-## Altyapıya herhangi bir zararın gelmediğinden emin olunmalıdır. Kanalizasyon, su, doğalgaz ve elektrik hatları iyice incelenmeli ve ona göre bir çalışma yapılmalıdır. Hafriyat işlemi için kullanılan araçların alanında profesyonel kişiler aracılığıyla kullanılması güvenli bir uygulama sağlar.
+Hafriyat sadece toprağı kazmak değil, çıkan malzemeyi doğru yönetmektir. Kazı sırasında yan parsellerin güvenliğini alıyor, yeraltı hatlarına (elektrik, su) zarar vermemek için titiz davranıyoruz. Çıkan molozu yasal döküm sahalarına taşıyarak çevreye duyarlı hareket ediyoruz. Küçük bahçe işlerinden büyük site projelerine kadar her ölçekte çözüm ortağınızız.

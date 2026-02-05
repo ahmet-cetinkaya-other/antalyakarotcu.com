@@ -1,30 +1,20 @@
 ---
 title: "Kimyasal Ankraj"
-description: "Yapısal güçlendirme ve ek bağlantılar için yüksek dayanımlı kimyasal ankraj ve yapıştırma hizmeti."
+description: "Ağır yükleri betona sabitlemek için kullanılan en güçlü ve güvenilir montaj yöntemi."
 icon: "anchor"
-image: "https://karmakkarot.com/images/kimyasal-ankraj/5.jpg"
-features: ["Tozsuz", "Sessiz", "Hızlı"]
+image: "/assets/images/services/kimyasal-ankraj-5.jpg"
+features: ["Ağır Yük Montajı", "Sismik Dayanım", "Hızlı Uygulama"]
 technicalSpecs:
-  - label: "Malzeme"
-    value: "Epoksi Reçine, Polyester Reçine"
-  - label: "Uygulama Alanı"
-    value: "Kolon, Kiriş, Çelik Montajı"
-  - label: "Dayanım"
-    value: "Yüksek Yük Taşıma Kapasitesi"
+  - label: "Ürün"
+    value: "Çift Komponentli Reçine"
+  - label: "Kapasite"
+    value: "Tonlarca Yük"
+  - label: "Alan"
+    value: "Endüstriyel & Konut"
 ---
 
-Kimyasal ankraj, yeni binalarda ve yapılarda olduğu kadar inşa edilmiş ve deformasyon sürecinde olan yapı türlerinde de kullanılabilir. Kimyasal ankraj, uzun zaman önce üretilmiş ve hasar görmüş yapıları onarmak ve onarmak veya yeni binaları güçlendirmek için kullanılan bir yöntemdir.
+Çelik konstrüksiyon çatılar, yangın merdivenleri, makine parkurları veya cephe sistemleri... Tonlarca ağırlığı betona güvenle emanet etmek için kimyasal ankraj kullanıyoruz. Mekanik dübellerin aksine, betonda gerilme yaratmadığı için kenar mesafelerine çok yakın yerlerde bile güvenle uygulanabilir.
 
-## Kimyasal Ankraj Kullanım Alanları
+## Sanayi ve Turizm Projeleri
 
-Betona sabitlenmiş ankrajlar ve kimyasal ankraj kullanılarak kolonlarla ilgili bir çalışma, onları hasarlı ve sağlıksız yapılarda güçlü ve dayanıklı hale getirmeyi amaçlamaktadır. Başlıca kullanım alanları şunlardır:
-
-- Çelik kolon ve kiriş bağlantılarının yapılması
-- Çelik çatı uygulamaları
-- Makine montajı yapılması
-- Bayrak direği montajı
-- Dış cephe uygulamaları
-- Bina güçlendirme projeleri
-- Bina genişletme projeleri
-- Sonradan dökülen merdiven betonlarında
-- Unutulan filizlerde ve sonradan dökülen hatıl demirlerinde kullanılır.
+Antalya'daki otel projelerinin devasa kanopilerinden, fabrikaların üretim bantlarına kadar her yerde imzamız var. Kullandığımız reçineler, betona moleküler düzeyde yapışarak, betonun kendi dayanımından bile daha yüksek bir tutunma gücü (pull-out değeri) sağlar.

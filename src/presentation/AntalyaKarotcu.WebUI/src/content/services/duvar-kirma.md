@@ -1,22 +1,20 @@
 ---
 title: "Duvar Kırma"
-description: "İç mekan düzenlemeleri ve yapısal değişiklikler için kontrollü duvar kırma ve yıkım hizmeti."
+description: "Mekan yenileme ve yıkım işleri için kontrollü, güvenli duvar kırma yöntemleri."
 icon: "gavel"
-image: "https://karmakkarot.com/images/duvar-kirma/5.jpg"
-features: ["Tozsuz", "Sessiz", "Hızlı"]
+image: "/assets/images/services/duvar-kirma-5.jpg"
+features: ["Bölgesel Yıkım", "Moloz Tahliyesi", "Hızlı Teslim"]
 technicalSpecs:
   - label: "Yöntem"
-    value: "Pnömatik ve Hidrolik Kırıcılar"
-  - label: "Kontrol"
-    value: "Toz ve Gürültü Kontrolü"
+    value: "Kırıcı & Kesici Aletler"
   - label: "Güvenlik"
-    value: "Statik Analiz Sonrası Uygulama"
+    value: "Statik Kontrol"
+  - label: "Sonuç"
+    value: "Temiz Alan"
 ---
 
-Duvar Kırma; betondan kesilen göbeğin muayenesi ve basınç testi, dayanım tahmini ile birlikte elemanın iç alanını görsel olarak incelemek için güvenilir bir yöntemdir. Karot konumunun ve gerekli çekirdek sayısının sorumlu mühendis tarafından belirlenmesi önemlidir.
+Evinizde veya iş yerinizde yapmak istediğiniz dekorasyon değişikliklerinde, engel teşkil eden duvarları güvenli bir şekilde kaldırıyoruz. Antalya'da tadilat projelerinde en önemli konu, hangi duvarın taşıyıcı olduğunu bilmektir. Uzman ekibimiz, binanın statiğini riske atmadan sadece bölücü (tuğla, bims) duvarların yıkımını gerçekleştirir.
 
-## Duvar Nasıl Kırılır?
+## Yıkım Süreci ve Temizlik
 
-Eğer bir duvarın tamamının yıkılması isteniyorsa, genellikle ağırlık kuvvetinden dolayı balyoz kullanılarak iç duvarlar kırılır. Duvarın sadece bir bölümün kırmak istiyor olabilirsiniz. Böyle bir durumda balyoz kullanmaya gerek kalmaz. Keski ve çekiç kullanarak duvarın belli bir bölümünün kırılmasını sağlayabilirsiniz.
-
-Betonun ortalama eşdeğer kübik dayanımı, ilgili yaşta belirtilen beton sınıfının kübik dayanımının en az %85'ine eşitse ve betonun ortalama dayanımı herhangi bir çekirdeğin %75'inden azsa, o zaman Duvar Kırma işlemi rahatlıkla gerçekleştirilebilir.
+Balyoz, hilti veya özel yıkım robotları kullanarak, gürültüyü ve tozu minimumda tutarak çalışıyoruz. İşlem bittikten sonra çıkan moloz yığınını çuvallayarak veya konteynerle tahliye ediyor, size tertemiz bir alan teslim ediyoruz.

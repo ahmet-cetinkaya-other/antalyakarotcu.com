@@ -1,22 +1,20 @@
 ---
 title: "Filiz Ekimi"
-description: "Mevcut beton yapılara donatı ekleyerek yapısal güçlendirme ve onarım sağlama hizmeti."
+description: "Eski ve yeni betonu birbirine bağlayan, yapısal bütünlüğü sağlayan donatı ekimi."
 icon: "vertical_align_bottom"
-image: "https://karmakkarot.com/images/filiz-ekimi/5.jpg"
-features: ["Tozsuz", "Sessiz", "Hızlı"]
+image: "/assets/images/services/filiz-ekimi-5.jpg"
+features: ["Bina Güçlendirme", "Kat Ekleme", "Kolon Mantolama"]
 technicalSpecs:
-  - label: "Yöntem"
-    value: "Epoksi ile Donatı Ekimi"
-  - label: "Fayda"
-    value: "Sismik Güçlendirme, Kapasite Artışı"
-  - label: "Doğrulama"
-    value: "Kalite Kontrol ve Test"
+  - label: "Malzeme"
+    value: "Epoksi Kimyasal"
+  - label: "Standart"
+    value: "Eurocode Uyumlu"
+  - label: "Uygulama"
+    value: "Tozsuz Delik"
 ---
 
-Filiz ekimi, sertleşmiş betonun basınç dayanımını belirlemek ve mevcut yapının kalitesini artırmak için kullanılır. Mevcut yapının güvenlik değerlendirmesinde iyileştirme ve güçlendirme gerektiğinde başvurulan bir yöntemdir.
+Mevcut bir yapıyı güçlendirmek, balkon eklemek veya yarım kalmış bir inşaatı tamamlamak istediğinizde filiz ekimi hayati önem taşır. Antalya Karotçu olarak, betonarme elemanlara sonradan demir donatı ekleyerek, sanki ilk döküldüğü andaki gibi tek parça çalışmasını sağlıyoruz.
 
-## Filiz Ekimi Nasıl Yapılır?
+## Kritik Detaylar
 
-Filiz ekimi yapılacak olan bölgenin önceden belirlenmesi ve hangi filiz ekimi tekniğinin uygulanacağının tespit edilmesi gerekir. Uygulanacak filiz ekme işlemi için alanın doğru şekilde delinmesi ve demir bakımının düzgün yapılması önemlidir.
-
-Filiz ekme işlemi için gerekli bütün aşamaların doğru yapıldığından ve beton parçaların birbirine doğru tutturulduğundan emin olunmalıdır. İşlem, püf noktalarına dikkat edilerek tamamlandığında, binalarda ve yapılarda oluşan hasarlara kalıcı çözümler sağlamaktadır.
+Bu işlem şakaya gelmez; deliğin temizliği ve kullanılan epoksinin kalitesi binanın ömrünü belirler. Özel fırçalarla delik içindeki tozu tamamen temizliyor, uluslararası onaylı kimyasal dübeller kullanıyoruz. Demir filizleri yerleştirdikten sonra kürlenme süresine dikkat ediyor, tam dayanım almadan yük bindirmiyoruz.

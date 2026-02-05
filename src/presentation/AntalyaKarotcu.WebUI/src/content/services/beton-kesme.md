@@ -1,22 +1,20 @@
 ---
 title: "Beton Kesme"
-description: "Yapısal değişiklikler, kapı-pencere açılımları ve yıkım işlemleri için profesyonel beton kesme hizmeti."
-icon: "architecture"
-image: "https://karmakkarot.com/images/beton-kesme/5.jpg"
-features: ["Tozsuz", "Sessiz", "Hızlı"]
+description: "Kontrollü ve güvenli bir şekilde kapı, pencere veya asansör boşluğu açma hizmetleri."
+icon: "content_cut"
+image: "/assets/images/services/beton-kesme-5.jpg"
+features: ["Düzgün Hatlar", "İş Güvenliği", "Planlı Kesim"]
 technicalSpecs:
-  - label: "Yöntemler"
-    value: "Raylı Kesme, Halatlı Kesme, Derz Kesme"
-  - label: "Hassasiyet"
-    value: "±2mm"
-  - label: "Kesme Derinliği"
-    value: "600mm'den sınırsıza kadar"
+  - label: "Teknoloji"
+    value: "Hidrolik & Derz Kesme"
+  - label: "Kapasite"
+    value: "Yüksek Kalınlıkta Kesim"
+  - label: "Sonuç"
+    value: "Pürüzsüz Beton Yüzeyi"
 ---
 
-Beton kesme için işlemin yapılacağı alanın doğru bir şekilde analiz edilmesi gerekir. Kullanılan makineye göre tercih edilebilecek yöntemler farklılaşır. Bu yöntemlerden bazıları karot, derz, tel ve hidrolik beton kesme olarak adlandırılır.
+Mevcut bir yapıda kapı veya pencere açmak, ya da gereksiz bir duvarı kaldırmak istediğinizde beton kesme en sağlıklı yöntemdir. Balyozla kırma devri kapandı; artık yapıyı sarsmadan, komşuları rahatsız etmeden beton blokları tereyağı keser gibi ayırıyoruz.
 
-## Beton Nasıl Kesilir?
+## Kesim Sürecimiz
 
-Hidrolik kesme yönteminde yatay ve dikey olarak farklı açılarda çalışan makineler kullanılır. Perde betonların kesilmesinde bu yöntem daha yaygındır. Tel ile beton kesmek için elmas yapıda olan halatlardan yararlanılır.
-
-Beton güçlendirme, malzemeleri evlerde, işyerlerinde, ofislerde kısacası her türlü yapıya uygun olarak yaygın olarak kullanılmaktadır. Beton güçlendirme elemanları; genel olarak betonarme ile inşa edilen tüm bina ve yapıların ilk yapımında yani bu yapıları sağlam ve dayanıklı hale getirmek için kullanılan mimari elemanlardır.
+Antalya'daki tadilat projelerinizde, kesilecek alanı lazerle işaretliyor ve milimetrik sapma olmadan kesiyoruz. Kestiğimiz beton bloğu vinç veya caraskal yardımıyla güvenle yere indiriyoruz. Bu sayede moloz yığını oluşmuyor ve taşıması çok daha kolay oluyor. Perde beton, tabliye veya kiriş kesimlerinde mutlaka statik açıdan değerlendirme yaparak ilerliyoruz.

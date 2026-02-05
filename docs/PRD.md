@@ -82,7 +82,7 @@ Modern construction requires precise, safe, and efficient methods for concrete m
 
 - **Phone:** +90 532 609 68 02
 - **WhatsApp:** +90 532 609 68 02
-- **Website:** https://karmakkarot.com
+- **Website:** https://antalyakarotcu.com
 
 ---
 
@@ -912,7 +912,7 @@ Professional excavation and earthworks for construction and infrastructure proje
 - **Antalya Karotcu**
 - **Phone:** +90 532 609 68 02
 - **WhatsApp:** +90 532 609 68 02
-- **Website:** https://karmakkarot.com
+- **Website:** https://antalyakarotcu.com
 
 ---
 

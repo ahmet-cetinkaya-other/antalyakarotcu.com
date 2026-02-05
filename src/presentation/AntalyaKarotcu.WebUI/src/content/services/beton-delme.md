@@ -1,22 +1,20 @@
 ---
 title: "Beton Delme"
-description: "Tesisat geçişleri, kapı-pencere açılımları ve yapısal değişiklikler için hassas beton delme hizmeti."
-icon: "precision_manufacturing"
-image: "https://karmakkarot.com/images/beton-delme/5.jpg"
-features: ["Tozsuz", "Sessiz", "Hızlı"]
+description: "Tesisat geçişleri ve montajlar için yapıya zarar vermeyen, titiz beton delme çözümleri."
+icon: "radio_button_checked"
+image: "/assets/images/services/beton-delme-5.jpg"
+features: ["Hasarsız", "Temiz İşçilik", "İstenilen Çapta"]
 technicalSpecs:
-  - label: "Yöntem"
-    value: "Vibrasyonsuz Karot Delme"
-  - label: "Çap"
-    value: "10mm - 500mm+"
-  - label: "Derinlik"
-    value: "1 metreye kadar (standart)"
+  - label: "Makine"
+    value: "Profesyonel Karot Sistemi"
+  - label: "Uygulama"
+    value: "Yatay ve Dikey Delme"
+  - label: "Zemin"
+    value: "Beton, Tuğla, Ytong"
 ---
 
-Beton Delme; işlenecek alanın özelliklerinden operasyon türüne kadar birçok değişken tercih edilen beton delme yöntemini etkili bir şekilde belirleyebilir. En doğru yöntemi belirlemek için profesyonel firmalarla çalışmanız gerekiyor.
+Yapılarınızda sonradan ihtiyaç duyulan tüm delik açma işlemleri için Antalya Karotçu yanınızda. Klima, doğalgaz, su tesisatı, davlumbaz çıkışı gibi ihtiyaçlarınızda, binanızın statiğini bozmadan, çatlatmadan ve kırmadan delme işlemi yapıyoruz.
 
-Karot, en yaygın kullanılan yöntemlerden biridir. Karot, elmas uçlu silindirik bir makine kullanılarak uygun boyutta delik delme işlemidir. Diğer bir yöntem de elmas boncuklu tel kullanmaktır. Bu yöntem genellikle blok beton ve taşıyıcı kolonlar için kullanılır.
+## Neden Beton Delme?
 
-## Beton Nasıl Delinir?
-
-Beton Delme, işlenecek alanın özelliklerinden operasyon türüne kadar birçok değişken tercih edilen beton delme yöntemini etkili bir şekilde belirleyebilir. En doğru yöntemi belirlemek için profesyonel firmalarla çalışmanız gerekiyor. Karot, elmas uçlu silindirik bir makine kullanılarak uygun boyutta delik delme işlemidir. Diğer bir yöntem de elmas boncuklu tel kullanmaktır. Bu yöntem genellikle blok beton ve taşıyıcı kolonlar için kullanılır. Halat, inşaat sırasında betonu delmek için kullanılır.
+Eski usul kırıcılarla yapılan delme işlemleri, çevresindeki sıva ve tuğlaları patlatarak ekstra tadilat masrafı çıkarır. Bizim kullandığımız yöntemle, tıpkı bir elma soyacağı gibi sadece istenilen silindir çıkarılır. Sonuç; pürüzsüz bir delik, sıfır çatlak ve tertemiz bir çalışma ortamı. Demir donatılı betonlarda bile sorunsuz sonuç alıyoruz.

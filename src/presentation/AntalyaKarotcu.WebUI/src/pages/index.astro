@@ -8,7 +8,8 @@ import { getCollection } from "astro:content";
 
 const services = await getCollection("services");
 const title = "Antalya Karotçu - Endüstriyel Hassasiyet";
-const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
+const description =
+  "Antalya'da profesyonel beton delme, kesme ve inşaat hizmetleri.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -38,7 +39,7 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
         >
           <Icon name="verified" class="text-primary text-sm" />
           <span class="text-xs font-bold uppercase tracking-widest text-primary"
-            >Yüksek Müşteri Memnuniyeti</span
+            >Antalya'nın Yerel Gücü</span
           >
         </div>
         <h1
@@ -53,8 +54,9 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
         <p
           class="mb-10 max-w-xl text-lg font-medium leading-relaxed text-text-muted md:text-xl"
         >
-          1995'ten bu yana, Antalya'nın en karmaşık mühendislik projeleri için
-          ağır hizmet tipi delme, kırma ve kesme hizmetleri sunuyoruz.
+          1995 yılından beri Antalya'nın yapısal dönüşümünde rol alıyoruz. En
+          zorlu betonları bile hassasiyetle şekillendiriyor, projenize değer
+          katıyoruz.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <Button
@@ -89,23 +91,25 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
           >
           <span
             class="text-sm font-bold uppercase tracking-widest text-text-muted"
-            >Yıllık Tecrübe</span
+            >Yıllık Deneyim</span
           >
         </div>
         <div class="flex flex-col gap-1 border-l-4 border-border pl-6">
           <span class="text-5xl font-black text-text tracking-tighter"
-            >1k<span class="text-primary">+</span></span
+            >5k<span class="text-primary">+</span></span
           >
           <span
             class="text-sm font-bold uppercase tracking-widest text-text-muted"
-            >Tamamlanan Proje</span
+            >Başarılı Operasyon</span
           >
         </div>
         <div class="flex flex-col gap-1 border-l-4 border-border pl-6">
-          <span class="text-5xl font-black text-text tracking-tighter">0</span>
+          <span class="text-5xl font-black text-text tracking-tighter"
+            >100<span class="text-primary">%</span></span
+          >
           <span
             class="text-sm font-bold uppercase tracking-widest text-text-muted"
-            >İş Kazası</span
+            >Müşteri Memnuniyeti</span
           >
         </div>
         <div class="flex flex-col gap-1 border-l-4 border-border pl-6">
@@ -114,7 +118,7 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
           >
           <span
             class="text-sm font-bold uppercase tracking-widest text-text-muted"
-            >Destek Ekibi</span
+            >Kesintisiz Destek</span
           >
         </div>
       </div>
@@ -132,13 +136,10 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
       <div
         class="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
       >
-        <SectionTitle
-          title="Endüstriyel Hizmetler"
-          subtitle="Uzmanlık Alanlarımız"
-        />
+        <SectionTitle title="Hizmetlerimiz" subtitle="Uzmanlık Alanlarımız" />
         <p class="max-w-md text-text-muted text-lg">
-          Son teknoloji elmas kesim teknolojisi kullanılarak yüksek hassasiyetli
-          beton işlemleri.
+          Son teknoloji ekipmanlar kullanılarak yüksek hassasiyetli beton
+          işlemleri.
         </p>
       </div>
 
@@ -177,7 +178,8 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
             class="text-3xl md:text-4xl font-black uppercase text-text mb-8 leading-tight"
           >
             "Antalya Karotçu, Akdeniz Üniversitesi genişletme projesinde
-            olağanüstü hassasiyet sağladı. Güvenlik protokolleri eşsiz."
+            olağanüstü hassasiyet sağladı. Güvenlik ve temizlik konusundaki
+            titizlikleri etkileyici."
           </h3>
           <div class="flex items-center gap-4">
             <div
@@ -215,7 +217,7 @@ const description = "Profesyonel beton delme, kesme ve inşaat hizmetleri.";
           <h4
             class="text-text text-lg font-bold uppercase mb-6 text-center border-b border-border pb-4"
           >
-            Sektör Liderlerinin Tercihi
+            Birlikte Başardıklarımız
           </h4>
           <div class="grid grid-cols-2 gap-8 opacity-60">
             <div
