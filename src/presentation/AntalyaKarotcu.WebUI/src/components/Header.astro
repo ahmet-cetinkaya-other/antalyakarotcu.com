@@ -1,33 +1,62 @@
 ---
-import ThemeToggle from './ui/ThemeToggle.astro';
-import Button from './ui/Button.astro';
+import ThemeToggle from "./ui/ThemeToggle.astro";
+import Button from "./ui/Button.astro";
 ---
-<header class="sticky top-0 z-50 w-full border-b-4 border-primary bg-surface/95 backdrop-blur shadow-xl">
-    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-         <a class="flex items-center gap-3" href="/">
-             <div class="flex h-10 w-10 items-center justify-center bg-primary rounded text-white">
-                 <span class="material-symbols-outlined !text-3xl">construction</span>
-             </div>
-             <div class="flex flex-col">
-                 <span class="text-xl font-black uppercase tracking-widest leading-none text-text">Antalya</span>
-                 <span class="text-sm font-bold uppercase tracking-widest leading-none text-primary">Karotcu</span>
-             </div>
-         </a>
-         <nav class="hidden md:flex items-center gap-8">
-            <a class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors" href="/hizmetler">Hizmetler</a>
-            <a class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors" href="/galeri">Galeri</a>
-            <a class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors" href="/hakkimizda">Hakkımızda</a>
-            <a class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors" href="/iletisim">İletişim</a>
+
+<header
+    class="sticky top-0 z-50 w-full border-b-4 border-primary bg-surface/95 backdrop-blur shadow-xl"
+>
+    <div
+        class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+    >
+        <a class="flex items-center gap-3" href="/">
+            <img
+                src="/favicon.svg"
+                alt="Antalya Karotcu Logo"
+                class="h-10 w-auto"
+            />
+            <div class="flex flex-col">
+                <span
+                    class="text-xl font-black uppercase tracking-widest leading-none text-text"
+                    >Antalya</span
+                >
+                <span
+                    class="text-sm font-bold uppercase tracking-widest leading-none text-primary"
+                    >Karotcu</span
+                >
+            </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a
+                class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors"
+                href="/hizmetler">Hizmetler</a
+            >
+            <a
+                class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors"
+                href="/galeri">Galeri</a
+            >
+            <a
+                class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors"
+                href="/hakkimizda">Hakkımızda</a
+            >
+            <a
+                class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors"
+                href="/iletisim">İletişim</a
+            >
         </nav>
-         <div class="flex items-center gap-4">
-             <a class="hidden lg:flex items-center gap-2 text-text font-bold group" href="tel:+905326096802">
-                 <span class="material-symbols-outlined text-primary group-hover:animate-pulse">call</span>
-                 <span class="text-sm tracking-wide">+90 532 609 68 02</span>
-             </a>
-              <Button variant="primary" href="/iletisim">
-                Teklif Al
-              </Button>
-             <ThemeToggle />
-         </div>
+        <div class="flex items-center gap-4">
+            <a
+                class="hidden lg:flex items-center gap-2 text-text font-bold group"
+                href="tel:+905326096802"
+            >
+                <span
+                    class="material-symbols-outlined text-primary group-hover:animate-pulse"
+                    >call</span
+                >
+                <span class="text-sm tracking-wide">+90 532 609 68 02</span>
+            </a>
+            <Button variant="primary" href="/iletisim"> Teklif Al </Button>
+            <ThemeToggle />
+        </div>
     </div>
 </header>
