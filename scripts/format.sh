@@ -36,26 +36,26 @@ main() {
 
   case "$format_type" in
     all)
-      bash "$ACORE_DIR/format_sh.sh"
-      bash "$ACORE_DIR/format_md.sh"
-      bash "$ACORE_DIR/format_json.sh"
-      bash "$ACORE_DIR/format_yaml.sh"
-      bash "$PROJECT_ROOT/src/presentation/AntalyaKarotcu.WebUI/scripts/format.sh"
+      bash "$ACORE_DIR/format_sh.sh" || true
+      bash "$ACORE_DIR/format_md.sh" || true
+      bash "$ACORE_DIR/format_json.sh" || true
+      bash "$ACORE_DIR/format_yaml.sh" || true
+      bash "$PROJECT_ROOT/src/presentation/AntalyaKarotcu.WebUI/scripts/format.sh" || true
       ;;
     shell)
-      bash "$ACORE_DIR/format_sh.sh"
+      bash "$ACORE_DIR/format_sh.sh" || true
       ;;
     markdown)
-      bash "$ACORE_DIR/format_md.sh"
+      bash "$ACORE_DIR/format_md.sh" || true
       ;;
     json)
-      bash "$ACORE_DIR/format_json.sh"
+      bash "$ACORE_DIR/format_json.sh" || true
       ;;
     yaml)
-      bash "$ACORE_DIR/format_yaml.sh"
+      bash "$ACORE_DIR/format_yaml.sh" || true
       ;;
     webui)
-      bash "$PROJECT_ROOT/src/presentation/AntalyaKarotcu.WebUI/scripts/format.sh"
+      bash "$PROJECT_ROOT/src/presentation/AntalyaKarotcu.WebUI/scripts/format.sh" || true
       ;;
     -h | --help)
       show_usage

@@ -1,7 +1,6 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
-
 const services = defineCollection({
   loader: glob({ base: "./src/content/services", pattern: "**/*.{md,mdx}" }),
   schema: ({ image }) =>
@@ -21,6 +20,5 @@ const services = defineCollection({
         .optional(),
     }),
 });
-
 
 export const collections = { services };
