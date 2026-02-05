@@ -75,6 +75,15 @@
 }
 
 /* Theme toggle icon visibility */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 html:not(.dark) #theme-toggle .icon-dark,
 html.dark #theme-toggle .icon-light {
   display: block;

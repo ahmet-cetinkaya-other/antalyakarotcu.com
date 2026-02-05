@@ -4,12 +4,13 @@ import Button from "./ui/Button.astro";
 ---
 
 <header
-    class="sticky top-0 z-50 w-full border-b-4 border-primary bg-surface/95 backdrop-blur shadow-xl"
+    class="sticky top-0 z-50 w-full border-b-4 border-primary bg-surface/95 backdrop-blur shadow-xl transition-all duration-300"
+    id="main-header"
 >
     <div
         class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
     >
-        <a class="flex items-center gap-3" href="/">
+        <a class="flex items-center gap-3 z-50 relative" href="/">
             <img
                 src="/favicon.svg"
                 alt="Antalya Karotçu Logosu"
@@ -26,6 +27,8 @@ import Button from "./ui/Button.astro";
                 >
             </div>
         </a>
+
+        <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-8">
             <a
                 class="text-sm font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors"
@@ -44,7 +47,8 @@ import Button from "./ui/Button.astro";
                 href="/iletisim">İletişim</a
             >
         </nav>
-        <div class="flex items-center gap-4">
+
+        <div class="flex items-center gap-4 z-50 relative">
             <a
                 class="hidden lg:flex items-center gap-2 text-text font-bold group"
                 href="tel:+905326096802"
@@ -55,8 +59,121 @@ import Button from "./ui/Button.astro";
                 >
                 <span class="text-sm tracking-wide">+90 532 609 68 02</span>
             </a>
-            <Button variant="primary" href="/iletisim"> Teklif Al </Button>
+            <div class="hidden md:block">
+                <Button variant="primary" href="/iletisim"> Teklif Al </Button>
+            </div>
             <ThemeToggle />
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="menu-btn"
+                class="md:hidden flex items-center justify-center p-2 text-text hover:text-primary transition-colors"
+                aria-label="Menüyü Aç"
+            >
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
         </div>
     </div>
 </header>
+
+<!-- Mobile Drawer Overlay -->
+<div
+    id="drawer-overlay"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[90] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+>
+</div>
+
+<!-- Mobile Drawer -->
+<div
+    id="mobile-drawer"
+    class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-surface shadow-2xl z-[100] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-6"
+>
+    <div class="flex items-center justify-between mb-8">
+        <span class="text-xl font-black uppercase tracking-widest text-text"
+            >Menü</span
+        >
+        <button
+            id="drawer-close-btn"
+            class="p-2 text-text hover:text-primary transition-colors"
+            aria-label="Menüyü Kapat"
+        >
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+    </div>
+
+    <nav class="flex flex-col gap-6">
+        <a
+            class="text-lg font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors border-b border-border/50 pb-2"
+            href="/hizmetler">Hizmetler</a
+        >
+        <a
+            class="text-lg font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors border-b border-border/50 pb-2"
+            href="/galeri">Galeri</a
+        >
+        <a
+            class="text-lg font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors border-b border-border/50 pb-2"
+            href="/hakkimizda">Hakkımızda</a
+        >
+        <a
+            class="text-lg font-bold uppercase tracking-wider text-text-muted hover:text-primary transition-colors border-b border-border/50 pb-2"
+            href="/iletisim">İletişim</a
+        >
+    </nav>
+
+    <div class="mt-auto flex flex-col gap-6">
+        <a
+            class="flex items-center justify-center gap-2 text-text font-bold group p-4 bg-surface-sunken rounded-lg"
+            href="tel:+905326096802"
+        >
+            <span
+                class="material-symbols-outlined text-primary group-hover:animate-pulse"
+                >call</span
+            >
+            <span class="tracking-wide">+90 532 609 68 02</span>
+        </a>
+        <Button
+            variant="primary"
+            href="/iletisim"
+            class="w-full justify-center"
+        >
+            Teklif Al
+        </Button>
+    </div>
+</div>
+
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("drawer-close-btn");
+    const drawer = document.getElementById("mobile-drawer");
+    const overlay = document.getElementById("drawer-overlay");
+    let isOpen = false;
+
+    function openMenu() {
+        isOpen = true;
+        drawer?.classList.remove("translate-x-full");
+        overlay?.classList.remove("opacity-0", "pointer-events-none");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+        isOpen = false;
+        drawer?.classList.add("translate-x-full");
+        overlay?.classList.add("opacity-0", "pointer-events-none");
+        document.body.style.overflow = "";
+    }
+
+    menuBtn?.addEventListener("click", openMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
+
+    // Close on link click
+    const drawerLinks = drawer?.querySelectorAll("a");
+    drawerLinks?.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    // Close on escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isOpen) closeMenu();
+    });
+</script>
