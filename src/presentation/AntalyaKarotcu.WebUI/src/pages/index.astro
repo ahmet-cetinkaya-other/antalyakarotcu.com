@@ -5,6 +5,9 @@ import Button from "../components/ui/Button.astro";
 import SectionTitle from "../components/ui/SectionTitle.astro";
 import Icon from "../components/ui/Icon.astro";
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import heroImg from "../assets/images/backgrounds/hero.jpg";
+import placeholderImg from "../assets/images/placeholder/service-fallback.jpg";
 
 const services = await getCollection("services");
 const title = "Antalya Karotçu - Endüstriyel Hassasiyet";
@@ -21,10 +24,12 @@ const description =
         class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-transparent z-10 dark:from-neutral-900 dark:via-neutral-900/90"
       >
       </div>
-      <div
-        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60 mix-blend-overlay"
-        data-alt="Ağır sanayi beton delme makinesinin yakın çekimi, uçuşan kıvılcımlar ve karanlık atmosfer"
-      >
+      <div class="absolute inset-0">
+        <Image
+          src={heroImg}
+          alt="Ağır sanayi beton delme makinesinin yakın çekimi"
+          class="h-full w-full object-cover opacity-60 mix-blend-overlay"
+        ></Image>
       </div>
       <!-- Texture Overlay -->
       <div class="absolute inset-0 opacity-20 z-10 industrial-grid"></div>
@@ -150,10 +155,7 @@ const description =
             <ServiceCard
               title={service.data.title}
               description={service.data.description}
-              image={
-                service.data.image ??
-                "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
-              }
+              image={service.data.image ?? placeholderImg}
               icon={service.data.icon}
               href={`/hizmetler/${service.id}`}
             />

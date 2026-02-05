@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/ui/Button.astro";
+import { Image } from "astro:assets";
+import heroBg from "../assets/images/backgrounds/about-hero.jpg";
+import historyImg from "../assets/images/about/about-history.jpg";
+import valuesBg from "../assets/images/backgrounds/values-bg.jpg";
+import mastersImg from "../assets/images/about/about-masters.jpg";
 
 const title = "Hakkımızda - Antalya Karotçu";
 const description =
@@ -9,17 +14,19 @@ const description =
 
 <BaseLayout title={title} description={description}>
     <section
-        class="relative h-[70vh] w-full overflow-hidden bg-surface-strong flex items-center"
+        class="relative h-[85vh] w-full overflow-hidden bg-surface-strong flex items-center"
     >
         <div class="absolute inset-0 z-0">
             <div
-                class="absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-transparent z-10"
+                class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-transparent z-10 dark:from-neutral-900 dark:via-neutral-900/90"
             >
             </div>
-            <div
-                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590059530490-674391c49a04?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-50 mix-blend-overlay"
-                data-alt="İnşaat halindeki devasa beton köprü yapısı, karanlık ve atmosferik"
-            >
+            <div class="absolute inset-0">
+                <Image
+                    src={heroBg}
+                    alt="İnşaat halindeki devasa beton köprü yapısı"
+                    class="h-full w-full object-cover opacity-70 mix-blend-overlay"
+                ></Image>
             </div>
             <div class="absolute inset-0 opacity-20 z-10 industrial-grid"></div>
         </div>
@@ -132,11 +139,11 @@ const description =
                     <div
                         class="h-64 w-full rounded overflow-hidden relative border-2 border-white/5"
                     >
-                        <img
-                            alt="Eski şantiye alanı, siyah beyaz"
-                            class="object-cover w-full h-full opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLjV4hHt_vht3tpYfeSp9KUSc7zcw6rvlx05puMiin_AyHQ5ka5_96dir8es5sIipsukUP6d1mZEgAgzAd5jaSUMqt73tcHIAxKo-5zeJgHMPcHHFXCP9U0SCCBjA-GEq9HeO8bKuqInzUg2iPoQ5kubFzW_PCIMNCqNPh8iK5ppNirgXyQDlxnKeDxC_vilIDDa2hQ4Glabo56pegmwTTmxQ400ch2gysbolfKUAE9DDhzBp8EELW83qHvbPmKSbRHDhgbVsyu7k3"
-                        />
+                        <Image
+                            src={historyImg}
+                            alt="Eski şantiye alanı"
+                            class="object-cover w-full h-full opacity-60 transition-all duration-700"
+                        ></Image>
                         <div
                             class="absolute inset-0 bg-primary/20 mix-blend-overlay"
                         >
@@ -262,9 +269,12 @@ const description =
     </section>
 
     <section class="bg-surface-strong py-24 border-t border-white/5 relative">
-        <div
-            class="absolute right-0 top-0 h-full w-1/2 bg-[url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-luminosity"
-        >
+        <div class="absolute right-0 top-0 h-full w-1/2">
+            <Image
+                src={valuesBg}
+                alt="İnşaat detayları"
+                class="h-full w-full object-cover opacity-5 mix-blend-luminosity"
+            ></Image>
         </div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 max-w-2xl mx-auto">
@@ -375,11 +385,11 @@ const description =
             class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12"
         >
             <div class="w-full md:w-1/2">
-                <img
+                <Image
+                    src={mastersImg}
                     alt="Duvar kesme makinesi kullanan ekip"
-                    class="rounded border-2 border-border grayscale hover:grayscale-0 transition-all duration-500 w-full shadow-2xl"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHiYKTo_1TTRS_Dln22dgXJbLPaXu6-cHM10xmBhwFipDp-2vi5jo5bsZAXwvdDQUyqXzLqGXqj-E-VtUGIVJvNqNliOBihGmKSbxk_EHgven-UlQkp4-qWDXr99_VioYr7nCbZNAKoF0zac0TTWL-s8fQUiAoLKr9HPltFex5iFl5g_IjRpn2jmpjYhhdraTfm6zP_TpXmq14WA7fGRWPEADl79Ka9LsaKGfeaTgQMuKetqpynFAFZaZTi1Dd2EG1SE6XhO000_A"
-                />
+                    class="rounded border-2 border-border transition-all duration-500 w-full shadow-2xl"
+                ></Image>
             </div>
             <div class="w-full md:w-1/2">
                 <h3 class="text-3xl font-black uppercase text-text mb-6">
