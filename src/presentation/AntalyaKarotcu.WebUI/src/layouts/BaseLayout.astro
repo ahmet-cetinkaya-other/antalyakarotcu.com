@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import GTM from "../components/GTM.astro";
+import GTMNoscript from "../components/GTMNoscript.astro";
 import "../styles/global.css";
 
 // Fonts
@@ -25,6 +27,7 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="tr">
   <head>
+    <GTM />
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
@@ -47,6 +50,7 @@ const { title, description } = Astro.props;
   <body
     class="bg-bg text-text font-display antialiased overflow-x-hidden flex flex-col min-h-screen"
   >
+    <GTMNoscript />
     <Header />
     <main class="flex-grow">
       <slot />
