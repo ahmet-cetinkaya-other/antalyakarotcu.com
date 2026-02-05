@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import GTM from "../components/GTM.astro";
 import GTMNoscript from "../components/GTMNoscript.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import "../styles/global.css";
 
 // Fonts
@@ -28,6 +29,7 @@ const { title, description } = Astro.props;
 <html lang="tr">
   <head>
     <GTM />
+    <GoogleAnalytics />
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
