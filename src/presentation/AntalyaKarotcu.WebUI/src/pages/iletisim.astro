@@ -1,9 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/ui/Button.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/ui/Button.astro";
 
-const title = "İletişim - Antalya Karotcu";
-const description = "Antalya Karotcu ile 7/24 endüstriyel beton kesme, delme ve yıkım hizmetleri için iletişime geçin. Bugün teklif alın.";
+const title = "İletişim - Antalya Karotçu";
+const description =
+    "Antalya Karotçu ile 7/24 endüstriyel beton kesme, delme ve yıkım hizmetleri için iletişime geçin. Bugün teklif alın.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -13,141 +14,339 @@ const description = "Antalya Karotcu ile 7/24 endüstriyel beton kesme, delme ve
         }
     </style>
 
-    <section class="relative h-[400px] w-full bg-surface-strong overflow-hidden border-b-4 border-border">
+    <section
+        class="relative h-[400px] w-full bg-surface-strong overflow-hidden border-b-4 border-border"
+    >
         <div class="absolute inset-0 z-0">
-            <iframe class="map-container opacity-60" frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=Antalya%20Organize%20Sanayi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%">
+            <iframe
+                class="map-container opacity-60"
+                frameborder="0"
+                height="100%"
+                marginheight="0"
+                marginwidth="0"
+                scrolling="no"
+                src="https://maps.google.com/maps?q=Antalya%20Organize%20Sanayi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+            >
             </iframe>
-            <div class="absolute inset-0 bg-background-concrete/30 pointer-events-none mix-blend-multiply"></div>
-            <div class="absolute inset-0 z-10 industrial-grid pointer-events-none opacity-40"></div>
-        </div>
-        <div class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-            <div class="relative">
-                <span class="material-symbols-outlined text-primary text-6xl drop-shadow-[0_0_15px_rgba(255,103,0,0.8)] animate-bounce">location_on</span>
-                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-2 bg-black/50 blur-sm rounded-full"></div>
+            <div
+                class="absolute inset-0 bg-background-concrete/30 pointer-events-none mix-blend-multiply"
+            >
+            </div>
+            <div
+                class="absolute inset-0 z-10 industrial-grid pointer-events-none opacity-40"
+            >
             </div>
         </div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-concrete to-transparent pt-20 pb-8 z-20">
+        <div
+            class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none"
+        >
+            <div class="relative">
+                <span
+                    class="material-symbols-outlined text-primary text-6xl drop-shadow-[0_0_15px_rgba(255,103,0,0.8)] animate-bounce"
+                    >location_on</span
+                >
+                <div
+                    class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-2 bg-black/50 blur-sm rounded-full"
+                >
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-concrete to-transparent pt-20 pb-8 z-20"
+        >
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h1 class="text-6xl md:text-8xl font-display font-bold uppercase text-text tracking-tighter drop-shadow-lg">
+                <h1
+                    class="text-6xl md:text-8xl font-display font-bold uppercase text-text tracking-tighter drop-shadow-lg"
+                >
                     Merkez <span class="text-primary">İletişim</span>
                 </h1>
             </div>
         </div>
     </section>
 
-    <section class="flex-grow py-16 lg:py-24 relative overflow-hidden bg-background-concrete">
-        <div class="absolute right-0 top-0 h-full w-1/3 bg-black/10 skew-x-12 translate-x-32 pointer-events-none"></div>
+    <section
+        class="flex-grow py-16 lg:py-24 relative overflow-hidden bg-background-concrete"
+    >
+        <div
+            class="absolute right-0 top-0 h-full w-1/3 bg-black/10 skew-x-12 translate-x-32 pointer-events-none"
+        >
+        </div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                 <div class="lg:col-span-5 flex flex-col gap-8">
                     <div>
-                        <div class="mb-2 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1">
-                            <span class="material-symbols-outlined text-primary text-sm">engineering</span>
-                            <span class="text-sm font-display font-bold uppercase tracking-widest text-primary">7/24 Destek</span>
+                        <div
+                            class="mb-2 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1"
+                        >
+                            <span
+                                class="material-symbols-outlined text-primary text-sm"
+                                >engineering</span
+                            >
+                            <span
+                                class="text-sm font-display font-bold uppercase tracking-widest text-primary"
+                                >7/24 Destek</span
+                            >
                         </div>
-                        <h2 class="text-4xl font-display font-bold uppercase text-text mb-6">Mühendislik Ekibiyle Bağlantı Kurun</h2>
+                        <h2
+                            class="text-4xl font-display font-bold uppercase text-text mb-6"
+                        >
+                            Mühendislik Ekibiyle Bağlantı Kurun
+                        </h2>
                         <p class="text-text-muted text-lg leading-relaxed mb-8">
-                            Acil endüstriyel beton kesme, delme operasyonları veya proje tahmini için teknik ekibimize doğrudan ulaşın.
+                            Acil endüstriyel beton kesme, delme operasyonları
+                            veya proje tahmini için teknik ekibimize doğrudan
+                            ulaşın.
                         </p>
                     </div>
-                    <div class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"></div>
-                        <div class="flex items-start gap-5 relative z-10">
-                            <div class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
-                                <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors">Doğrudan Hat</h3>
-                                <p class="text-2xl font-bold text-text tracking-wide font-display">+90 532 609 68 02</p>
-                                <p class="text-sm text-text-muted mt-1 uppercase tracking-wider">Acil Durumlar İçin 7/24 Açık</p>
-                            </div>
+                    <div
+                        class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden"
+                    >
+                        <div
+                            class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"
+                        >
                         </div>
-                    </div>
-                    <div class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"></div>
                         <div class="flex items-start gap-5 relative z-10">
-                            <div class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
-                                <span class="material-symbols-outlined text-3xl">chat</span>
+                            <div
+                                class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors"
+                            >
+                                <span class="material-symbols-outlined text-3xl"
+                                    >phone_in_talk</span
+                                >
                             </div>
                             <div>
-                                <h3 class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors">WhatsApp Destek</h3>
-                                <p class="text-2xl font-bold text-text tracking-wide font-display">+90 532 609 68 02</p>
-                                <p class="text-sm text-text-muted mt-1 uppercase tracking-wider">Anında Proje Değerlendirmesi</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"></div>
-                        <div class="flex items-start gap-5 relative z-10">
-                            <div class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors">
-                                <span class="material-symbols-outlined text-3xl">factory</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors">Merkez Ofis</h3>
-                                <p class="text-lg font-bold text-text leading-tight font-display tracking-wide">
-                                    Antalya Organize Sanayi Bölgesi<br/>
-                                    1. Cadde No:12<br/>
-                                    Antalya, Turkey
+                                <h3
+                                    class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors"
+                                >
+                                    Doğrudan Hat
+                                </h3>
+                                <p
+                                    class="text-2xl font-bold text-text tracking-wide font-display"
+                                >
+                                    +90 532 609 68 02
+                                </p>
+                                <p
+                                    class="text-sm text-text-muted mt-1 uppercase tracking-wider"
+                                >
+                                    Acil Durumlar İçin 7/24 Açık
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 flex items-center gap-4 border-t border-border pt-6">
-                        <div class="h-12 w-12 flex items-center justify-center bg-white/5 rounded-full border border-border">
-                            <span class="material-symbols-outlined text-primary">public</span>
+                    <div
+                        class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden"
+                    >
+                        <div
+                            class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"
+                        >
+                        </div>
+                        <div class="flex items-start gap-5 relative z-10">
+                            <div
+                                class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors"
+                            >
+                                <span class="material-symbols-outlined text-3xl"
+                                    >chat</span
+                                >
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors"
+                                >
+                                    WhatsApp Destek
+                                </h3>
+                                <p
+                                    class="text-2xl font-bold text-text tracking-wide font-display"
+                                >
+                                    +90 532 609 68 02
+                                </p>
+                                <p
+                                    class="text-sm text-text-muted mt-1 uppercase tracking-wider"
+                                >
+                                    Anında Proje Değerlendirmesi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-surface border-[3px] border-border hover:border-primary transition-colors p-6 relative overflow-hidden"
+                    >
+                        <div
+                            class="absolute top-0 right-0 w-16 h-16 bg-white/5 -mr-8 -mt-8 rotate-45 transition-transform group-hover:scale-150 group-hover:bg-primary/10"
+                        >
+                        </div>
+                        <div class="flex items-start gap-5 relative z-10">
+                            <div
+                                class="bg-primary/10 p-3 border border-primary/20 group-hover:bg-primary group-hover:text-white text-primary transition-colors"
+                            >
+                                <span class="material-symbols-outlined text-3xl"
+                                    >factory</span
+                                >
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-xl font-display font-bold uppercase text-white/50 mb-1 group-hover:text-white transition-colors"
+                                >
+                                    Merkez Ofis
+                                </h3>
+                                <p
+                                    class="text-lg font-bold text-text leading-tight font-display tracking-wide"
+                                >
+                                    Antalya Organize Sanayi Bölgesi<br />
+                                    1. Cadde No:12<br />
+                                    Antalya, Türkiye
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-4 flex items-center gap-4 border-t border-border pt-6"
+                    >
+                        <div
+                            class="h-12 w-12 flex items-center justify-center bg-white/5 rounded-full border border-border"
+                        >
+                            <span class="material-symbols-outlined text-primary"
+                                >public</span
+                            >
                         </div>
                         <div>
-                            <h4 class="text-xl font-display font-bold uppercase text-text">Ülke Çapında Hizmet</h4>
-                            <p class="text-sm text-text-muted">Türkiye'nin 81 iline hizmet veriyoruz</p>
+                            <h4
+                                class="text-xl font-display font-bold uppercase text-text"
+                            >
+                                Ülke Çapında Hizmet
+                            </h4>
+                            <p class="text-sm text-text-muted">
+                                Türkiye'nin 81 iline hizmet veriyoruz
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:col-span-7">
-                    <div class="bg-surface-strong p-8 md:p-10 border-t-4 border-primary shadow-2xl relative">
-                        <div class="absolute top-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
-                        <div class="absolute top-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
-                        <div class="absolute bottom-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
-                        <div class="absolute bottom-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"></div>
-                        <h2 class="text-4xl md:text-5xl font-display font-bold uppercase text-text mb-2">Teklif Alın</h2>
-                        <p class="text-text-muted mb-8 uppercase tracking-widest text-sm font-bold border-b border-gray-700 pb-4 inline-block">Teknik Özellikler Gereklidir</p>
+                    <div
+                        class="bg-surface-strong p-8 md:p-10 border-t-4 border-primary shadow-2xl relative"
+                    >
+                        <div
+                            class="absolute top-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"
+                        >
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"
+                        >
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"
+                        >
+                        </div>
+                        <div
+                            class="absolute bottom-4 right-4 w-2 h-2 bg-gray-600 rounded-full shadow-inner"
+                        >
+                        </div>
+                        <h2
+                            class="text-4xl md:text-5xl font-display font-bold uppercase text-text mb-2"
+                        >
+                            Teklif Alın
+                        </h2>
+                        <p
+                            class="text-text-muted mb-8 uppercase tracking-widest text-sm font-bold border-b border-gray-700 pb-4 inline-block"
+                        >
+                            Teknik Özellikler Gereklidir
+                        </p>
                         <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="block text-xl font-display font-bold uppercase text-text-muted" for="name">Ad Soyad</label>
-                                <input class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="name" placeholder="AD SOYAD GİRİNİZ" type="text"/>
+                                <label
+                                    class="block text-xl font-display font-bold uppercase text-text-muted"
+                                    for="name">Ad Soyad</label
+                                >
+                                <input
+                                    class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm"
+                                    id="name"
+                                    placeholder="AD SOYAD GİRİNİZ"
+                                    type="text"
+                                />
                             </div>
                             <div class="space-y-2">
-                                <label class="block text-xl font-display font-bold uppercase text-text-muted" for="company">Firma Adı</label>
-                                <input class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="company" placeholder="FİRMA ADI GİRİNİZ" type="text"/>
+                                <label
+                                    class="block text-xl font-display font-bold uppercase text-text-muted"
+                                    for="company">Firma Adı</label
+                                >
+                                <input
+                                    class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm"
+                                    id="company"
+                                    placeholder="FİRMA ADI GİRİNİZ"
+                                    type="text"
+                                />
                             </div>
                             <div class="space-y-2">
-                                <label class="block text-xl font-display font-bold uppercase text-text-muted" for="email">E-posta Adresi</label>
-                                <input class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="email" placeholder="iletisim@antalyakarotcu.com" type="email"/>
+                                <label
+                                    class="block text-xl font-display font-bold uppercase text-text-muted"
+                                    for="email">E-posta Adresi</label
+                                >
+                                <input
+                                    class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm"
+                                    id="email"
+                                    placeholder="iletisim@antalyakarotcu.com"
+                                    type="email"
+                                />
                             </div>
                             <div class="space-y-2">
-                                <label class="block text-xl font-display font-bold uppercase text-text-muted" for="phone">Telefon Numarası</label>
-                                <input class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm" id="phone" placeholder="+90 XXX XXX XX XX" type="tel"/>
+                                <label
+                                    class="block text-xl font-display font-bold uppercase text-text-muted"
+                                    for="phone">Telefon Numarası</label
+                                >
+                                <input
+                                    class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm"
+                                    id="phone"
+                                    placeholder="+90 XXX XXX XX XX"
+                                    type="tel"
+                                />
                             </div>
                             <div class="space-y-2 md:col-span-2">
-                                <label class="block text-xl font-display font-bold uppercase text-text-muted" for="service">Talep Edilen Hizmet</label>
-                                <select class="w-full bg-input-charcoal border-none text-text focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm uppercase" id="service">
+                                <label
+                                    class="block text-xl font-display font-bold uppercase text-text-muted"
+                                    for="service">Talep Edilen Hizmet</label
+                                >
+                                <select
+                                    class="w-full bg-input-charcoal border-none text-text focus:ring-2 focus:ring-primary h-14 px-4 font-bold rounded-sm uppercase"
+                                    id="service"
+                                >
                                     <option>Karot Delme (Elmaslı)</option>
                                     <option>Duvar Kesme (Derz)</option>
                                     <option>Tel Kesme</option>
-                                    <option>Kimyasal Ankraj (Filiz Ekimi)</option>
+                                    <option
+                                        >Kimyasal Ankraj (Filiz Ekimi)</option
+                                    >
                                     <option>Kontrollü Yıkım</option>
                                     <option>Diğer / Danışmanlık</option>
                                 </select>
                             </div>
                             <div class="space-y-2 md:col-span-2">
-                                <label class="block text-xl font-display font-bold uppercase text-text-muted" for="details">Proje Detayları</label>
-                                <textarea class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary p-4 font-medium rounded-sm" id="details" placeholder="Derinlik, çap, beton tipi ve konum detaylarını belirtiniz..." rows="4"></textarea>
+                                <label
+                                    class="block text-xl font-display font-bold uppercase text-text-muted"
+                                    for="details">Proje Detayları</label
+                                >
+                                <textarea
+                                    class="w-full bg-input-charcoal border-none text-text placeholder-gray-500 focus:ring-2 focus:ring-primary p-4 font-medium rounded-sm"
+                                    id="details"
+                                    placeholder="Derinlik, çap, beton tipi ve konum detaylarını belirtiniz..."
+                                    rows="4"></textarea>
                             </div>
-                              <div class="md:col-span-2 pt-4">
-                                  <Button variant="primary" class="w-full text-3xl" type="submit">
-                                      Talebi Gönder<span class="material-symbols-outlined text-4xl ml-2">send</span>
-                                  </Button>
-                                 <p class="text-center text-gray-500 text-xs mt-4 uppercase tracking-wider">Göndererek, teknik verilerinizin işlenmesini kabul etmiş olursunuz.</p>
-                             </div>
+                            <div class="md:col-span-2 pt-4">
+                                <Button
+                                    variant="primary"
+                                    class="w-full text-3xl"
+                                    type="submit"
+                                >
+                                    Talebi Gönder<span
+                                        class="material-symbols-outlined text-4xl ml-2"
+                                        >send</span
+                                    >
+                                </Button>
+                                <p
+                                    class="text-center text-gray-500 text-xs mt-4 uppercase tracking-wider"
+                                >
+                                    Göndererek, teknik verilerinizin işlenmesini
+                                    kabul etmiş olursunuz.
+                                </p>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -1,27 +1,40 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/ui/Button.astro';
-import { getCollection } from 'astro:content';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/ui/Button.astro";
+import { getCollection } from "astro:content";
 
-const services = await getCollection('services');
+const services = await getCollection("services");
 ---
 
-<BaseLayout title="Hizmet Kataloğu | Antalya Karotcu" description="Antalya'nın ağır sanayi ve altyapı projeleri için mühendislik harikası beton kesme, delme ve kontrollü yıkım çözümleri.">
+<BaseLayout
+  title="Hizmet Kataloğu | Antalya Karotçu"
+  description="Antalya'nın ağır sanayi ve altyapı projeleri için mühendislik harikası beton kesme, delme ve kontrollü yıkım çözümleri."
+>
   <!-- Header Section -->
   <section class="bg-surface border-b border-border py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-end gap-6">
         <div>
-          <div class="mb-4 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1">
-            <span class="material-symbols-outlined text-primary text-sm">engineering</span>
-            <span class="text-xs font-bold uppercase tracking-widest text-primary">Kapsamlı Katalog</span>
+          <div
+            class="mb-4 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1"
+          >
+            <span class="material-symbols-outlined text-primary text-sm"
+              >engineering</span
+            >
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-primary"
+              >Kapsamlı Katalog</span
+            >
           </div>
-          <h1 class="text-4xl font-black uppercase tracking-tighter text-text sm:text-6xl">
+          <h1
+            class="text-4xl font-black uppercase tracking-tighter text-text sm:text-6xl"
+          >
             Endüstriyel <span class="text-primary">Hizmetler</span>
           </h1>
         </div>
         <p class="max-w-xl text-text-muted text-lg leading-relaxed font-body">
-          Antalya'nın ağır sanayi ve altyapı projeleri için özel olarak tasarlanmış beton kesme, delme ve kontrollü yıkım çözümleri.
+          Antalya'nın ağır sanayi ve altyapı projeleri için özel olarak
+          tasarlanmış beton kesme, delme ve kontrollü yıkım çözümleri.
         </p>
       </div>
     </div>
@@ -30,148 +43,283 @@ const services = await getCollection('services');
   <!-- Services List -->
   <main class="flex-grow bg-bg py-12">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-      {services.map((service, index) => {
-        const isEven = index % 2 === 0;
-        const imageClasses = `lg:col-span-5 ${isEven ? '' : 'lg:order-2'}`;
-        const contentClasses = `lg:col-span-7 ${isEven ? '' : 'lg:order-1'}`;
-        
-        return (
-          <article class="group relative overflow-hidden bg-surface border border-border rounded-sm hover:border-primary/50 transition-colors">
-            <div class="grid grid-cols-1 lg:grid-cols-12">
-              {/* Image Section - 5 columns */}
-              <div class={`${imageClasses} relative h-64 lg:h-auto overflow-hidden`}>
-                <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-surface/80 to-transparent z-10 lg:bg-gradient-to-t"></div>
-                <img
-                  alt={service.data.title}
-                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                  src={service.data.image || 'https://placehold.co/600x400/1a1a1a/FFF?text=Service'}
-                />
-                {index === 0 && (
-                  <div class="absolute top-4 left-4 z-20">
-                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest">En Çok Tercih Edilen</span>
-                  </div>
-                )}
-              </div>
+      {
+        services.map((service, index) => {
+          const isEven = index % 2 === 0;
+          const imageClasses = `lg:col-span-5 ${isEven ? "" : "lg:order-2"}`;
+          const contentClasses = `lg:col-span-7 ${isEven ? "" : "lg:order-1"}`;
 
-              {/* Content Section - 7 columns */}
-              <div class={`${contentClasses} p-8 flex flex-col justify-between relative`}>
-                {/* Striped Background Pattern - matches mockup */}
-                <div class="absolute inset-0 opacity-5 pointer-events-none" style={{
-                  backgroundImage: 'repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 10px, transparent 10px, transparent 20px)'
-                }}></div>
-
-                <div class="relative z-10">
-                  <div class="mb-6">
-                    <div class="flex items-center gap-3 mb-4">
-                      <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 200;">{service.data.icon}</span>
-                      <h2 class="text-3xl font-black uppercase text-text tracking-tight">{service.data.title}</h2>
-                    </div>
-                    <p class="text-text-muted font-body mb-6 leading-relaxed">{service.data.description}</p>
-                  </div>
-
-                  {service.data.technicalSpecs && (
-                    <div class="bg-surface-strong/50 border border-white/5 rounded p-4 mb-6">
-                      <h3 class="text-xs font-bold uppercase text-gray-500 tracking-widest mb-3 border-b border-white/5 pb-2">Teknik Özellikler</h3>
-                      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {service.data.technicalSpecs.map((spec) => (
-                          <div>
-                            <span class="block text-xs text-gray-500 uppercase">{spec.label}</span>
-                            <span class="block text-text font-bold font-mono">{spec.value}</span>
-                          </div>
-                        ))}
-                      </div>
+          return (
+            <article class="group relative overflow-hidden bg-surface border border-border rounded-sm hover:border-primary/50 transition-colors">
+              <div class="grid grid-cols-1 lg:grid-cols-12">
+                {/* Image Section - 5 columns */}
+                <div
+                  class={`${imageClasses} relative h-64 lg:h-auto overflow-hidden`}
+                >
+                  <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-surface/80 to-transparent z-10 lg:bg-gradient-to-t" />
+                  <img
+                    alt={service.data.title}
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    src={
+                      service.data.image ||
+                      "https://placehold.co/600x400/1a1a1a/FFF?text=Hizmet"
+                    }
+                  />
+                  {index === 0 && (
+                    <div class="absolute top-4 left-4 z-20">
+                      <span class="bg-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest">
+                        En Çok Tercih Edilen
+                      </span>
                     </div>
                   )}
+                </div>
 
-                  {/* Features based on service type */}
-                  <div class="flex items-center justify-between border-t border-border pt-6">
-                    <div class="flex gap-4 text-sm text-text-muted">
-                      {index === 0 && (
-                        <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Tozsuz</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Düşük Gürültü</span>
-                        </>
-                      )}
-                      {index === 1 && (
-                        <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Mükemmel Kenarlar</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Hızlı Kurulum</span>
-                        </>
-                      )}
-                      {index === 2 && (
-                        <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Her Kalınlıkta</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Karmaşık Şekiller</span>
-                        </>
-                      )}
-                      {index === 3 && (
-                        <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Yüksek Çekme Dayanımı</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Sertifikalı</span>
-                        </>
-                      )}
-                      {index === 4 && (
-                        <>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Dumansız</span>
-                          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Kapalı Alan</span>
-                        </>
-                      )}
+                {/* Content Section - 7 columns */}
+                <div
+                  class={`${contentClasses} p-8 flex flex-col justify-between relative`}
+                >
+                  {/* Striped Background Pattern - matches mockup */}
+                  <div
+                    class="absolute inset-0 opacity-5 pointer-events-none"
+                    style={{
+                      backgroundImage:
+                        "repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 10px, transparent 10px, transparent 20px)",
+                    }}
+                  />
+
+                  <div class="relative z-10">
+                    <div class="mb-6">
+                      <div class="flex items-center gap-3 mb-4">
+                        <span
+                          class="material-symbols-outlined text-primary text-3xl"
+                          style="font-variation-settings: 'FILL' 0, 'wght' 200;"
+                        >
+                          {service.data.icon}
+                        </span>
+                        <h2 class="text-3xl font-black uppercase text-text tracking-tight">
+                          {service.data.title}
+                        </h2>
+                      </div>
+                      <p class="text-text-muted font-body mb-6 leading-relaxed">
+                        {service.data.description}
+                      </p>
                     </div>
-                    <a href={`/hizmetler/${service.id}`} class="flex items-center gap-2 text-primary font-bold uppercase text-sm tracking-wider group-hover:translate-x-2 transition-transform">
-                      Hizmet Detayı <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                    </a>
+
+                    {service.data.technicalSpecs && (
+                      <div class="bg-surface-strong/50 border border-white/5 rounded p-4 mb-6">
+                        <h3 class="text-xs font-bold uppercase text-gray-500 tracking-widest mb-3 border-b border-white/5 pb-2">
+                          Teknik Özellikler
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          {service.data.technicalSpecs.map((spec) => (
+                            <div>
+                              <span class="block text-xs text-gray-500 uppercase">
+                                {spec.label}
+                              </span>
+                              <span class="block text-text font-bold font-mono">
+                                {spec.value}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Features based on service type */}
+                    <div class="flex items-center justify-between border-t border-border pt-6">
+                      <div class="flex gap-4 text-sm text-text-muted">
+                        {index === 0 && (
+                          <>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Tozsuz
+                            </span>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Düşük Gürültü
+                            </span>
+                          </>
+                        )}
+                        {index === 1 && (
+                          <>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Mükemmel Kenarlar
+                            </span>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Hızlı Kurulum
+                            </span>
+                          </>
+                        )}
+                        {index === 2 && (
+                          <>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Her Kalınlıkta
+                            </span>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Karmaşık Şekiller
+                            </span>
+                          </>
+                        )}
+                        {index === 3 && (
+                          <>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Yüksek Çekme Dayanımı
+                            </span>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Sertifikalı
+                            </span>
+                          </>
+                        )}
+                        {index === 4 && (
+                          <>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Dumansız
+                            </span>
+                            <span class="flex items-center gap-1">
+                              <span class="material-symbols-outlined text-primary text-base">
+                                check_circle
+                              </span>{" "}
+                              Kapalı Alan
+                            </span>
+                          </>
+                        )}
+                      </div>
+                      <a
+                        href={`/hizmetler/${service.id}`}
+                        class="flex items-center gap-2 text-primary font-bold uppercase text-sm tracking-wider group-hover:translate-x-2 transition-transform"
+                      >
+                        Hizmet Detayı{" "}
+                        <span class="material-symbols-outlined text-lg">
+                          arrow_forward
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </article>
-        );
-      })}
+            </article>
+          );
+        })
+      }
     </div>
   </main>
 
   <!-- Standards & Protocols Section -->
-  <section class="bg-surface-strong border-t border-primary/20 py-20 relative overflow-hidden">
+  <section
+    class="bg-surface-strong border-t border-primary/20 py-20 relative overflow-hidden"
+  >
     {/* Background Grid Pattern */}
-    <div class="absolute right-0 top-0 h-full w-1/3 opacity-5 pointer-events-none" style={{
-      backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
-      backgroundSize: '40px 40px'
-    }}></div>
+    <div
+      class="absolute right-0 top-0 h-full w-1/3 opacity-5 pointer-events-none"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
+        backgroundSize: "40px 40px",
+      }}
+    >
+    </div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="mb-12 text-center md:text-left">
-        <h2 class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2">Standartlar ve Uyumluluk</h2>
-        <h3 class="text-4xl font-black uppercase text-text">Güvenlik Protokolleri</h3>
+        <h2
+          class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2"
+        >
+          Standartlar ve Uyumluluk
+        </h2>
+        <h3 class="text-4xl font-black uppercase text-text">
+          Güvenlik Protokolleri
+        </h3>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
-          <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
+        <div
+          class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group"
+        >
+          <div
+            class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary"
+          >
             <span class="material-symbols-outlined">health_and_safety</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">İSG Uyumluluğu</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Tehlikeli inşaat ortamları için uluslararası iş güvenliği standartlarına uyum.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">
+            İSG Uyumluluğu
+          </h4>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Tehlikeli inşaat ortamları için uluslararası iş güvenliği
+            standartlarına uyum.
+          </p>
         </div>
-        <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
-          <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
+        <div
+          class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group"
+        >
+          <div
+            class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary"
+          >
             <span class="material-symbols-outlined">chef_hat</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">KKD Zorunluluğu</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Sahadaki tüm personel için katı kişisel koruyucu donanım gereklilikleri, sıfır tolerans.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">
+            KKD Zorunluluğu
+          </h4>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Sahadaki tüm personel için katı kişisel koruyucu donanım
+            gereklilikleri, sıfır tolerans.
+          </p>
         </div>
-        <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
-          <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
+        <div
+          class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group"
+        >
+          <div
+            class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary"
+          >
             <span class="material-symbols-outlined">engineering</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">Saha Değerlendirmesi</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Ekipman kurulumundan önce yapısal bütünlük analizi ve tehlike tanımlaması.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">
+            Saha Değerlendirmesi
+          </h4>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Ekipman kurulumundan önce yapısal bütünlük analizi ve tehlike
+            tanımlaması.
+          </p>
         </div>
-        <div class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group">
-          <div class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary">
+        <div
+          class="border border-border bg-surface p-6 rounded relative hover:border-primary transition-colors group"
+        >
+          <div
+            class="absolute -top-3 left-6 bg-surface-strong px-2 text-primary"
+          >
             <span class="material-symbols-outlined">verified_user</span>
           </div>
-          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">Sertifikalı Operatörler</h4>
-          <p class="text-text-muted text-sm leading-relaxed">Tüm makine operatörleri, özel hidrolik ekipmanlar için güncel ileri düzey sertifikalara sahiptir.</p>
+          <h4 class="text-xl font-bold uppercase text-text mb-3 mt-2">
+            Sertifikalı Operatörler
+          </h4>
+          <p class="text-text-muted text-sm leading-relaxed">
+            Tüm makine operatörleri, özel hidrolik ekipmanlar için güncel ileri
+            düzey sertifikalara sahiptir.
+          </p>
         </div>
       </div>
     </div>
@@ -181,16 +329,23 @@ const services = await getCollection('services');
   <section class="bg-primary py-24 relative overflow-hidden">
     <div class="absolute inset-0 bg-black/10"></div>
     <div class="absolute -right-20 -bottom-20 opacity-20 rotate-12">
-      <span class="material-symbols-outlined text-[300px] text-black">construction</span>
+      <span class="material-symbols-outlined text-[300px] text-black"
+        >construction</span
+      >
     </div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <h2 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">Projenize Başlamaya Hazır mısınız?</h2>
-      <p class="text-white/90 text-xl font-medium max-w-2xl mx-auto mb-10">Beton kesme ihtiyaçlarınız için 24 saat içinde detaylı teknik teklif ve maliyet tahmini alın.</p>
-       <div class="flex flex-col sm:flex-row justify-center gap-6">
-         <Button variant="outline" class="px-8 py-4">
-           Teklif Alın
-         </Button>
-       </div>
+    <div
+      class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+    >
+      <h2 class="text-4xl md:text-5xl font-black uppercase text-white mb-6">
+        Projenize Başlamaya Hazır mısınız?
+      </h2>
+      <p class="text-white/90 text-xl font-medium max-w-2xl mx-auto mb-10">
+        Beton kesme ihtiyaçlarınız için 24 saat içinde detaylı teknik teklif ve
+        maliyet tahmini alın.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <Button variant="outline" class="px-8 py-4"> Teklif Alın </Button>
+      </div>
     </div>
   </section>
 </BaseLayout>

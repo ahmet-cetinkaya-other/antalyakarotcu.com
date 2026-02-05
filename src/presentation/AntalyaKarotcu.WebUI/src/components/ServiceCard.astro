@@ -10,23 +10,38 @@ interface Props {
 const { title, description, image, icon, href } = Astro.props;
 ---
 
-<div class="group relative flex flex-col overflow-hidden rounded bg-surface border-2 border-border transition-all hover:border-primary hover:-translate-y-1">
-  <div class="relative h-56 w-full overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10 opacity-90"></div>
-    <div 
-      class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" 
-      data-alt={title} 
+<div
+  class="group relative flex flex-col overflow-hidden rounded bg-surface border-2 border-border transition-all hover:border-primary hover:-translate-y-1"
+>
+  <a href={href} class="relative h-56 w-full overflow-hidden block">
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10 opacity-90"
+    >
+    </div>
+    <div
+      class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+      data-alt={title}
       style={`background-image: url('${image}')`}
-    ></div>
-    <div class="absolute bottom-4 left-4 z-20 bg-primary p-2 text-white shadow-lg">
+    >
+    </div>
+    <div
+      class="absolute bottom-4 left-4 z-20 bg-primary p-2 text-white shadow-lg"
+    >
       <span class="material-symbols-outlined !text-3xl">{icon}</span>
     </div>
-  </div>
+  </a>
   <div class="flex flex-1 flex-col p-6">
-    <h4 class="mb-3 text-2xl font-bold uppercase text-text">{title}</h4>
+    <a href={href} class="hover:text-primary transition-colors">
+      <h4 class="mb-3 text-2xl font-bold uppercase text-text">{title}</h4>
+    </a>
     <p class="mb-6 text-text-muted leading-relaxed">{description}</p>
-    <a class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-text transition-colors" href={href}>
-      Technical Specs <span class="material-symbols-outlined text-lg">arrow_forward</span>
+    <a
+      class="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary group-hover:text-text transition-colors"
+      href={href}
+    >
+      Teknik Özellikler <span class="material-symbols-outlined text-lg"
+        >arrow_forward</span
+      >
     </a>
   </div>
 </div>
