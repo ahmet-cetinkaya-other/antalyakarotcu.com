@@ -2,7 +2,7 @@
 title: "Asfalt Kesme"
 description: "Yol çalışmaları ve altyapı onarımları için düzgün hatlı asfalt kesme hizmeti."
 icon: "edit_road"
-image: "/assets/images/services/asfalt-kesme-5.jpg"
+image: "../../assets/images/services/asfalt-kesme-5.jpg"
 features: ["Altyapı Onarımı", "Derz Kesim", "Kontrollü Kanal"]
 technicalSpecs:
   - label: "Makine"

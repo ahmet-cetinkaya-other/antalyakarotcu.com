@@ -2,7 +2,7 @@
 title: "Hafriyat"
 description: "Projeniz için sağlam bir zemin hazırlığı: Temel kazısı, dolgu ve çevre düzenleme."
 icon: "foundation"
-image: "/assets/images/services/hafriyat-5.jpg"
+image: "../../assets/images/services/hafriyat-5.jpg"
 features: ["Zemin Hazırlığı", "Temel Kazısı", "Moloz Nakliyesi"]
 technicalSpecs:
   - label: "Araçlar"

@@ -2,7 +2,7 @@
 title: "Beton Kırma"
 description: "Mekan yenileme ve yıkım işleri için kontrollü, güvenli duvar kırma yöntemleri."
 icon: "gavel"
-image: "/assets/images/services/duvar-kirma-5.jpg"
+image: "../../assets/images/services/duvar-kirma-5.jpg"
 features: ["Bölgesel Yıkım", "Moloz Tahliyesi", "Hızlı Teslim"]
 technicalSpecs:
   - label: "Yöntem"

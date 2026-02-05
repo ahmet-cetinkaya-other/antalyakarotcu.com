@@ -2,7 +2,7 @@
 title: "Beton Delme"
 description: "Tesisat geçişleri ve montajlar için yapıya zarar vermeyen, titiz beton delme çözümleri."
 icon: "radio_button_checked"
-image: "/assets/images/services/beton-delme-5.jpg"
+image: "../../assets/images/services/beton-delme-5.jpg"
 features: ["Hasarsız", "Temiz İşçilik", "İstenilen Çapta"]
 technicalSpecs:
   - label: "Makine"

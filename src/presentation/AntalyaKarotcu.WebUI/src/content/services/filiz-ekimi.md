@@ -2,7 +2,7 @@
 title: "Filiz Ekimi"
 description: "Eski ve yeni betonu birbirine bağlayan, yapısal bütünlüğü sağlayan donatı ekimi."
 icon: "vertical_align_bottom"
-image: "/assets/images/services/filiz-ekimi-5.jpg"
+image: "../../assets/images/services/filiz-ekimi-5.jpg"
 features: ["Bina Güçlendirme", "Kat Ekleme", "Kolon Mantolama"]
 technicalSpecs:
   - label: "Malzeme"

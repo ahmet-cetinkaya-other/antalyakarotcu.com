@@ -2,7 +2,7 @@
 title: "Kimyasal Ankraj"
 description: "Ağır yükleri betona sabitlemek için kullanılan en güçlü ve güvenilir montaj yöntemi."
 icon: "anchor"
-image: "/assets/images/services/kimyasal-ankraj-5.jpg"
+image: "../../assets/images/services/kimyasal-ankraj-5.jpg"
 features: ["Ağır Yük Montajı", "Sismik Dayanım", "Hızlı Uygulama"]
 technicalSpecs:
   - label: "Ürün"

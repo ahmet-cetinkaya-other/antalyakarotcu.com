@@ -1,5 +1,6 @@
 ---
 import Icon from "../ui/Icon.astro";
+import { Image } from "astro:assets";
 
 interface Props {
     project: any; // We'll type this properly if possible, or use the collection type
@@ -12,7 +13,7 @@ const { title, category, image, stats, type = "image" } = project.data;
 const projectData = JSON.stringify({
     title,
     category,
-    image,
+    image: typeof image === "string" ? image : image.src,
     stats,
     type,
     id: project.id,
@@ -38,7 +39,7 @@ const projectData = JSON.stringify({
                     onmouseout="this.pause()"
                 />
             ) : (
-                <img
+                <Image
                     src={image}
                     alt={title}
                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"

@@ -2,7 +2,7 @@
 title: "Beton Kesme"
 description: "Kontrollü ve güvenli bir şekilde kapı, pencere veya asansör boşluğu açma hizmetleri."
 icon: "content_cut"
-image: "/assets/images/services/beton-kesme-5.jpg"
+image: "../../assets/images/services/beton-kesme-5.jpg"
 features: ["Düzgün Hatlar", "İş Güvenliği", "Planlı Kesim"]
 technicalSpecs:
   - label: "Teknoloji"

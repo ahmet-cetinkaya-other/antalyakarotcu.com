@@ -34,19 +34,16 @@ const projects = Object.entries(galleryFiles).map(([path, mod]) => {
 
   const isVideo = filename.match(/\.(mp4|webm|mov)$/i);
 
-  // For videos, the default export is usually the URL string. For images, it might be an object or string.
-  // We handle both cases safely.
-  const src =
-    typeof mod.default === "string"
-      ? mod.default
-      : (mod.default as any).src || mod.default;
+  // For videos, the default export is usually the URL string. For images, it might be an object (ImageMetadata) or string.
+  // We keep the object for images to use with <Image /> component.
+  const image = mod.default;
 
   return {
     id: path, // unique id from path
     data: {
       title: title.charAt(0).toUpperCase() + title.slice(1),
       category: categoryName,
-      image: src,
+      image,
       type: isVideo ? "video" : "image",
       stats: [],
     },
