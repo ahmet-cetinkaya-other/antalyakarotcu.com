@@ -3,36 +3,37 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/ui/Button.astro";
 import heroImg from "../assets/images/backgrounds/hero.jpg";
 
-const title = "İletişim - Antalya Karotçu";
+const title = "İletişim | Antalya Karotçu: 7/24 Beton Kesme & Delme Desteği";
 const description =
-    "Antalya Karotçu ile 7/24 endüstriyel beton kesme, delme ve yıkım hizmetleri için iletişime geçin. Bugün teklif alın.";
+    "Antalya Karotçu ile 7/24 endüstriyel beton kesme, delme ve yıkım hizmetleri için hemen iletişime geçin. Projeniz için ücretsiz ve hızlı teklif alın.";
 
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "İletişim - Antalya Karotcu",
-  description: description,
-  url: "https://antalyakarotcu.com/iletisim",
-  mainEntity: {
-    "@type": "LocalBusiness",
-    name: "Antalya Karotcu",
-    telephone: "+90 532 609 68 02",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Yükseliş Mahallesi, 2124 Sokak, Sakin Apartmanı, No:34/A",
-      addressLocality: "Kepez",
-      addressRegion: "Antalya",
-      addressCountry: "TR",
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "İletişim - Antalya Karotcu",
+    description: description,
+    url: "https://antalyakarotcu.com/iletisim",
+    mainEntity: {
+        "@type": "LocalBusiness",
+        name: "Antalya Karotcu",
+        telephone: "+90 532 609 68 02",
+        address: {
+            "@type": "PostalAddress",
+            streetAddress:
+                "Yükseliş Mahallesi, 2124 Sokak, Sakin Apartmanı, No:34/A",
+            addressLocality: "Kepez",
+            addressRegion: "Antalya",
+            addressCountry: "TR",
+        },
     },
-  },
 };
 ---
 
 <BaseLayout
-  title={title}
-  description={description}
-  ogImage={{ image: heroImg, alt: "Antalya Karotcu İletişim" }}
-  structuredData={structuredData}
+    title={title}
+    description={description}
+    ogImage={{ image: heroImg, alt: "Antalya Karotcu İletişim" }}
+    structuredData={structuredData}
 >
     <style>
         .map-container {
@@ -347,11 +348,19 @@ const structuredData = {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const name = (document.getElementById("name") as HTMLInputElement)?.value;
-            const company = (document.getElementById("company") as HTMLInputElement)?.value;
-            const phone = (document.getElementById("phone") as HTMLInputElement)?.value;
-            const service = (document.getElementById("service") as HTMLSelectElement)?.value;
-            const details = (document.getElementById("details") as HTMLTextAreaElement)?.value;
+            const name = (document.getElementById("name") as HTMLInputElement)
+                ?.value;
+            const company = (
+                document.getElementById("company") as HTMLInputElement
+            )?.value;
+            const phone = (document.getElementById("phone") as HTMLInputElement)
+                ?.value;
+            const service = (
+                document.getElementById("service") as HTMLSelectElement
+            )?.value;
+            const details = (
+                document.getElementById("details") as HTMLTextAreaElement
+            )?.value;
 
             const subject = "Antalya Karotçu - Yeni Hizmet Talebi";
             const body = `Merhaba,\n\nAşağıdaki hizmet talebini iletiyorum:\n\n**Kişisel Bilgiler:**\nAd Soyad: ${name}\nFirma Adı: ${company}\n\nTelefon: ${phone}\n\n**Hizmet Detayları:**\nTalep Edilen Hizmet: ${service}\nProje Detayları:\n${details}\n\nTeşekkürler.`;

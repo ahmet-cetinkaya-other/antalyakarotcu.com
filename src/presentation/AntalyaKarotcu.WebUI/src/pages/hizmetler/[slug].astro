@@ -29,9 +29,11 @@ const structuredData = {
 ---
 
 <BaseLayout
-  title={`${entry.data.title} | Antalya Karotçu`}
+  title={`${entry.data.title} Hizmeti | Antalya Karotçu: Profesyonel Çözümler`}
   description={entry.data.description}
-  ogImage={entry.data.image ? { image: entry.data.image, alt: entry.data.title } : undefined}
+  ogImage={entry.data.image
+    ? { image: entry.data.image, alt: entry.data.title }
+    : undefined}
   structuredData={structuredData}
 >
   <section class="bg-surface border-b border-border py-16">

@@ -10,9 +10,9 @@ import heroImg from "../assets/images/backgrounds/hero.jpg";
 import placeholderImg from "../assets/images/placeholder/service-fallback.jpg";
 
 const services = await getCollection("services");
-const title = "Antalya Karotçu - Endüstriyel Hassasiyet";
+const title = "Antalya Karotçu: Profesyonel Beton Kesme & Delme Hizmetleri";
 const description =
-  "Antalya'da profesyonel beton delme, kesme ve inşaat hizmetleri. 1995'ten beri güvenilir çözüm ortağınız.";
+  "Antalya'da güvenilir karot, beton delme ve kesme çözümleri. 1995'ten beri tecrübeli ekibimizle, uygun fiyat ve yüksek hassasiyetli hizmet sunuyoruz.";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -22,10 +22,10 @@ const structuredData = {
   telephone: "+90 532 609 68 02",
   address: {
     "@type": "PostalAddress",
-    "streetAddress": "Yükseliş Mahallesi, 2124 Sokak, Sakin Apartmanı, No:34/A",
-    "addressLocality": "Kepez",
-    "addressRegion": "Antalya",
-    "addressCountry": "TR",
+    streetAddress: "Yükseliş Mahallesi, 2124 Sokak, Sakin Apartmanı, No:34/A",
+    addressLocality: "Kepez",
+    addressRegion: "Antalya",
+    addressCountry: "TR",
   },
   url: "https://antalyakarotcu.com",
   image: "https://antalyakarotcu.com/assets/images/backgrounds/hero.jpg", // Fallback/Actual URL if predictable
@@ -67,7 +67,7 @@ const structuredData = {
           src={heroImg}
           alt="Ağır sanayi beton delme makinesinin yakın çekimi"
           class="h-full w-full object-cover opacity-60 mix-blend-overlay"
-        ></Image>
+        />
       </div>
       <!-- Texture Overlay -->
       <div class="absolute inset-0 opacity-20 z-10 industrial-grid"></div>

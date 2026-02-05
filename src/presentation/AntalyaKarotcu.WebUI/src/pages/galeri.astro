@@ -54,9 +54,9 @@ const projects = Object.entries(galleryFiles).map(([path, mod]) => {
   };
 });
 
-const title = "Proje Galerisi | Antalya Karotçu";
+const title = "Proje Galerisi | Antalya Karotçu: Beton Kesme ve Delme İşleri";
 const description =
-  "Antalya genelindeki beton kesme, delme ve yıkım projelerimizdeki mühendislik hassasiyetimizin sergisi.";
+  "Antalya genelindeki beton kesme, delme ve yıkım projelerimizden örnekler. Mühendislik hassasiyetiyle tamamladığımız işlerimizi inceleyin.";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -139,12 +139,14 @@ const categories = [
     class="py-20 bg-surface-strong border-t border-border relative overflow-hidden"
   >
     <!-- Decorative Background -->
-    <div class="absolute right-0 top-0 w-1/2 h-full opacity-10 mix-blend-overlay pointer-events-none">
-        <Image
-            src={mapBg}
-            alt="Antalya Haritası"
-            class="h-full w-full object-cover"
-        ></Image>
+    <div
+      class="absolute right-0 top-0 w-1/2 h-full opacity-10 mix-blend-overlay pointer-events-none"
+    >
+      <Image
+        src={mapBg}
+        alt="Antalya Haritası"
+        class="h-full w-full object-cover"
+      />
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
