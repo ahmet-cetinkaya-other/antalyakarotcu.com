@@ -1,0 +1,19 @@
+---
+import Metadata from "acore-astro/src/components/Metadata.astro";
+import type { Props as MetadataProps } from "acore-astro/src/components/Metadata.astro";
+import favicon from "../assets/favicon.svg";
+
+export interface Props extends Omit<MetadataProps, "site"> {
+  site?: string;
+}
+
+const { site = "Antalya Karotcu", ...props } = Astro.props;
+---
+
+<Metadata
+  site={site}
+  favicon={{ image: favicon }}
+  locale="tr_TR"
+  themeColor="#ff6600"
+  {...props}
+/>

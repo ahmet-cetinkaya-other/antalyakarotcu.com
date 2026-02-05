@@ -1,3 +1,6 @@
 [submodule "packages/acore-scripts"]
 	path = packages/acore-scripts
 	url = https://github.com/ahmet-cetinkaya/acore-scripts
+[submodule "packages/acore-astro"]
+	path = packages/acore-astro
+	url = https://github.com/ahmet-cetinkaya/acore-astro.git

@@ -10,9 +10,34 @@ import mastersImg from "../assets/images/about/about-masters.jpg";
 const title = "Hakkımızda - Antalya Karotçu";
 const description =
     "Antalya Karotçu: 1995'ten bugüne, Antalya'nın yapısal gelişiminde emeği olan, beton kesme ve güçlendirme alanındaki çözüm ortağınız.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "Hakkımızda - Antalya Karotcu",
+  description: description,
+  url: "https://antalyakarotcu.com/hakkimizda",
+  mainEntity: {
+    "@type": "LocalBusiness",
+    name: "Antalya Karotcu",
+    foundingDate: "1995",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Yükseliş Mahallesi, 2124 Sokak, Sakin Apartmanı, No:34/A",
+      addressLocality: "Kepez",
+      addressRegion: "Antalya",
+      addressCountry: "TR",
+    },
+  },
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={{ image: heroBg, alt: "Antalya Karotcu Hakkımızda" }}
+  structuredData={structuredData}
+>
     <section
         class="relative h-[85vh] w-full overflow-hidden bg-surface-strong flex items-center"
     >

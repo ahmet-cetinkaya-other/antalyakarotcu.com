@@ -14,11 +14,25 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: entry.data.title,
+  description: entry.data.description,
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Antalya Karotcu",
+  },
+  url: `https://antalyakarotcu.com/hizmetler/${entry.id}`,
+};
 ---
 
 <BaseLayout
   title={`${entry.data.title} | Antalya Karotçu`}
   description={entry.data.description}
+  ogImage={entry.data.image ? { image: entry.data.image, alt: entry.data.title } : undefined}
+  structuredData={structuredData}
 >
   <section class="bg-surface border-b border-border py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

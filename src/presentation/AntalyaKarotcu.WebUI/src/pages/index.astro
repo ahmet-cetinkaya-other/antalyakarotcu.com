@@ -12,10 +12,48 @@ import placeholderImg from "../assets/images/placeholder/service-fallback.jpg";
 const services = await getCollection("services");
 const title = "Antalya Karotçu - Endüstriyel Hassasiyet";
 const description =
-  "Antalya'da profesyonel beton delme, kesme ve inşaat hizmetleri.";
+  "Antalya'da profesyonel beton delme, kesme ve inşaat hizmetleri. 1995'ten beri güvenilir çözüm ortağınız.";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Antalya Karotcu",
+  description: description,
+  telephone: "+90 532 609 68 02",
+  address: {
+    "@type": "PostalAddress",
+    "streetAddress": "Yükseliş Mahallesi, 2124 Sokak, Sakin Apartmanı, No:34/A",
+    "addressLocality": "Kepez",
+    "addressRegion": "Antalya",
+    "addressCountry": "TR",
+  },
+  url: "https://antalyakarotcu.com",
+  image: "https://antalyakarotcu.com/assets/images/backgrounds/hero.jpg", // Fallback/Actual URL if predictable
+  priceRange: "₺₺",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={{ image: heroImg, alt: "Antalya Karotcu Şantiye Çalışması" }}
+  structuredData={structuredData}
+>
   <!-- Hero Section -->
   <section class="relative h-[85vh] w-full overflow-hidden bg-surface-strong">
     <!-- Background Image with Overlay -->

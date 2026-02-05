@@ -58,6 +58,14 @@ const title = "Proje Galerisi | Antalya Karotçu";
 const description =
   "Antalya genelindeki beton kesme, delme ve yıkım projelerimizdeki mühendislik hassasiyetimizin sergisi.";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Galeri - Antalya Karotcu",
+  description: description,
+  url: "https://antalyakarotcu.com/galeri",
+};
+
 // Dynamic categories based on found folders + 'All'
 const foundCategories = [
   ...new Set(projects.map((p) => p.data.category)),
@@ -68,7 +76,12 @@ const categories = [
 ];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={{ image: mapBg, alt: "Antalya Karotcu Proje Haritası" }}
+  structuredData={structuredData}
+>
   <!-- Hero Section with Industrial Grid -->
   <section
     class="relative bg-surface-strong border-b border-border pt-32 pb-20 overflow-hidden"

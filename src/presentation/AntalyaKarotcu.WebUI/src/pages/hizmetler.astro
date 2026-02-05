@@ -11,11 +11,22 @@ const services = (await getCollection("services")).sort((a, b) => {
   if (b.data.title === "Karot Delme") return 1;
   return a.data.title.localeCompare(b.data.title, "tr");
 });
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Hizmetlerimiz - Antalya Karotcu",
+  description:
+    "Antalya'nın ağır sanayi ve altyapı projeleri için mühendislik harikası beton kesme, delme ve kontrollü yıkım çözümleri.",
+  url: "https://antalyakarotcu.com/hizmetler",
+};
 ---
 
 <BaseLayout
   title="Hizmet Kataloğu | Antalya Karotçu"
   description="Antalya'nın ağır sanayi ve altyapı projeleri için mühendislik harikası beton kesme, delme ve kontrollü yıkım çözümleri."
+  ogImage={{ image: heroBg, alt: "Antalya Karotcu Hizmetleri" }}
+  structuredData={structuredData}
 >
   <!-- Header Section -->
   <section class="relative h-[60vh] w-full overflow-hidden bg-surface-strong flex items-center border-b border-border">

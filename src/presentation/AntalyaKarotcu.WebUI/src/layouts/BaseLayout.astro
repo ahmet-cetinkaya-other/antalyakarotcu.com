@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import GTM from "../components/GTM.astro";
 import GTMNoscript from "../components/GTMNoscript.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import Meta, { type Props as MetaProps } from "../components/Meta.astro";
 import "../styles/global.css";
 
 // Fonts
@@ -17,12 +18,9 @@ import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/jetbrains-mono/700.css";
 import "@fontsource-variable/material-symbols-outlined";
 
-interface Props {
-  title: string;
-  description: string;
-}
+interface Props extends MetaProps {}
 
-const { title, description } = Astro.props;
+const { ...props } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,12 +28,7 @@ const { title, description } = Astro.props;
   <head>
     <GTM />
     <GoogleAnalytics />
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <Meta {...props} />
     <script>
       // Check system preference or localStorage for dark mode
       if (
