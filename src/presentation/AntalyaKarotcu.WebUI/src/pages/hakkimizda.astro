@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/ui/Button.astro";
+import HeroStrip from "../components/ui/HeroStrip.astro";
 import { Image } from "astro:assets";
 import heroBg from "../assets/images/backgrounds/about-hero.jpg";
 import historyImg from "../assets/images/about/about-history.jpg";
@@ -86,10 +87,7 @@ const structuredData = {
                 </p>
             </div>
         </div>
-        <div
-            class="absolute bottom-0 left-0 h-2 w-full bg-[repeating-linear-gradient(45deg,#ff6600,#ff6600_20px,#1a1a1a_20px,#1a1a1a_40px)] opacity-80"
-        >
-        </div>
+        <HeroStrip />
     </section>
 
     <div class="border-y border-border bg-surface relative z-30">

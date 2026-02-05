@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/ui/Button.astro";
+import HeroStrip from "../../components/ui/HeroStrip.astro";
 
 export async function getStaticPaths() {
   const services = await getCollection("services");
@@ -36,7 +37,9 @@ const structuredData = {
     : undefined}
   structuredData={structuredData}
 >
-  <section class="bg-surface border-b border-border py-16">
+  <section
+    class="bg-surface border-b border-border py-16 relative overflow-hidden"
+  >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div
         class="mb-4 inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-3 py-1"
@@ -54,6 +57,7 @@ const structuredData = {
         {entry.data.title}
       </h1>
     </div>
+    <HeroStrip />
   </section>
 
   <main class="py-12 bg-bg">
