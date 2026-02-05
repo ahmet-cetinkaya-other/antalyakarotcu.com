@@ -4,7 +4,7 @@ import Button from "../components/ui/Button.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import placeholderImg from "../assets/images/placeholder/service-fallback.jpg";
-import heroBg from "../assets/images/backgrounds/services-hero.jpg";
+import heroBg from "../assets/images/backgrounds/values-bg-new.jpg";
 
 const services = (await getCollection("services")).sort((a, b) => {
   if (a.data.title === "Karot Delme") return -1;
