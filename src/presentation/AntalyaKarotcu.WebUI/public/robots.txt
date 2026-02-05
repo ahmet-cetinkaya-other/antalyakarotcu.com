@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antalyakarotcu.com/sitemap-index.xml
