@@ -8,6 +8,7 @@ stats:
   - label: "Malzeme Derinliği"
     value: "2400mm"
 completedDate: "2023"
+pubDate: "2023-01-01"
 ---
 
 Uzaktan kumandalı tel kesme makinesi ile sualtı kesim operasyonu gerçekleştirildi. Sapma < 2mm olarak kaydedildi.
