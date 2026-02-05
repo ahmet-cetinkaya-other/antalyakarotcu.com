@@ -21,23 +21,5 @@ const services = defineCollection({
   }),
 });
 
-const projects = defineCollection({
-  loader: glob({ base: "./src/content/projects", pattern: "**/*.{md,mdx}" }),
-  schema: z.object({
-    title: z.string(),
-    category: z.string(),
-    image: z.string(),
-    stats: z
-      .array(
-        z.object({
-          label: z.string(),
-          value: z.string(),
-        }),
-      )
-      .optional(),
-    completedDate: z.string().optional(),
-    pubDate: z.coerce.date().optional(),
-  }),
-});
 
-export const collections = { services, projects };
+export const collections = { services };

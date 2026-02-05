@@ -1,0 +1,239 @@
+---
+import Icon from "../ui/Icon.astro";
+---
+
+<div
+    id="lightbox-modal"
+    class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Project details"
+>
+    <!-- Navigation Buttons -->
+    <button
+        id="lightbox-prev"
+        class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-[110] text-white/70 hover:text-white bg-black/40 hover:bg-black/60 rounded-full p-3 md:p-4 transition-all backdrop-blur-md shadow-lg active:scale-95"
+        aria-label="Previous image"
+    >
+        <Icon name="chevron_left" class="text-4xl md:text-5xl" />
+    </button>
+
+    <button
+        id="lightbox-next"
+        class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-[110] text-white/70 hover:text-white bg-black/40 hover:bg-black/60 rounded-full p-3 md:p-4 transition-all backdrop-blur-md shadow-lg active:scale-95"
+        aria-label="Next image"
+    >
+        <Icon name="chevron_right" class="text-4xl md:text-5xl" />
+    </button>
+
+    <!-- Content Container -->
+    <div
+        class="h-full w-full flex flex-col items-center justify-center p-4 gap-4"
+    >
+        <!-- Info Area (Top Header) -->
+        <div
+            class="w-full max-w-5xl shrink-0 flex items-center justify-between text-white relative z-[120]"
+        >
+            <span
+                id="lightbox-category"
+                class="text-xl md:text-3xl font-black text-white uppercase leading-none drop-shadow-lg"
+            ></span>
+
+            <div class="flex items-center gap-4">
+                <a
+                    href="/iletisim"
+                    class="flex items-center gap-2 bg-primary hover:bg-primary-hover text-white font-bold py-2 px-4 rounded-sm uppercase tracking-wider transition-colors text-sm"
+                >
+                    <span>Bilgi Al</span>
+                    <Icon name="arrow_forward" />
+                </a>
+
+                <button
+                    id="lightbox-close"
+                    class="text-text-muted hover:text-white transition-colors p-2"
+                    aria-label="Close modal"
+                >
+                    <Icon name="close" class="text-4xl" />
+                </button>
+            </div>
+        </div>
+
+        <!-- Image Area -->
+        <div
+            class="relative w-full max-w-5xl flex-1 min-h-0 flex items-center justify-center"
+        >
+            <img
+                id="lightbox-image"
+                src=""
+                alt=""
+                class="max-w-full max-h-full object-contain shadow-2xl rounded-sm border border-white/10"
+            />
+            <video
+                id="lightbox-video"
+                src=""
+                controls
+                autoplay
+                class="max-w-full max-h-full object-contain shadow-2xl rounded-sm border border-white/10 hidden"
+            ></video>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lightbox Logic
+    const modal = document.getElementById("lightbox-modal");
+    const closeBtn = document.getElementById("lightbox-close");
+    const prevBtn = document.getElementById("lightbox-prev");
+    const nextBtn = document.getElementById("lightbox-next");
+
+    const imgEl = document.getElementById("lightbox-image") as HTMLImageElement;
+    const vidEl = document.getElementById("lightbox-video") as HTMLVideoElement;
+    const titleEl = document.getElementById("lightbox-title");
+    const catEl = document.getElementById("lightbox-category");
+
+    let currentIndex = -1;
+    let visibleProjects: any[] = [];
+
+    // Function to gather currently visible projects (respecting filter)
+    function updateVisibleProjects() {
+        const items = document.querySelectorAll(".gallery-item");
+        visibleProjects = Array.from(items)
+            .filter((item) => (item as HTMLElement).style.display !== "none")
+            .map((item) => {
+                const data = (item as HTMLElement).dataset.project;
+                return data ? JSON.parse(data) : null;
+            })
+            .filter(Boolean);
+    }
+
+    function openLightbox(index: number) {
+        if (index < 0 || index >= visibleProjects.length) return;
+
+        currentIndex = index;
+        const project = visibleProjects[currentIndex];
+
+        // Update content
+        if (project.type === "video") {
+            if (imgEl) imgEl.classList.add("hidden");
+            if (vidEl) {
+                vidEl.classList.remove("hidden");
+                vidEl.src = project.image;
+                vidEl
+                    .play()
+                    .catch((e) => console.log("Auto-play prevented", e));
+            }
+        } else {
+            if (vidEl) {
+                vidEl.classList.add("hidden");
+                vidEl.pause();
+                vidEl.src = "";
+            }
+            if (imgEl) {
+                imgEl.classList.remove("hidden");
+                imgEl.src = project.image;
+                imgEl.alt = project.title;
+            }
+        }
+
+        if (titleEl) titleEl.innerHTML = project.title.replace(/\n/g, "<br/>");
+        if (catEl) catEl.textContent = project.category;
+
+        // Update stats
+
+        // Show modal
+        if (modal) {
+            modal.classList.remove("hidden");
+            // Trigger reflow
+            void modal.offsetWidth;
+            modal.classList.remove("opacity-0");
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        }
+    }
+
+    function closeLightbox() {
+        if (modal) {
+            modal.classList.add("opacity-0");
+            setTimeout(() => {
+                modal.classList.add("hidden");
+                document.body.style.overflow = "";
+                if (vidEl) {
+                    vidEl.pause();
+                    vidEl.src = ""; // Clear source to stop buffering
+                }
+            }, 300);
+        }
+    }
+
+    function showNext() {
+        const nextIndex = (currentIndex + 1) % visibleProjects.length;
+        openLightbox(nextIndex);
+    }
+
+    function showPrev() {
+        const prevIndex =
+            (currentIndex - 1 + visibleProjects.length) %
+            visibleProjects.length;
+        openLightbox(prevIndex);
+    }
+
+    // Event Listeners
+    document.addEventListener("astro:page-load", () => {
+        // Re-initialize logic on page navigation if using view transitions
+        attachListeners();
+    });
+
+    // Initial attach
+    attachListeners();
+
+    function attachListeners() {
+        const items = document.querySelectorAll(".gallery-item");
+        items.forEach((item) => {
+            item.addEventListener("click", () => {
+                updateVisibleProjects();
+                const data = (item as HTMLElement).dataset.project;
+                if (!data) return;
+                const projectData = JSON.parse(data);
+                const index = visibleProjects.findIndex(
+                    (p) => p.id === projectData.id,
+                );
+                if (index !== -1) openLightbox(index);
+            });
+        });
+
+        closeBtn?.addEventListener("click", closeLightbox);
+        prevBtn?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            showPrev();
+        });
+        nextBtn?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            showNext();
+        });
+
+        // Background click close
+        modal?.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+
+            // Don't close if clicking header (which has z-[120])
+            if (target.closest(".z-\\[120\\]")) return;
+
+            // Don't close if clicking the actual image or video
+            if (target.tagName === "IMG" || target.tagName === "VIDEO") return;
+
+            // Don't close if clicking any buttons (nav, close, contact)
+            if (target.closest("button") || target.closest("a")) return;
+
+            // Otherwise, we are clicking the background/container
+            closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+            if (modal && !modal.classList.contains("hidden")) {
+                if (e.key === "Escape") closeLightbox();
+                if (e.key === "ArrowRight") showNext();
+                if (e.key === "ArrowLeft") showPrev();
+            }
+        });
+    }
+</script>

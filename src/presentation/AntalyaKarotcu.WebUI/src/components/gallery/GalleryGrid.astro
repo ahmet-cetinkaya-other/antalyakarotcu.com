@@ -1,0 +1,132 @@
+---
+import GalleryItem from "./GalleryItem.astro";
+import Lightbox from "./Lightbox.astro";
+import Icon from "../ui/Icon.astro";
+
+interface Props {
+    projects: any[];
+    categories: { name: string; active: boolean }[];
+}
+
+const { projects, categories } = Astro.props;
+---
+
+<!-- Filter Bar -->
+<div class="sticky top-20 z-30 mb-8">
+    <div
+        class="flex items-center gap-2 py-4 overflow-x-auto no-scrollbar mask-gradient bg-bg/95 backdrop-blur-sm border-b border-white/5 pb-4"
+        id="gallery-filters"
+    >
+        <span
+            class="text-xs font-bold uppercase text-gray-500 mr-4 shrink-0 hidden sm:block"
+        >
+            Filtrele:
+        </span>
+        {
+            categories.map((cat, index) => (
+                <button
+                    data-filter={cat.name === "Tüm Projeler" ? "all" : cat.name}
+                    class={`
+            filter-btn whitespace-nowrap px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 border rounded-sm
+            ${
+                index === 0
+                    ? "active bg-primary text-white border-primary shadow-[0_0_15px_rgba(255,102,0,0.3)]"
+                    : "bg-transparent text-text-muted border-border hover:border-primary/50 hover:text-text"
+            }
+          `}
+                >
+                    {cat.name}
+                </button>
+            ))
+        }
+    </div>
+</div>
+
+<!-- Grid -->
+<div>
+    {
+        projects.length > 0 ? (
+            <div
+                id="gallery-grid"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20"
+            >
+                {projects.map((project) => (
+                    <GalleryItem project={project} />
+                ))}
+            </div>
+        ) : (
+            <div class="text-center py-20 border border-dashed border-border rounded-lg bg-surface/50">
+                <Icon
+                    name="construction"
+                    class="text-4xl text-text-muted mb-4 mx-auto"
+                />
+                <p class="text-text-muted font-mono uppercase">
+                    Koleksiyonda proje bulunamadı
+                </p>
+            </div>
+        )
+    }
+</div>
+
+<Lightbox />
+
+<script>
+    // Filtering Logic
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".gallery-item");
+
+    function filterProjects(filterValue: string) {
+        items.forEach((item) => {
+            const category = (item as HTMLElement).dataset.category;
+            if (filterValue === "all" || category === filterValue) {
+                (item as HTMLElement).style.display = "";
+                // Optional: specific animation
+                (item as HTMLElement).classList.remove(
+                    "opacity-50",
+                    "scale-95",
+                );
+            } else {
+                (item as HTMLElement).style.display = "none";
+            }
+        });
+
+        // Notify lightbox logic that visible items changed (handled by click listener re-checking)
+    }
+
+    filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            // Update active state
+            filterBtns.forEach((b) => {
+                b.classList.remove(
+                    "bg-primary",
+                    "text-white",
+                    "border-primary",
+                    "shadow-[0_0_15px_rgba(255,102,0,0.3)]",
+                    "active",
+                );
+                b.classList.add(
+                    "bg-transparent",
+                    "text-text-muted",
+                    "border-border",
+                );
+            });
+
+            btn.classList.remove(
+                "bg-transparent",
+                "text-text-muted",
+                "border-border",
+            );
+            btn.classList.add(
+                "bg-primary",
+                "text-white",
+                "border-primary",
+                "shadow-[0_0_15px_rgba(255,102,0,0.3)]",
+                "active",
+            );
+
+            // Perform filter
+            const filter = (btn as HTMLElement).dataset.filter;
+            if (filter) filterProjects(filter);
+        });
+    });
+</script>

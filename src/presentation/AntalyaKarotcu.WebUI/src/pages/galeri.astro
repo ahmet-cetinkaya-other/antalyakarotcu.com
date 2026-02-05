@@ -1,21 +1,69 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import GalleryGrid from "../components/gallery/GalleryGrid.astro";
 import Icon from "../components/ui/Icon.astro";
-import { getCollection } from "astro:content";
 
-const projects = await getCollection("projects");
+// Load all images and videos from the gallery folder
+const galleryFiles = import.meta.glob<{ default: ImageMetadata | string }>(
+  "/src/content/gallery/**/*.{jpeg,jpg,png,webp,mp4,webm,mov}",
+  {
+    eager: true,
+  },
+);
+
+// Helper to format category slug to title
+const categoryNames: Record<string, string> = {
+  "beton-kesme": "Beton Kesme",
+  "karot-delme": "Karot Delme",
+  yikim: "Yıkım",
+  ankraj: "Ankraj",
+  diger: "Diğer",
+};
+
+const projects = Object.entries(galleryFiles).map(([path, mod]) => {
+  const parts = path.split("/");
+  // Expected path: /src/content/gallery/{category}/{filename}.ext
+  // parts: ['', 'src', 'content', 'gallery', 'category', 'filename.ext']
+  const categorySlug = parts[4];
+  const filename = parts[5];
+  const title = filename.split(".")[0].replace(/-/g, " ");
+
+  const categoryName =
+    categoryNames[categorySlug] ||
+    categorySlug.charAt(0).toUpperCase() + categorySlug.slice(1);
+
+  const isVideo = filename.match(/\.(mp4|webm|mov)$/i);
+
+  // For videos, the default export is usually the URL string. For images, it might be an object or string.
+  // We handle both cases safely.
+  const src =
+    typeof mod.default === "string"
+      ? mod.default
+      : (mod.default as any).src || mod.default;
+
+  return {
+    id: path, // unique id from path
+    data: {
+      title: title.charAt(0).toUpperCase() + title.slice(1),
+      category: categoryName,
+      image: src,
+      type: isVideo ? "video" : "image",
+      stats: [],
+    },
+  };
+});
+
 const title = "Proje Galerisi | Antalya Karotçu";
 const description =
   "Antalya genelindeki beton kesme, delme ve yıkım projelerimizdeki mühendislik hassasiyetimizin sergisi.";
 
-// Static categories for the filter bar
+// Dynamic categories based on found folders + 'All'
+const foundCategories = [
+  ...new Set(projects.map((p) => p.data.category)),
+].sort();
 const categories = [
   { name: "Tüm Projeler", active: true },
-  { name: "Beton Kesme", active: false },
-  { name: "Karot Delme", active: false },
-  { name: "Yıkım", active: false },
-  { name: "Ankraj", active: false },
+  ...foundCategories.map((name) => ({ name, active: false })),
 ];
 ---
 
@@ -65,66 +113,10 @@ const categories = [
     </div>
   </section>
 
-  <!-- Filter Bar -->
-  <section
-    class="sticky top-0 z-40 bg-bg/95 backdrop-blur-md border-b border-white/5"
-  >
-    <div class="container mx-auto px-4">
-      <div
-        class="flex items-center gap-2 py-4 overflow-x-auto no-scrollbar mask-gradient"
-      >
-        <span
-          class="text-xs font-bold uppercase text-gray-500 mr-4 shrink-0 hidden sm:block"
-          >Filtrele:</span
-        >
-        {
-          categories.map((cat) => (
-            <button
-              class={`
-              whitespace-nowrap px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 border
-              ${
-                cat.active
-                  ? "bg-primary text-white border-primary shadow-[0_0_15px_rgba(255,102,0,0.3)]"
-                  : "bg-transparent text-text-muted border-border hover:border-primary/50 hover:text-text"
-              }
-            `}
-            >
-              {cat.name}
-            </button>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Grid -->
-  <section class="py-16 bg-bg relative">
-    <div class="container mx-auto px-4">
-      {
-        projects.length > 0 ? (
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <ProjectCard
-                title={project.data.title}
-                category={project.data.category}
-                image={project.data.image}
-                specs={project.data.stats || []}
-                href={`/projects/${project.id}`}
-              />
-            ))}
-          </div>
-        ) : (
-          <div class="text-center py-20 border border-dashed border-border rounded-lg bg-surface/50">
-            <Icon
-              name="construction"
-              class="text-4xl text-text-muted mb-4 mx-auto"
-            />
-            <p class="text-text-muted font-mono uppercase">
-              Koleksiyonda proje bulunamadı
-            </p>
-          </div>
-        )
-      }
+  <!-- Gallery Grid Component -->
+  <section class="min-h-screen bg-bg relative">
+    <div class="container mx-auto px-4 py-8">
+      <GalleryGrid projects={projects} categories={categories} />
     </div>
   </section>
 
