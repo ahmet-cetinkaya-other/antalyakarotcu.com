@@ -3,7 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/ui/Button.astro";
 import { getCollection } from "astro:content";
 
-const services = await getCollection("services");
+const services = (await getCollection("services")).sort((a, b) => {
+  if (a.data.title === "Karot Delme") return -1;
+  if (b.data.title === "Karot Delme") return 1;
+  return a.data.title.localeCompare(b.data.title, "tr");
+});
 ---
 
 <BaseLayout
