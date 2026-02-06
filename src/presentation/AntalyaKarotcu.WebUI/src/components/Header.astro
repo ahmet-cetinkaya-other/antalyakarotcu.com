@@ -62,7 +62,19 @@ import Button from "./ui/Button.astro";
             <div class="hidden md:block">
                 <Button variant="primary" href="/iletisim"> Teklif Al </Button>
             </div>
-            <ThemeToggle />
+            <div class="hidden md:block">
+                <ThemeToggle />
+            </div>
+
+            <!-- Mobile Phone Link -->
+            <Button
+                href="tel:+905326096802"
+                variant="primary"
+                class="md:hidden !px-3 !py-2"
+                aria-label="Hemen Ara"
+            >
+                <span class="material-symbols-outlined text-2xl">call</span>
+            </Button>
 
             <!-- Mobile Menu Button -->
             <button
@@ -89,9 +101,12 @@ import Button from "./ui/Button.astro";
     class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-surface shadow-2xl z-[100] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-6"
 >
     <div class="flex items-center justify-between mb-8">
-        <span class="text-xl font-black uppercase tracking-widest text-text"
-            >Menü</span
-        >
+        <div class="flex items-center gap-4">
+            <span class="text-xl font-black uppercase tracking-widest text-text"
+                >Menü</span
+            >
+            <ThemeToggle />
+        </div>
         <button
             id="drawer-close-btn"
             class="p-2 text-text hover:text-primary transition-colors"
