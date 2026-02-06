@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/ui/Button.astro";
 import HeroStrip from "../components/ui/HeroStrip.astro";
+import GoogleAdsConversion from "../components/GoogleAdsConversion.astro";
 import heroImg from "../assets/images/backgrounds/hero.jpg";
 
 const title = "İletişim | Antalya Karotçu: 7/24 Beton Kesme & Delme Desteği";
@@ -36,6 +37,7 @@ const structuredData = {
     ogImage={{ image: heroImg, alt: "Antalya Karotcu İletişim" }}
     structuredData={structuredData}
 >
+    <GoogleAdsConversion slot="head" />
     <style>
         .map-container {
             /* Filter removed to show full color map per user request */
