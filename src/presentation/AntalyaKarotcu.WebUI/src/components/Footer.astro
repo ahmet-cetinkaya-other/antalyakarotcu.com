@@ -149,18 +149,24 @@ const today = new Date();
         <div
             class="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
-            <p class="text-text-muted text-xs">
-                © {today.getFullYear()} Antalya Karotçu. Tüm hakları saklıdır.
-            </p>
-            <div class="flex gap-6">
+            <div class="flex items-center gap-4">
+                <p class="text-text-muted text-xs">
+                    © {today.getFullYear()} Antalya Karotçu. Tüm hakları saklıdır.
+                </p>
                 <a
-                    class="text-text-muted hover:text-text-muted/80 text-xs uppercase"
-                    href="#">Gizlilik Politikası</a
+                    href="https://ahmetcetinkaya.me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-xs text-text-muted underline decoration-text-muted/50 underline-offset-2 transition duration-300 hover:text-text hover:decoration-text/80"
                 >
-                <a
-                    class="text-text-muted hover:text-text-muted/80 text-xs uppercase"
-                    href="#">Kullanım Şartları</a
-                >
+                    <img
+                        src="https://ahmetcetinkaya.me/favicon.svg"
+                        alt="Ahmet Çetinkaya"
+                        class="size-3"
+                        onerror="this.style.display='none'"
+                    />
+                    Ahmet Çetinkaya tarafından hazırlandı.
+                </a>
             </div>
         </div>
     </div>
